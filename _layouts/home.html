@@ -15,7 +15,8 @@
           <p>this is the occasional blog of <a href="http://jamierumbelow.net">jamie rumbelow</a>: a software engineer, writer and philosophy graduate who lives in london, and spends a lot of time in paris.</p>
           <p>
             <strong>tags:</strong>
-            {% for tag in site.tags %}
+            {% assign sortedTags = site.tags | sort %}
+            {% for tag in sortedTags %}
               <a href="/{{ tag[0] }}">{{ tag[0] }}</a>
             {% endfor %}
           </p>
