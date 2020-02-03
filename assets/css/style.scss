@@ -202,9 +202,34 @@ header p {
   max-width: 100%;
 }
 
-.post blockquote {
-  padding-left: 1em;
-  border-left: 1px solid #ddd;
+.post {
+  blockquote {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-left: 1.5em;
+    border-left: 1px solid #ddd;
+
+    p {
+      font-size: 1rem;
+      color: #888;
+    }
+  }
+
+  .footnotes {
+    margin-top: 3em;
+
+    ol {
+      margin-left: -4.1em;
+    }
+
+    li,
+    p {
+      font-size: 0.8em;
+      margin-top: 0;
+      margin-bottom: 5px;
+      margin-left: 1.5em;
+    }
+  }
 }
 
 .post ul,
@@ -317,9 +342,14 @@ header p {
   float: right;
 }
 
-footer.wrap {
-  padding-top: 2em;
-  padding-bottom: 2em;
+footer {
+  max-width: 48em;
+  margin: 8em auto 3em auto;
+
+  p {
+    text-align: center;
+    font-size: 0.8em;
+  }
 }
 
 ul.pages {
@@ -390,10 +420,4 @@ ol.notes li.note img.avatar {
 
 header h1 a:hover {
   color: #09b;
-}
-.footnotes li,
-.footnotes li p {
-  font-size: 0.8em;
-  margin-top: 0;
-  margin-bottom: 5px;
 }
