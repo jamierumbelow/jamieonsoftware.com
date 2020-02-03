@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
-  </head>
+{% include head.html %}
   <body>
     <header class="callout">
-      <h1><a href="{{ "/" | absolute_url | lower }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+      <h1>
+        <!-- <a href="{{ "/" | absolute_url | lower }}"> -->
+          {{ site.title }}
+        <!-- </a> -->
+      </h1>
       <p>{{ site.description }}</p>
     </header>
 
@@ -24,7 +16,7 @@
           <p>
             <strong>tags:</strong>
             {% for tag in site.tags %}
-              <a href={{ tag[0] }}>{{ tag[0] }}</a>
+              <a href="/{{ tag[0] }}">{{ tag[0] }}</a>
             {% endfor %}
           </p>
           <hr />
@@ -44,29 +36,10 @@
           {% if forloop.last %}{% else %}<hr />{% endif %}
         {% endfor %}
 
-        <div class="pagination">
-          {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path }}" class="previous">
-              Previous
-            </a>
-          {% else %}
-            <span class="previous">Previous</span>
-          {% endif %}
-          <span class="page_number ">
-            Page: {{ paginator.page }} of {{ paginator.total_pages }}
-          </span>
-          {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-          {% else %}
-            <span class="next ">Next</span>
-          {% endif %}
-        </div>
-
+        {% include pagination.html %}
       </section>
     </div>
 
-    <footer>
-      <p>est. 2009, reset 2019. written in London. powered by Jekyll.</p>
-    </footer>
+    {% include footer.html %}
   </body>
 </html>
