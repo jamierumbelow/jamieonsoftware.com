@@ -1,3 +1,5 @@
+destination: docs
+
 title: Jamie on Software
 email: jamie@jamierumbelow.net
 description: >- # this means to ignore newlines until "baseurl:"
