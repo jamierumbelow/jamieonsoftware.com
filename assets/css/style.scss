@@ -215,6 +215,17 @@ header p {
     }
   }
 
+  ul,
+  ol {
+    margin-top: 2em;
+    margin-left: -1em;
+    margin-bottom: 2em;
+
+    li {
+      padding-left: 1em;
+    }
+  }
+
   .footnotes {
     margin-top: 3em;
 
@@ -230,11 +241,6 @@ header p {
       margin-left: 1.5em;
     }
   }
-}
-
-.post ul,
-.post ol {
-  margin-left: 2em;
 }
 
 .post footer ul,

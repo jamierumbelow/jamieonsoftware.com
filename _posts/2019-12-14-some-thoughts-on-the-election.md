@@ -7,15 +7,17 @@ tags: politics
 
 Here are a few thoughts, mostly unstructured, and in no particular order, on the general election:
 
-- Why is everybody so surprised that so many working-class Northern seats went Tory? The moment Labour prevaricated over their Brexit position was the moment they lost them.
+- Why is everybody so surprised that so many working-class Northern seats went Tory? The moment Labour prevaricated over their Brexit position was the moment they lost these seats. Delivering Brexit matters.
 
-- This is an empirical point I’ve not tested, but [it looks like](https://yougov.co.uk/topics/politics/articles-reports/2017/05/15/voting-intention-regional-breakdown-apr-24-may-5) May did the bulk of the work in 2017. Johnson’s – and Cummings’ – brilliance was to realise and leverage it.
+- This is an empirical point I’ve not tested, but [it looks like](https://yougov.co.uk/topics/politics/articles-reports/2017/05/15/voting-intention-regional-breakdown-apr-24-may-5) May did the bulk of the work in 2017. Johnson’s – and Cummings’ – brilliance was to leverage it.
 
-- It would only work if they managed to convince the right voters in the right places that Parliament – _this_ Parliament – was the block, and needed overhauling. While the rest of us were moaning about prorogation, and mocking Johnson for losing all those votes, he was quietly winning the election he hadn’t even called yet.
+- It would only work if they managed to convince the right voters in the right places that Parliament – _this_ Parliament – was the block, and needed replacing. While the rest of us were moaning about prorogation, and mocking Johnson for losing all those votes, he was quietly winning the election – and he hadn’t even called it yet.
 
-- The Momentum brigade are just as bad after the election as they were before it. I saw more on my feed from Corbynites trashing the Liberal Democrats than I saw criticising the Conservatives, or even making a positive argument for Labour.
+- The Momentum brigade are just as bad after the election as they were before it. I saw more on my feed from Corbynites trashing the Liberal Democrats than I saw from them criticising the Conservatives. Or even making a positive argument for Labour.
 
-- Relatedly, ‘the media has a right-wing bias’ and ‘FPTP disadvantages us’ are terrible excuses for losing an election. Tough. Of course the media have a right-wing bias (though I see the symmetric allegations of left-wing bias on Brexit Twitter when I venture out of my own half of the bubble). Of course FPTP is a preposterous system that offers the Conservatives an entrenched advantage. We’ve known this for years. The Left needs to learn to work within these constraints rather than decry them. And, this election, Labour _singularly_ failed to do so. This is on you.
+- Relatedly, ‘the media has a right-wing bias’ and ‘FPTP disadvantages us’ are terrible excuses for losing an election. Tough. Of course the media have a right-wing bias. Of course FPTP is a preposterous system that offers the Conservatives an entrenched advantage. We’ve known this for years. The Left needs to learn to work within these constraints rather than decry them. And, this election, Labour _singularly_ failed to do so. This is on you.
+
+- (By the way, Labour, you had a chance to get rid of FPTP.)
 
 - I’ll leave my thoughts on antisemitism in the Labour Party for another day. But they got everything they deserved, and their loss is something to celebrate.
 
@@ -23,19 +25,19 @@ Here are a few thoughts, mostly unstructured, and in no particular order, on the
 
 - I think it’s likely that ‘presidentialising’ the campaign – "Jo Swinson’s Liberal Democrats" – killed it more than the revoke Article 50 overreach. As people got to know her more, people liked her less.
 
-- Obviously, the Conservatives ran a remarkably ugly campaign too, and their victory should also be lamented. This was not a victory of ideas. It was the final nail in the coffin Thatcher and Blair built. Democracy’s epistemic function is over.
+- Obviously, the Conservatives ran a remarkably ugly campaign too, and their victory should be lamented. This was not a victory of ideas. It was the final nail in the coffin that Thatcher and Blair built. Democracy’s epistemic function is over.
 
 - That being said, I’m a little more optimistic about a Johnson government with a seventy-odd-seat majority rather than a minority, or a 5-seat majority, particularly one enabled by working-class Northern seats. These voters are still, quite rightly, naturally suspicious of the Conservatives. He has very little good will indeed. I think he understands this – his "you’ve lent me your vote" comment is telling.
 
-- Turkeys voting for Christmas? It’s this arrogance and superiority, this smug self-indulgent paternalism in which I’ve indulged a lot myself, that lost the election for people like me and the ideas I believe in. Of course the average voter doesn’t have the time, skills, knowledge, whatever to make comprehensive, informed decisions. Their vote still counts, and their voice should still be heard. It’s up to politicians to craft a narrative – which is to say, an _abstraction_ of ideas and policy proposals – that resonates with people.
+- Turkeys voting for Christmas? It’s this arrogance and superiority, this smug self-indulgent paternalism (which I've indulged in myself) that lost the election for people like me and the ideas I believe in. Of course the average voter doesn’t have the time, skills, knowledge, whatever to make comprehensive, informed decisions. Their vote still counts, and their voice should still be heard. It’s up to politicians to craft a narrative – which is to say, an _abstraction_ of ideas and policy proposals – that resonates with people.
 
-- Also, it’s really easy to forget that a lot of people are instinctively, naturally, ineluctably conservative. A lot of people don’t like immigration. A lot of people don’t like taxes, and have a strongly negative aesthetic response to the social justice movement. We can debate any of these individual positions until we’re – cough – blue in the face, but for a lot of people it’s just a gut thing.
+- Also, it’s easy to forget that most people are instinctively conservative. A lot of people don’t like immigration, or are (reasonably) fearful of its effects. A lot of people don’t like taxes. An increasing number of people have a strongly negative aesthetic response to perceived political correctness, and the social justice movement more broadly. We can debate any of these individual positions until we’re blue in the face, but for a lot of people it’s just a gut thing.
 
 - It now seems clear to me that Remain is no longer an option, democratically or otherwise. We’re not getting a People’s Vote. We are going to leave the European Union, at least formally speaking, in January. In this sense, the debate is over.
 
 - In another sense, it’s just beginning. Remainers who care about preserving the tangible benefits of EU membership need to plan, regroup, and lean on interest groups, business, the trades unions, local government and the other relevant institutions of civil society to protect or otherwise emulate those benefits in a Brexit context. Democracy doesn’t end between elections (even though it might feel like it does sometimes.) Nor is it only implemented in Westminster.
 
-- A lot of people in my circles – [including people who have taught me](https://twitter.com/acgrayling) – are arguing that there’s no mandate for Brexit since the Tories were elected without a majority of the popular vote, or polling suggests slight support for remain, or whatever. This misses the point. We have procedures, whatever issues from those procedures are called democratic, and Brexit, loosely defined, has now issued from those procedures twice. If you don’t like it, change the procedures – and I really hope we do.
+- A lot of people in my circles – [including people who have taught me](https://twitter.com/acgrayling) – are arguing that there’s no mandate for Brexit since the Tories were elected without a majority of the popular vote, or polling suggests slight support for remain, or whatever. This misses the point. We have procedures, whatever issues from those procedures are called democratic, and Brexit, loosely defined, has now issued from those procedures twice. If you don’t like it, change the procedures.
 
 - One might reply with illegal contributions, Russian hacking, lies on busses etc. It’s horrendous, I agree. But I’m starting to think that the fact that enough people _believe_ they voted for Brexit for their own valid reasons, and voted subsequently for the Tories to _reaffirm_ that Brexit position, is enough to make the implementing the outcome both legitimate and indeed required, at least morally speaking (though perhaps not epistemically). You can’t tell people they’re empowered and then not let them wield that power –– certainly not twice. The social contract is a fragile thing.
 
