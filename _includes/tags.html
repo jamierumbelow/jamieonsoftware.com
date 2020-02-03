@@ -1,0 +1,7 @@
+<p>
+  <strong>tags:</strong>
+  {% assign sortedTags = site.tags | sort %}
+  {% for tag in sortedTags %}
+    <a href="/{{ tag[0] }}">{{ tag[0] }}</a>
+  {% endfor %}
+</p>
