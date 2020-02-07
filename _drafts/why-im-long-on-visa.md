@@ -33,9 +33,9 @@ Merchants can accept payments from anyone, and no longer need to run back-office
 
 Banks can offer credit at higher interest rates to consumers and collect fees from merchants to provide these credit management services (and thus reduce merchants’ exposure to credit risk).
 
-For arranging this service, Visa charge merchants and banks a percentage of each transaction. The [underlying economics of the business](https://finance.yahoo.com/quote/V?p=V) are excellent: they have over a 50% profit margin, steady revenues, a long pedigree, and revenue still grew 10% year-on-year.
+For arranging this service, Visa charge merchants and banks a percentage of each transaction. The [underlying economics of the business](https://finance.yahoo.com/quote/V?p=V) are excellent: they have over a 50% profit margin, steady revenues, a long pedigree, and revenue still grows 10% year-on-year.
 
-Plaid can contribute to this core business, since an increase in fintech innovation is likely to increase transactions simplicity:
+Plaid can contribute to this core business, since an increase in fintech innovation is likely to increase transactions simpliciter:
 
 Banks can offer more, and better tailored, financial products to consumers. Visa can better integrate identity and security services with payments, reducing rates of fraud. More broadly, and more importantly, fintech [can, and will, bring finance to the under- and unbanked](https://policyexchange.org.uk/publication/fintech-for-all/).
 
@@ -59,9 +59,9 @@ All this said, Plaid could represent a significant income stream for Visa in its
 
 Finally, this purchase reflects a wider trend.
 
-As Stripe, Twilio, Algolia, and now Plaid have shown, making developers happy is big business. And it’s not just a big business in its own right.
+As Stripe, Twilio, Algolia, and now Plaid have shown, making developers happy is big business.
 
-Making developers happy and productive has serious downstream effects. It reduces the amount of time and money it takes to create new products. It encourages the development of new tools which themselves make developers happy and productive, effecting a [Cambrian explosion](https://www.techrepublic.com/article/the-open-source-decade-fueled-by-cloud-and-github/) of new products and tools.
+But making developers happy and productive also has serious downstream effects. It reduces the amount of time and money it takes to create new products. It encourages the development of new tools which themselves make developers happy and productive, effecting a [Cambrian explosion](https://www.techrepublic.com/article/the-open-source-decade-fueled-by-cloud-and-github/) of new products and tools.
 
 Just like the set of norms and tools developed around open source, and [composability](https://medium.com/dappradar-com/collateralization-and-composability-what-i-learned-at-defi-summit-london-2019-446005eee000) in smart-contract technologies, making it easy, cheap, and secure for developers to access financial data will only accelerate the potential of technology –– and, crucially, along dimensions we can’t easily predict.
 
