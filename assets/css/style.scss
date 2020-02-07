@@ -79,36 +79,6 @@ hr {
   }
 }
 
-@media screen and (min-width: 480px) {
-  h2 {
-    font-size: 32px;
-  }
-  h3,
-  .h3 {
-    font-size: 24px;
-  }
-  p,
-  .p,
-  ul,
-  ol {
-    font-size: 20px;
-  }
-  small,
-  .small {
-    font-size: 16px;
-  }
-}
-
-@media screen and (min-width: 640px) {
-  h2 {
-    font-size: 48px;
-  }
-  h3,
-  .h3 {
-    font-size: 32px;
-  }
-}
-
 .homepage-content {
   position: relative;
   top: -100px;
@@ -424,6 +394,60 @@ ol.notes li.note img.avatar {
   margin-left: 3em;
 }
 
-header h1 a:hover {
-  color: #09b;
+@media screen and (max-width: 1280px) {
+  header.callout {
+    top: 0px;
+
+    h1 {
+      font-size: 7.5em;
+    }
+  }
+
+  .homepage-content {
+    top: 20px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  header.callout {
+    top: 0px;
+
+    h1 {
+      font-size: 4.7em;
+    }
+  }
+
+  .homepage-content {
+    top: 20px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  h2 {
+    font-size: 32px;
+  }
+  h3,
+  .h3 {
+    font-size: 24px;
+  }
+  p,
+  .p,
+  ul,
+  ol {
+    font-size: 20px;
+  }
+  small,
+  .small {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  h2 {
+    font-size: 48px;
+  }
+  h3,
+  .h3 {
+    font-size: 32px;
+  }
 }
