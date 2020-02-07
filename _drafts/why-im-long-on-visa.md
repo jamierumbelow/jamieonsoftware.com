@@ -5,11 +5,11 @@ title: "Why I’m long on Visa"
 tags: fintech startups
 ---
 
-Last month, Visa announced the intention to buy [Plaid](http://plaid.com/) for \$5.3 billion dollars.
+Last month, Visa announced their intention to buy [Plaid](http://plaid.com/) for \$5.3 billion dollars.
 
-Plaid provide an abstraction around bank accounts. They offer a developer-friendly API to query one, or several, of a user’s accounts. This allows startups and consumer products to offer financial analysis and services in a bank-agnostic way.
+Plaid provide an abstraction around bank accounts. They offer a developer-friendly API to query one or more of a user’s accounts. This allows startups and consumer products to offer financial analysis and services in a bank-agnostic way.
 
-On the back of this purchase, alongside my general growing interest in fintech, I’ve been becoming more and more bullish about Visa.
+On the back of this purchase, and alongside my general growing interest in fintech, I’ve been becoming more and more bullish about Visa.
 
 But why did Visa pay _so much_ for Plaid?
 
@@ -27,9 +27,9 @@ Visa is a three-sided network. It provides the infrastructure to move money betw
 
 When Visa works well, everyone benefits:
 
-Consumers get instant access to credit, can buy products from anywhere the card is supported.
+Consumers get instant access to credit, and can buy products from anywhere the card is supported.
 
-Merchants can accept payments from anyone, and no longer need to run back-office operations responsible for credit & payments or handle cash.
+Merchants can accept payments from anyone, and no longer need to run back-office operations responsible for credit & payments, or handle cash.
 
 Banks can offer credit at higher interest rates to consumers and collect fees from merchants to provide these credit management services (and thus reduce merchants’ exposure to credit risk).
 
