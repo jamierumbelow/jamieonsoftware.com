@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why I’m long on Visa"
-# date: 2020-02-08 10:00:00 +0000
+date: 2020-02-08 21:49:05 +0000
 tags: fintech startups
 ---
 
@@ -15,9 +15,9 @@ But why did Visa pay _so much_ for Plaid?
 
 \$5.3b is a _lot_ of money. It’s [somewhere between a 25x and 50x multiple of Plaid’s revenue](https://www.forbes.com/sites/jeffkauflin/2020/01/13/why-visa-is-buying-fintech-startup-plaid-for-53-billion).
 
-The Plaid team are impressive, but \$5.3b is too much for a team. As [my friend Rich](https://twitter.com/ricburton) put it, when you’re counting in billions, it’s not an acquihire.
+The Plaid team are impressive, but at \$5.3b, it's got to be something strategic. As [my friend Rich](https://twitter.com/ricburton) put it, when you’re counting in billions, it’s not an acquihire.
 
-So if it’s not revenue, and it’s not the team, what’s the strategic value in Visa’s owning Plaid?
+So if it’s not revenue, and it’s not (just) the team, what’s the strategic value in Visa’s owning Plaid?
 
 I can think of three big reasons:
 
@@ -29,9 +29,9 @@ When Visa works well, everyone benefits:
 
 Consumers get instant access to credit, and can buy products from anywhere the card is supported.
 
-Merchants can accept payments from anyone, and no longer need to run back-office operations responsible for credit & payments, or handle cash.
+Merchants can accept payments from anyone, and no longer need to run back-office operations responsible for credit and payments, nor handle cash.
 
-Banks can offer credit at higher interest rates to consumers and collect fees from merchants to provide these credit management services (and thus reduce merchants’ exposure to credit risk).
+Banks can offer credit to consumers more easily, at higher interest rates, and collect fees from merchants to provide the aforementioned credit management services – and, in doing so, reduce merchants’ exposure to credit risk.
 
 For arranging this service, Visa charge merchants and banks a percentage of each transaction. The [underlying economics of the business](https://finance.yahoo.com/quote/V?p=V) are excellent: they have over a 50% profit margin, steady revenues, a long pedigree, and revenue still grows 10% year-on-year.
 
@@ -68,3 +68,5 @@ Just like the set of norms and tools developed around open source, and [composab
 In short: it increases the amount of innovation possible in the world.
 
 If I am at all correct about this, then Visa have shorn up their excellent business model, giving themselves access to an attractive new revenue stream, and now control a resource which has already, and will continue to be, central to sustaining and growing the fintech space, and, eventually, the global economy.
+
+**Thanks** to Jessica Cooper, Richard Burton, Peter King, JS Denain, and Jonny Corrie for their notes and comments.
