@@ -1,7 +1,10 @@
 <p>
   <strong>tags:</strong>
-  {% assign sortedTags = site.tags | sort %}
-  {% for tag in sortedTags %}
-    <a href="/{{ tag[0] }}">{{ tag[0] }}</a>
-  {% endfor %}
+  {% if page.tags %} {% assign sortedTags = page.tags | sort %} {% for tag in
+  sortedTags %}
+  <a href="/{{ tag }}">{{ tag }}</a>
+  {% endfor %} {% else %} {% assign sortedTags = site.tags | sort %} {% for tag
+  in sortedTags %}
+  <a href="/{{ tag[0] }}">{{ tag[0] }}</a>
+  {% endfor %} {% endif %}
 </p>
