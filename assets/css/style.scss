@@ -1,13 +1,10 @@
 ---
 ---
 
-$primaryColor: #444;
-
 body {
-  color: $primaryColor;
+  color: #444;
   background: #fff;
-  font-family: "Gentium Book Basic", Georgia, serif;
-  font-size: 100%;
+  font-family: ui-sans-serif, system-ui, "Helvetic Neue", sans-serif;
   line-height: 1.5;
   font-weight: 400;
   margin: 0;
@@ -38,12 +35,12 @@ p,
 .p,
 ul,
 ol {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 small,
 .small {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 strong,
@@ -59,95 +56,58 @@ ol {
 }
 
 hr {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   padding: 0;
   overflow: visible;
   border: none;
-  border-top: medium double #333;
-  color: #333;
+  border-top: 1px solid #ccc;
+  color: #ccc;
   text-align: center;
-
-  &:after {
-    content: "§";
-    display: inline-block;
-    position: relative;
-    top: -0.7em;
-    font-size: 1.5em;
-    padding: 0 0.25em;
-    background: white;
-  }
-}
-
-.homepage-content {
-  position: relative;
-  top: -100px;
 }
 
 .wrap {
   width: 90%;
   padding: 0 5%;
   max-width: 48em;
-  margin: 0 auto;
+  margin: 0;
   overflow: hidden;
 
   header {
-    margin: 2rem 0 6rem 0;
-  }
-}
-
-.full-post {
-  .post {
-    header {
-      position: relative;
-      left: -80px;
-      width: 110%;
-
-      h2.post-title {
-        font-size: 3em;
-        text-align: left;
-      }
-    }
+    margin: 2rem 0 4rem 0;
   }
 }
 
 a {
-  color: #09b;
+  color: rgb(30, 58, 138);
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-header.callout {
-  position: relative;
-  top: -100px;
-  margin: 0 auto;
-
-  h1 {
-    font-size: 14rem;
-    font-family: "Bebas Neue", cursive;
-    text-transform: uppercase;
-    text-align: center;
-
-    a {
-      color: $primaryColor;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
+ 
+  &:hover {
+    background-color: rgb(30, 58, 138);
+    color: #fff;
   }
 }
 
-/*header:after {
-  clear: both;
-  content: '.';
-  display: block;
-  height: 0;
-  visibility: hidden;
-}*/
+header.callout {
+  width: 90%;
+  margin: 1rem auto;
+  padding-top: 2rem;
+
+  h1 {
+    font-size: 4rem;
+    font-family: "Bebas Neue", cursive;
+    text-transform: uppercase;
+    text-align: left;
+
+    a {
+      color: #444;
+    }
+
+    a:hover {
+      color: white;
+    }
+  }
+}
 
 .logo {
   float: left;
@@ -174,14 +134,15 @@ header p {
 
 .post {
   blockquote {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0;
     padding-left: 1.5em;
     border-left: 1px solid #ddd;
-
+    
     p {
-      font-size: 1rem;
       color: #888;
+      font-size: 0.8em;
     }
   }
 
@@ -200,15 +161,20 @@ header p {
     margin-top: 3em;
 
     ol {
-      margin-left: -4.1em;
+      margin-left: 0;
+      padding-left: 0;
     }
-
+    
     li,
     p {
-      font-size: 0.8em;
       margin-top: 0;
       margin-bottom: 5px;
-      margin-left: 1.5em;
+      padding-left: 0;
+      font-size: 0.9em;
+    }
+    
+    li::marker {
+      font-size: 0.8em;
     }
   }
 }
@@ -230,16 +196,15 @@ header p {
 
 .post {
   h2.post-title {
-    margin-bottom: 3rem;
-    font-size: 2em;
-    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5em;
+    text-align: left;
 
     a {
-      color: $primaryColor;
+      color: #444;
 
       &:hover {
-        text-decoration: none;
-        color: #09b;
+        color: white;
       }
     }
   }
@@ -249,22 +214,16 @@ header p {
   }
 
   footer {
-    text-align: right;
+    width: 100%;
     padding: 0;
-    margin-top: 4em;
+    margin: 0;
+    margin-top: 1em;
+    margin-bottom: 4em;
     color: #aaa;
     font-style: italic;
 
-    span {
-      display: block;
-    }
-
-    a {
-      color: #aaa;
-
-      &:hover {
-        color: #999;
-      }
+    p {
+      text-align: right;
     }
 
     .source {
@@ -290,14 +249,6 @@ header p {
   overflow: hidden;
 }
 
-/*.pagination:after {
-  clear: both;
-  content: '.';
-  display: block;
-  height: 0;
-  visibility: hidden;
-}*/
-
 .pagination a {
   display: block;
   height: 3em;
@@ -319,12 +270,12 @@ header p {
 }
 
 footer {
-  max-width: 48em;
-  margin: 6em auto 3em auto;
+  width: 90%;
+  margin: 6em 0 3em 5%;
 
   p {
-    text-align: center;
-    font-size: 0.8em;
+    text-align: left;
+    font-size: 0.7em;
   }
 }
 
@@ -381,7 +332,7 @@ ol.notes li.note img.avatar {
 }
 
 .notes .action a {
-  color: $primaryColor;
+  color: #444;
 }
 
 .action {
@@ -394,60 +345,13 @@ ol.notes li.note img.avatar {
   margin-left: 3em;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 480px) {
   header.callout {
-    top: 0px;
+    margin-bottom: 0;
 
     h1 {
-      font-size: 7.5em;
+      font-size: 3rem;
+      text-align: left;
     }
-  }
-
-  .homepage-content {
-    top: 20px;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  header.callout {
-    top: 0px;
-
-    h1 {
-      font-size: 4.7em;
-    }
-  }
-
-  .homepage-content {
-    top: 20px;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  h2 {
-    font-size: 32px;
-  }
-  h3,
-  .h3 {
-    font-size: 24px;
-  }
-  p,
-  .p,
-  ul,
-  ol {
-    font-size: 20px;
-  }
-  small,
-  .small {
-    font-size: 16px;
-  }
-}
-
-@media screen and (min-width: 640px) {
-  h2 {
-    font-size: 48px;
-  }
-  h3,
-  .h3 {
-    font-size: 32px;
   }
 }

@@ -3,7 +3,6 @@ layout: post
 title: "The Government of No One: The Theory and Practice of Anarchism"
 date: 2020-01-09 09:36:38 +0000
 tags: books politics
-location: London
 ---
 
 _Ruth Kinna, Pelican, 2019._

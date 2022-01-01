@@ -12,7 +12,7 @@
     <div class="content homepage-content wrap">
       <section class="posts">
         <article class="post text">
-          <p>this is the occasional blog of <a href="http://jamierumbelow.net">jamie rumbelow</a>: a software engineer, writer and philosophy graduate who lives in london.</p>
+          <p>This is the blog of <a href="http://jamierumbelow.net">Jamie Rumbelow</a>: a software engineer, writer and philosophy graduate who lives in London.</p>
           {% include tags.html %}
           <hr />
         </article>
@@ -24,11 +24,9 @@
               {{ post.content }}
             </div>
             <footer class="post-meta">
-              <span>{{ post.date | date: "%l:%M%P. %B %e, %Y." }}</span>
-              {{ post.location }}
+              <p>{{ post.date | date: "%l:%M%P. %B %e, %Y." }}</p>
             </footer>
           </article>
-          {% if forloop.last %}{% else %}<hr />{% endif %}
         {% endfor %}
 
         {% include pagination.html %}
