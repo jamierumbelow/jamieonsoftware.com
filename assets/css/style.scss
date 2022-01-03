@@ -211,6 +211,12 @@ header p {
 
   .post-content {
     line-height: 1.7;
+
+    ul {
+      li {
+        margin-bottom: 0.7rem;
+      }
+    }
   }
 
   footer {
