@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <title>javascript &centerdot; Jamie on Software</title>
+  </head>
+  <body>
+    <header class="callout">
+      <h1>
+        <a href="https://jamieonsoftware.com/">
+          Jamie on Software
+        </a>
+      </h1>
+      <p></p>
+    </header>
+
+    <div class="content homepage-content wrap">
+      <section class="posts">
+        <article class="post text">
+          <p>this is the occasional blog of <a href="http://jamierumbelow.net">jamie rumbelow</a>: a software engineer, writer and philosophy graduate who lives in london.</p>
+          <p>
+            <strong>tags:</strong>
+            
+            
+              
+                <a href="/aesthetics">aesthetics</a>
+              
+            
+              
+                <a href="/books">books</a>
+              
+            
+              
+                <a href="/ethereum">ethereum</a>
+              
+            
+              
+                <a href="/fintech">fintech</a>
+              
+            
+              
+                <a href="/food">food</a>
+              
+            
+              
+                <strong>javascript</strong>
+              
+            
+              
+                <a href="/lrb">lrb</a>
+              
+            
+              
+                <a href="/personal">personal</a>
+              
+            
+              
+                <a href="/politics">politics</a>
+              
+            
+              
+                <a href="/productivity">productivity</a>
+              
+            
+              
+                <a href="/startups">startups</a>
+              
+            
+          </p>
+          <hr />
+        </article>
+
+        
+          <article class="post text">
+            <h2 class="post-title"><a href="https://jamieonsoftware.com/2022/04/03/a-quick-note-on-web_accessible_resources-in-Safari-Web-Extensions.html">A quick note on web_accessible_resources in Safari Web Extensions</a></h2>
+            <div class="post-content">
+              <p>The Safari Web Extension mechanism is an important step forward for iOS apps – and a significant part of my current project, on which more soon – but the documentation is a little fragmented and the tooling isn’t nearly solid enough just yet. Developing these new extensions is challenging.</p>
+
+<p>A small contribution to changing that:</p>
+
+<p>By default, extension files that aren’t explicitly whitelisted in the <code class="language-plaintext highlighter-rouge">manifest.json</code> file are inaccessible from the browser. One common use case of the <code class="language-plaintext highlighter-rouge">content.js</code> script is to inject scripts into the same execution environment of the active web page. However, no such injection is possible unless the loaded file is whitelisted.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">manifest.json</code> spec <a href="https://developer.chrome.com/docs/extensions/mv3/manifest/web_accessible_resources/">defines</a> a <code class="language-plaintext highlighter-rouge">web_accessible_resources</code> parameter, which allows extensions to whitelist resources for access from the browser.</p>
+
+<p>Thus, the following whitelist:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"web_accessible_resources": ["images/foo.png"]
+</code></pre></div></div>
+
+<p>Allows you to generate the resource’s URL with the following code:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>browser.runtime.getURL("images/foo.png")
+</code></pre></div></div>
+
+<p>Which gives you the following sort of URL:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>safari-web-extension://2AB33852-D69B-4ED6-99AD-A4839DFEC7ED/images/foo.png
+</code></pre></div></div>
+
+<p>The ID directly after the protocol in that URL is generated on a per-browser-instance basis, so you can’t guess it ahead of time. You have to call <code class="language-plaintext highlighter-rouge">getURL</code> to generate it.</p>
+
+<p>There are two important things that <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">the API documentation</a> doesn’t specify, which took me some time to figure out:</p>
+
+<ul>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">browser.runtime.getURL</code> is only defined inside the extension’s execution contexts.</strong> So the content.js and background.js files are fine, but the webpage itself is not. If you want to use it in the webpage context, you’ll need to generate the URL in the extension somewhere and communicate it via the <code class="language-plaintext highlighter-rouge">window.postMessage</code> event trigger.</p>
+  </li>
+  <li>
+    <p><strong>Any values used in the <code class="language-plaintext highlighter-rouge">web_accessible_resources</code> parameter must be nested under a subdirectory.</strong> If you try to call a top-level file (such as <code class="language-plaintext highlighter-rouge">getURL("foo.png")</code>), the URL will generate fine, but the file itself won’t be loadable. The browser will simply report it as inaccessible.</p>
+  </li>
+</ul>
+
+<p>Hopefully this saves somebody else some time.</p>
+
+            </div>
+            <footer class="post-meta">
+              <span>10:30pm. April  3, 2022.</span>
+              
+            </footer>
+          </article>
+          
+        
+
+        
+      </section>
+    </div>
+
+    <footer>
+  <p>
+    <strong>colophon:</strong>
+    est. 2009, reset 2019. published in London.</p>
+</footer>
+  </body>
+</html>
