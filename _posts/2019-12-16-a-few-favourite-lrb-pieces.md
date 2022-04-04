@@ -2,7 +2,7 @@
 layout: post
 title: "A few favourite LRB pieces"
 date: 2019-12-16 20:20:29 +0000
-tags: lrb books politics
+tags: books politics
 ---
 
 The London Review of Books has been a good companion to me, its prose crisp and clean and sometimes lyrical, its horizons broad. And while it's often a little _too_ political, too much on its sleeve – which hinders the analytical power of some of the more polemical pieces – I was a happy subscriber for years and recommend it to anybody.
