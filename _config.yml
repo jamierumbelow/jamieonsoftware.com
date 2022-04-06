@@ -12,6 +12,8 @@ github_username: jamierumbelow
 paginate: 10
 paginate_path: "/page:num/"
 
+timezone: Europe/London
+
 plugins:
   - jekyll-feed
   - jekyll-archives

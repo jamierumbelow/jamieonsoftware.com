@@ -87,6 +87,69 @@
 
         
           <article class="post text">
+            <h2 class="post-title"><a href="https://jamieonsoftware.com/2022/04/06/solidity-fridays-transmissions11.html">Notes on Solidity Fridays Episode with Transmissions11</a></h2>
+            <div class="post-content">
+              <p>December’s <a href="https://www.youtube.com/watch?v=58eKnYR_EyM">Solidity Fridays with transmissions11</a> is really excellent, and I think a very high-leverage way to learn how good Solidity actually gets written. When the guest is especially good, as with transmissions, I put Solidity Fridays in the same sort of category as <a href="https://www.destroyallsoftware.com">Destroy All Software</a> – teaching by communicating models and patterns of thought, rather than regurgitating tutorial content.</p>
+
+<p>Anyway, here are my notes in case somebody else finds them useful:</p>
+
+<ul>
+  <li>
+    <p>When emitting events, t11s emits instances of the contract rather than the address directly; the compiler will swap it out for an address anyway, but this approach gives you greater type safety</p>
+  </li>
+  <li>
+    <p>Call <code class="language-plaintext highlighter-rouge">CREATE2</code> to revert if the contract has already been deployed, by adding a salt of the underlying address to the deployment</p>
+  </li>
+  <li>
+    <p>Addresses are 20 bytes, salts have to be 32 bytes. So we call <code class="language-plaintext highlighter-rouge">fillLast12Bytes</code> to add the remaining bytes (provided in Solmate’s <code class="language-plaintext highlighter-rouge">bytes32</code> library)</p>
+  </li>
+  <li>
+    <p>The gas cost of <code class="language-plaintext highlighter-rouge">&gt;</code> is equivalent to <code class="language-plaintext highlighter-rouge">!=</code> when the comparator is <code class="language-plaintext highlighter-rouge">0</code>, more expensive otherwise.</p>
+  </li>
+  <li>
+    <p>Illustration of his opinionated approach to smart contract development: “the performance of the code for users who aren’t stupid matters” - that’s why the [[ERC20]] implementation in [[Solmate]] doesn’t stop you from transferring into the contract’s address. “I’m not raising the cost for everyone else”</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">fdiv</code> is like division, but accounting for the bases. ‘Scale this down by the contract’s base’. Multiply the numerator by <code class="language-plaintext highlighter-rouge">baseUnit</code> and then divide the <code class="language-plaintext highlighter-rouge">numerator * baseUnit</code> by the denominator. Also checks for overflow on <code class="language-plaintext highlighter-rouge">numerator * baseUnit</code>, since overflow isn’t protected in assembly calls.</p>
+  </li>
+  <li>
+    <p>In general, keep external calls all the way at the end of the function – including after any events are emitted – to make reentrancy more difficult.</p>
+  </li>
+  <li>
+    <p>More important with eg ERC777 since eg <code class="language-plaintext highlighter-rouge">safeTransferFrom</code> might allow arbitrary code execution (https://eips.ethereum.org/EIPS/eip-777)</p>
+  </li>
+  <li>
+    <p>Removing things from the end of an array is significantly cheaper than from the beginning, since in the latter case you have to move everything over.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">uint256 currentIndex = withdrawalQueue.length - 1; for (; ; currentIndex--)</code> is better in this case than initialising the <code class="language-plaintext highlighter-rouge">uint56 i = withdrawalQueue.length - 1</code> since we’re only doing effects (the tx will revert by underflow automatically), so we don’t need to check the length. Saves gas.</p>
+  </li>
+  <li>
+    <p>Add a <code class="language-plaintext highlighter-rouge">trusted</code> boolean to the strategies, which is then checked on deposit and withdrawal. Makes it easier for EOAs to manage vaults without having to be wrapped in some other contract. Also makes it possible to disable withdrawal from strategies easily if they’re malicious in some way.</p>
+  </li>
+  <li>
+    <p>Two reads to the same struct from <code class="language-plaintext highlighter-rouge">getStrategyData[strategy]</code> has no extra gas cost, since it gets optimised by the compiler into one single <code class="language-plaintext highlighter-rouge">SLOAD</code>. &amp; makes it clearer to read by a dev where it’s coming from.</p>
+  </li>
+  <li>
+    <p>Use <code class="language-plaintext highlighter-rouge">unchecked</code> when you know you won’t underflow or overflow, and so can therefore do without the safety. Saves gas.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">unchecked</code> isn’t leaky - it won’t uncheck in nested function calls</p>
+  </li>
+  <li>
+    <p>The implementation of Compound’s cToken is a little funky, since in a lot of places function calls return an error code rather than revert. So sometimes you need to <code class="language-plaintext highlighter-rouge">require(cToken.blah() == 0)</code> to ensure it succeeded.</p>
+  </li>
+</ul>
+
+            </div>
+            <footer class="post-meta">
+              <span> 6:38pm. April  6, 2022.</span>
+              
+            </footer>
+          </article>
+          <hr />
+        
+          <article class="post text">
             <h2 class="post-title"><a href="https://jamieonsoftware.com/2022/04/04/links-march-2022.html">Links, March 2022</a></h2>
             <div class="post-content">
               <p>A lot of spacey content this month, and a lot of crypto, as I left my old job at Pactio and moved into crypto full-time:</p>
