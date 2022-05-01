@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://jamieonsoftware.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jamieonsoftware.com/" rel="alternate" type="text/html" /><updated>2022-05-01T08:47:59+01:00</updated><id>https://jamieonsoftware.com/feed.xml</id><title type="html">Jamie on Software</title><subtitle></subtitle><entry><title type="html">Notes on Solidity Fridays Episode with Transmissions11</title><link href="https://jamieonsoftware.com/2022/04/06/solidity-fridays-transmissions11.html" rel="alternate" type="text/html" title="Notes on Solidity Fridays Episode with Transmissions11" /><published>2022-04-06T18:38:55+01:00</published><updated>2022-04-06T18:38:55+01:00</updated><id>https://jamieonsoftware.com/2022/04/06/solidity-fridays-transmissions11</id><content type="html" xml:base="https://jamieonsoftware.com/2022/04/06/solidity-fridays-transmissions11.html">&lt;p&gt;December’s &lt;a href=&quot;https://www.youtube.com/watch?v=58eKnYR_EyM&quot;&gt;Solidity Fridays with transmissions11&lt;/a&gt; is really excellent, and I think a very high-leverage way to learn how good Solidity actually gets written. When the guest is especially good, as with transmissions, I put Solidity Fridays in the same sort of category as &lt;a href=&quot;https://www.destroyallsoftware.com&quot;&gt;Destroy All Software&lt;/a&gt; – teaching by communicating models and patterns of thought, rather than regurgitating tutorial content.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://jamieonsoftware.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jamieonsoftware.com/" rel="alternate" type="text/html" /><updated>2022-05-01T09:22:24+01:00</updated><id>https://jamieonsoftware.com/feed.xml</id><title type="html">Jamie on Software</title><subtitle></subtitle><entry><title type="html">Links, April 2022</title><link href="https://jamieonsoftware.com/2022/05/01/links-april-2022.html" rel="alternate" type="text/html" title="Links, April 2022" /><published>2022-05-01T09:10:04+01:00</published><updated>2022-05-01T09:10:04+01:00</updated><id>https://jamieonsoftware.com/2022/05/01/links-april-2022</id><content type="html" xml:base="https://jamieonsoftware.com/2022/05/01/links-april-2022.html">&lt;p&gt;April has been busy and changeable – mirroring the weather, I suppose – I began a new role at &lt;a href=&quot;https://fei.money&quot;&gt;Fei Labs&lt;/a&gt; and am getting settled. I wrote three pieces on this blog: something technical on &lt;a href=&quot;https://jamieonsoftware.com/2022/04/02/hd-wallets-and-network-switching.html&quot;&gt;HD wallets and network switching&lt;/a&gt;, something equally technical &lt;a href=&quot;https://jamieonsoftware.com/2022/04/03/a-quick-note-on-web_accessible_resources-in-Safari-Web-Extensions.html&quot;&gt;about Safari iOS extensions&lt;/a&gt;, and the aforementioned &lt;a href=&quot;https://jamieonsoftware.com/2022/04/06/solidity-fridays-transmissions11.html&quot;&gt;notes on the t11s episode of Solidity Fridays&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Notwithstanding my own contributions, this was a good month for interesting reading. &lt;a href=&quot;https://www.amazon.co.uk/Star-Builders-Nuclear-Fusion-Planet/dp/1474611583&quot;&gt;The Star Builders&lt;/a&gt; is a very accessible and fast read on the why and how of nuclear fusion. It’s a contribution to the – I think underrated – genre of “here’s a plausible pathway to some major scientific discovery, and a set of good reasons to be optimistic we’re on that pathway” science writing. One for the techno-optimists’ bookshelves.&lt;/p&gt;
+
+&lt;p&gt;Emily St. John Mandel’s new novel, &lt;a href=&quot;https://www.amazon.co.uk/Sea-Tranquility-Emily-John-Mandel/dp/1529083494&quot;&gt;Sea of Tranquility&lt;/a&gt;, is out, and is splendid. I found some of the science fiction elements a little bit hamfisted, and this is definitely Mandel finding her voice and her groove. But it’s worth reading, especially if you’ve read Station Eleven (one of the best novels I’ve read in the last few years) and The Glass Hotel.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/Seven-Brief-Lessons-Physics-Rovelli/dp/0141981725/ref=tmm_pap_swatch_0?_encoding=UTF8&amp;amp;qid=1651344159&amp;amp;sr=1-1&quot;&gt;Seven Brief Lessons on Physics&lt;/a&gt; was enjoyable, too. Best supplemented by something more technical, I think.&lt;/p&gt;
+
+&lt;p&gt;Finally, I just finished &lt;a href=&quot;https://www.amazon.co.uk/London-Under-Peter-Ackroyd/dp/0099287374&quot;&gt;London Under&lt;/a&gt; by Peter Ackroyd. I &lt;em&gt;loved&lt;/em&gt; Ackroyd’s &lt;a href=&quot;https://www.amazon.co.uk/Life-Thomas-More-Peter-Ackroyd/dp/0749386401&quot;&gt;biography of Sir Thomas More&lt;/a&gt;, but hadn’t read any of his other books. He’s an excellent writer. There were a handful of places where I thought he made non-sequiturs – the sort of non-sequiturs quite common in a certain style of proto-academic culture writing – but I’m being really picky.&lt;/p&gt;
+
+&lt;p&gt;The excellent Noah Smith did &lt;a href=&quot;https://www.youtube.com/watch?v=oaMgZSd3gV4&quot;&gt;an interview&lt;/a&gt; with the excellent David Roberts on climate change, climate tech, climate activism, writing in public. Both combative and thoughtful throughout.&lt;/p&gt;
+
+&lt;p&gt;A &lt;a href=&quot;https://www.wired.com/story/tracers-in-the-dark-welcome-to-video-crypto-anonymity-myth/&quot;&gt;challenging post on child abuse videos&lt;/a&gt; and a global coordinated effort to bust a specific site and its clients. A long and difficult read but very worthwhile.&lt;/p&gt;
+
+&lt;p&gt;Something to keep an eye on – an economics lab &lt;a href=&quot;https://start.edgeryders.eu/page/15452&quot;&gt;imaginging systems through science-fiction&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In case you’ve woken in a sweat, panicked that you’re not subscribed to enough substacks (subsstack?), &lt;a href=&quot;https://news.ycombinator.com/item?id=30983517&quot;&gt;here’s a list&lt;/a&gt; of good, subject-specific newsletters.&lt;/p&gt;
+
+&lt;p&gt;Very very good and comprehensive and thorough &lt;a href=&quot;https://cdrprimer.org/read&quot;&gt;guide to direct carbon renewal&lt;/a&gt;. We need to do more here; Stripe and others have &lt;a href=&quot;https://frontierclimate.com&quot;&gt;launched an advanced market commitment to help&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Stripe &lt;a href=&quot;https://stripe.com/blog/expanding-global-payouts-with-crypto&quot;&gt;have also launched crypto payments&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The beginning of the conversation, not the end of it, but &lt;a href=&quot;https://austinvernon.site/blog/starshipsuperweapon.html&quot;&gt;some reflections on SpaceX’s technologies and warfare&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Really enjoyed &lt;a href=&quot;https://www.worksinprogress.co/issue/londons-lost-ringways/&quot;&gt;this article on the urban history and development of London’s planned and, blisfully, abandoned Ringways&lt;/a&gt;, the persistence of political structures and the perversity of political incentives, and the pitfalls of top-down urban planning. Works in Progress is putting out a lot of excellent stuff.&lt;/p&gt;
+
+&lt;p&gt;On top of my normal reading, I listened to three audiobooks this month, all spacey or science-related content. Another for the techno-optimist bookshelf, &lt;a href=&quot;https://www.amazon.co.uk/Case-Space-Revolution-Spaceflight-Possibility/dp/B08CVTT36C&quot;&gt;The Case for Space by Zubrin&lt;/a&gt; was good fun, opinionated, rigorous and rather inspiring.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/Forces-of-Nature/dp/B01NA0F2DD&quot;&gt;Forces of Nature&lt;/a&gt;, from the same authorship of The Planets (mentioned last month), was also splendid. The narrator is truly excellent.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/080322639X&quot;&gt;Into That Silent Sea: Trailblazers of the Space Era, 1961-1965 by French and Burgess&lt;/a&gt; is part of &lt;a href=&quot;https://www.amazon.co.uk/dp/B088T4M553&quot;&gt;a broader series&lt;/a&gt; of histories on various topics in spaceflight. The whole series is pretty good, with only a few exceptions, and this isn’t one of them. Meticulous and narrative-driven, I learnt a lot about Gagarin, Leonov, the Mercury Seven, and the politics that made it all happen. I’ll be continuing this series.&lt;/p&gt;
+
+&lt;p&gt;I also &lt;a href=&quot;https://calendly.com/jamierumbelow&quot;&gt;finally got a Calendly set up&lt;/a&gt;, so if you’d like to chat, feel free to book in a call.&lt;/p&gt;</content><author><name></name></author><category term="links" /><category term="science" /><category term="london" /><category term="books" /><category term="climate" /><summary type="html">April has been busy and changeable – mirroring the weather, I suppose – I began a new role at Fei Labs and am getting settled. I wrote three pieces on this blog: something technical on HD wallets and network switching, something equally technical about Safari iOS extensions, and the aforementioned notes on the t11s episode of Solidity Fridays.</summary></entry><entry><title type="html">Notes on Solidity Fridays Episode with Transmissions11</title><link href="https://jamieonsoftware.com/2022/04/06/solidity-fridays-transmissions11.html" rel="alternate" type="text/html" title="Notes on Solidity Fridays Episode with Transmissions11" /><published>2022-04-06T18:38:55+01:00</published><updated>2022-04-06T18:38:55+01:00</updated><id>https://jamieonsoftware.com/2022/04/06/solidity-fridays-transmissions11</id><content type="html" xml:base="https://jamieonsoftware.com/2022/04/06/solidity-fridays-transmissions11.html">&lt;p&gt;December’s &lt;a href=&quot;https://www.youtube.com/watch?v=58eKnYR_EyM&quot;&gt;Solidity Fridays with transmissions11&lt;/a&gt; is really excellent, and I think a very high-leverage way to learn how good Solidity actually gets written. When the guest is especially good, as with transmissions, I put Solidity Fridays in the same sort of category as &lt;a href=&quot;https://www.destroyallsoftware.com&quot;&gt;Destroy All Software&lt;/a&gt; – teaching by communicating models and patterns of thought, rather than regurgitating tutorial content.&lt;/p&gt;
 
 &lt;p&gt;Anyway, here are my notes in case somebody else finds them useful:&lt;/p&gt;
 
@@ -487,68 +519,4 @@ I’d like to see a modern book-length treatment of this subject, exploring the 
 
 &lt;p&gt;It runs deeper than just the code that actually gets written. Different language design decisions force us to &lt;em&gt;think&lt;/em&gt; about our code in different ways, and to structure our programmes along different fault lines. Type systems force us to think about our domain before we think about the processes we apply in that domain. Pure functional languages force us to think about the flow and transformation of data. Different languages, sometimes, though by no means always, designed for different tasks, start with different mental primitives which change both how we write code now, and how the norms of the broader language ecosystem evolve.&lt;/p&gt;
 
-&lt;p&gt;The great irony of programming: instructing computers can be a deeply human thing. It would be fun to see a thoughtful little book exploring these questions in more detail.&lt;/p&gt;</content><author><name></name></author><category term="books" /><category term="politics" /><category term="startups" /><summary type="html">For a while I’ve been collecting a list of interesting book-length projects. Since I’m never going to write the bloody things, I figured it’d be better to throw them into the light of day and see what daylight makes of them. Here is a preliminary, first stab at a list of books I wish existed: books that haven’t been written yet, but could be.</summary></entry><entry><title type="html">Why I’m long on Visa</title><link href="https://jamieonsoftware.com/2020/02/08/why-im-long-on-visa.html" rel="alternate" type="text/html" title="Why I’m long on Visa" /><published>2020-02-08T21:49:05+00:00</published><updated>2020-02-08T21:49:05+00:00</updated><id>https://jamieonsoftware.com/2020/02/08/why-im-long-on-visa</id><content type="html" xml:base="https://jamieonsoftware.com/2020/02/08/why-im-long-on-visa.html">&lt;p&gt;Last month, Visa announced their intention to buy &lt;a href=&quot;http://plaid.com/&quot;&gt;Plaid&lt;/a&gt; for $5.3 billion dollars.&lt;/p&gt;
-
-&lt;p&gt;Plaid provide an abstraction around bank accounts. They offer a developer-friendly API to query one or more of a user’s accounts. This allows startups and consumer products to offer financial analysis and services in a bank-agnostic way.&lt;/p&gt;
-
-&lt;p&gt;On the back of this purchase, and alongside my general growing interest in fintech, I’ve been becoming more and more bullish about Visa.&lt;/p&gt;
-
-&lt;p&gt;But why did Visa pay &lt;em&gt;so much&lt;/em&gt; for Plaid?&lt;/p&gt;
-
-&lt;p&gt;$5.3b is a &lt;em&gt;lot&lt;/em&gt; of money. It’s &lt;a href=&quot;https://www.forbes.com/sites/jeffkauflin/2020/01/13/why-visa-is-buying-fintech-startup-plaid-for-53-billion&quot;&gt;somewhere between a 25x and 50x multiple of Plaid’s revenue&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The Plaid team are impressive, but at $5.3b, it’s got to be something strategic. As &lt;a href=&quot;https://twitter.com/ricburton&quot;&gt;my friend Rich&lt;/a&gt; put it, when you’re counting in billions, it’s not an acquihire.&lt;/p&gt;
-
-&lt;p&gt;So if it’s not revenue, and it’s not (just) the team, what’s the strategic value in Visa’s owning Plaid?&lt;/p&gt;
-
-&lt;p&gt;I can think of three big reasons:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1. It solidifies Visa’s core business.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Visa is a three-sided network. It provides the infrastructure to move money between consumers, merchants, and banks.&lt;/p&gt;
-
-&lt;p&gt;When Visa works well, everyone benefits:&lt;/p&gt;
-
-&lt;p&gt;Consumers get instant access to credit, and can buy products from anywhere the card is supported.&lt;/p&gt;
-
-&lt;p&gt;Merchants can accept payments from anyone, and no longer need to run back-office operations responsible for credit and payments, nor handle cash.&lt;/p&gt;
-
-&lt;p&gt;Banks can offer credit to consumers more easily, at higher interest rates, and collect fees from merchants to provide the aforementioned credit management services – and, in doing so, reduce merchants’ exposure to credit risk.&lt;/p&gt;
-
-&lt;p&gt;For arranging this service, Visa charge merchants and banks a percentage of each transaction. The &lt;a href=&quot;https://finance.yahoo.com/quote/V?p=V&quot;&gt;underlying economics of the business&lt;/a&gt; are excellent: they have over a 50% profit margin, steady revenues, a long pedigree, and revenue still grows 10% year-on-year.&lt;/p&gt;
-
-&lt;p&gt;Plaid can contribute to this core business, since an increase in fintech innovation is likely to increase transactions simpliciter:&lt;/p&gt;
-
-&lt;p&gt;Banks can offer more, and better tailored, financial products to consumers. Visa can better integrate identity and security services with payments, reducing rates of fraud. More broadly, and more importantly, fintech &lt;a href=&quot;https://policyexchange.org.uk/publication/fintech-for-all/&quot;&gt;can, and will, bring finance to the under- and unbanked&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Thus, Visa can leverage Plaid to shore up the existing network, make being a Visa customer more attractive, and create whole new demographics of customers in developing markets.&lt;/p&gt;
-
-&lt;p&gt;All of this means more transactions, and more transactions means more transaction fees.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. Plaid is a good business in its own right.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;A 25x to 30x multiple on revenue is large, but Plaid are still a relatively young company.&lt;/p&gt;
-
-&lt;p&gt;Plaid offers Visa the opportunity to take fees from the “other side” of the consumer’s relationship with the bank: in GraphQL terms, the &lt;em&gt;queries&lt;/em&gt; against the bank account rather than the &lt;em&gt;mutations&lt;/em&gt; on it. This is somewhere Visa currently aren’t able to capture value.&lt;/p&gt;
-
-&lt;p&gt;Plaid’s target customers are software engineers, but the institutions at the bottleneck to Plaid’s growth are banks. Now Plaid has the weight – and half-century of personal relationships – of Visa behind it, the product itself can grow substantially more.&lt;/p&gt;
-
-&lt;p&gt;Plaid are also, so far, focussed heavily on the U.S. Fintech opportunities are global, so now Plaid can lean on Visa’s global reach to expand internationally.&lt;/p&gt;
-
-&lt;p&gt;All this said, Plaid could represent a significant income stream for Visa in its own right.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3. Plaid is part of a broader Cambrian explosion in fintech.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Finally, this purchase reflects a wider trend.&lt;/p&gt;
-
-&lt;p&gt;As Stripe, Twilio, Algolia, and now Plaid have shown, making developers happy is big business.&lt;/p&gt;
-
-&lt;p&gt;But making developers happy and productive also has serious downstream effects. It reduces the amount of time and money it takes to create new products. It encourages the development of new tools which themselves make developers happy and productive, effecting a &lt;a href=&quot;https://www.techrepublic.com/article/the-open-source-decade-fueled-by-cloud-and-github/&quot;&gt;Cambrian explosion&lt;/a&gt; of new products and tools.&lt;/p&gt;
-
-&lt;p&gt;Just like the set of norms and tools developed around open source, and &lt;a href=&quot;https://medium.com/dappradar-com/collateralization-and-composability-what-i-learned-at-defi-summit-london-2019-446005eee000&quot;&gt;composability&lt;/a&gt; in smart-contract technologies, making it easy, cheap, and secure for developers to access financial data will only accelerate the potential of technology –– and, crucially, along dimensions we can’t easily predict.&lt;/p&gt;
-
-&lt;p&gt;In short: it increases the amount of innovation possible in the world.&lt;/p&gt;
-
-&lt;p&gt;If I am at all correct about this, then Visa have shorn up their excellent business model, giving themselves access to an attractive new revenue stream, and now control a resource which has already, and will continue to be, central to sustaining and growing the fintech space, and, eventually, the global economy.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Thanks&lt;/strong&gt; to Jessica Cooper, Richard Burton, Peter King, JS Denain, and Jonny Corrie for their notes and comments.&lt;/p&gt;</content><author><name></name></author><category term="fintech" /><category term="startups" /><summary type="html">Last month, Visa announced their intention to buy Plaid for $5.3 billion dollars.</summary></entry></feed>
+&lt;p&gt;The great irony of programming: instructing computers can be a deeply human thing. It would be fun to see a thoughtful little book exploring these questions in more detail.&lt;/p&gt;</content><author><name></name></author><category term="books" /><category term="politics" /><category term="startups" /><summary type="html">For a while I’ve been collecting a list of interesting book-length projects. Since I’m never going to write the bloody things, I figured it’d be better to throw them into the light of day and see what daylight makes of them. Here is a preliminary, first stab at a list of books I wish existed: books that haven’t been written yet, but could be.</summary></entry></feed>
