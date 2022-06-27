@@ -73,6 +73,145 @@
 
         
           <article class="post text">
+            <h2 class="post-title"><a href="https://jamieonsoftware.com/2022/06/27/wallets-as-identity.html">Wallets As Identity</a></h2>
+            <div class="post-content">
+              <p><em>This is a very rough first draft of a chapter from my upcoming book on Product Engineering in Ethereum. Any and all feedback welcome!</em></p>
+
+<p>Technologists use metaphors to make <strong>skeuomorphic links</strong>, bridging old paradigms to new. The ‘desktop’ and ‘trash can’ and even the keyboard is a form of skeuomorphic link, giving users of a new platform enough conceptual and aesthetic resources to make sense of it, to feel familiar, connected to it. Computers and interfaces are physical, and rely on all the same instinctual responses, the same clusters of predispositions and responses attached to entities in the physical world. So new technologies can co-opt these instincts by creating these skeuomorphic links.</p>
+
+<p>Perhaps the most common example of skueomorphich linkage in crypto is the metaphor of the ‘wallet’. This post argues that it is one of the most misleading.</p>
+
+<p>A quick diversion on the structure of metaphors: metaphors behave by implying certain things about the subject based on the object. Good metaphors are good when the subject does indeed resemble the object in those ways. Good metaphors also have the nice property of illuminating the subject of the metaphor in ways that the reader doesn’t expect. A good metaphor can help reveal the shapes and contours of the subject by making us consider the subject from a new angle. ‘All the world’s a stage’, Jacques soliliquises in <strong>As You Like It</strong>, and the entrances and exits and performance that this equivalence conjures up help illuminate the human condition, revealing it to be a form of entrapment, confinement to a pre-determined script.</p>
+
+<p>What, then, does the metaphor of ‘wallet’ imply? It suggests a few features:</p>
+
+<ol>
+  <li>
+    <p>A wallet holds things</p>
+  </li>
+  <li>
+    <p>A wallet holds a specific sort of thing, namely financial things (such as credit cards and cash)</p>
+  </li>
+  <li>
+    <p>A wallet is a physical item, and plays the various roles that physical items do, such as signalling style, wealth, and status</p>
+  </li>
+</ol>
+
+<p>Crypto wallets – what we’ll call ‘accounts’ from now on to avoid confusion – have none of these features. Accounts don’t hold things: accounts represent identity. Accounts aren’t limited to interacting with financial products: they interact with anything representable on the blockchain. Accounts, of course, aren’t physical items: they are an abstraction over an individual on a ledger.</p>
+
+<p>It’s worth stopping at this point and asking why any of this matters. Isn’t it just a shallow, semantic dispute? No. Because as well as being illuminating about the subject, a metaphor can often <strong>constrain</strong> our understanding of the subject, especially if it becomes the primary mechanism through which the subject is known.</p>
+
+<p>This has happened with the wallet metaphor in crypto, which is why I believe it’s especially important to pay attention to what wallets actually are, how the metaphor shapes our thinking, and how it limits our thinking too. All the world is a stage, maybe, but if it is we still have plenty of freedom to improvise.</p>
+
+<h3 id="accounts-dont-hold-things">Accounts don’t hold things</h3>
+
+<p>An account is a pair of public and private keys. A private key is used to generate a public key, and the public key is used to generate an address. So when you see account addresses such as <code class="language-plaintext highlighter-rouge">0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045</code> (one of Vitalik’s accounts), what you’re really seeing is the result of passing Vitalik’s private key through the set of cryptographic functions that produce these addresses.</p>
+
+<p>The details of how this works are interesting, but out of the scope of this post. All we need to know for now is that this process is <strong>deterministic</strong>, in the sense that it returns the same value for the same input, no matter how often you run it, and <strong>irreversible</strong>, in the sense that it’s very very hard to get the private key from the wallet address.<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup></p>
+
+<p>So if you know the private key then you can generate the public key, but you can’t (easily) go in the other direction. This is one of the reasons why it’s so important to keep your private key private: your private key is the one piece of information somebody needs to get access to your account. Fortunately, most users don’t have to worry about the content of the private key at all: they can use wallet software that holds the private key in a secure way. For product engineers, you’ll always need to keep in mind that the private key is sacred.</p>
+
+<p>How does this link to the wallet metaphor?</p>
+
+<p>Well, I lied a little: accounts do ‘hold’ something. They hold ether, the native token of the Ethereum blockchain. But this is by communal assent: a group of people, incentivised to follow the same set of rules, collectively agree that a certain amount of ether is owned by a specific account, and another amount of ether is owned by a different account. It’s the collective assent that underwrites the ownership claim, not the account itself.</p>
+
+<p>If you’ve got cash in your wallet, you actually do have cash in your wallet. A portion of the ‘state’ of the money-system is in your pocket. If you’ve got ether in your account, you’ve got a claim on the group for the amount of that ether. It’s a guarantee, secured by cryptography and incentives, that when you decide you want to do something with that ether we’ll all agree that you can.</p>
+
+<p>So I’m also telling the truth: accounts don’t really hold that much at all, and the notion of ‘holding’ your ether and your tokens is a euphemism. Your account is the mechanism of a record of ownership. The state is not in your pocket, it’s ‘over there’.</p>
+
+<p>This might seem a little opaque, so let’s consider some code. One of the clearest examples of how accounts don’t actually hold anything is the ERC-20 token standard.</p>
+
+<p>This standard is the core primitive in DeFi, the basic lego brick upon which we build this cathedral. It offers a consistent interface for smart contracts that behave as a record of ledger. Contracts have to choose to implement it – that’s why it’s a standard, not a rule – but those that do share the same methods.</p>
+
+<p>We can distil the essence of ERC-20 down to only two function signatures:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function balanceOf(address _owner) public view returns (uint256 balance);
+function transferFrom(address _from, address _to, uint256 _value) public returns (bool success);
+</code></pre></div></div>
+
+<p>(The actual standard contains more than these two methods, but the rest are for convenience, expedience, and extensions to the functionality, rather than being central to the model of how tokens are represented by contracts that implement it.)</p>
+
+<p>These two functions tell us everything we need to know about a piece of state. What is that piece of state? It’s a mapping from address to the number of tokens owned by that address:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mapping(address =&gt; uint256) public balanceOf;
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">balanceOf</code> is a map – otherwise known as a dictionary, or an associative array – from an owner to the total amount owned. The total amount owned of what? The token that the contract represents.</p>
+
+<p>If we want to find out how much of the token we own, we call <code class="language-plaintext highlighter-rouge">balanceOf</code>, passing our address. If we want to send our tokens to somebody else, we call <code class="language-plaintext highlighter-rouge">transferFrom</code>, passing our address, the recipient’s address, and the amount we wish to send. The token contract does the work in updating the list it holds.</p>
+
+<p>Think about this carefully: <strong>a token is just a list of who owns the token</strong>, plus a bit of metadata (such as the token’s name and symbol).</p>
+
+<p>Your account doesn’t ‘hold’ anything. It doesn’t know anything about the token, per se. It just gives you a way of identifying yourself as the owner of some amount of the token. And a token is just a piece of code that understands how to update this <code class="language-plaintext highlighter-rouge">balanceOf</code> map.</p>
+
+<p>This is a very simple and powerful idea, because the token contract is able to stipulate its own rules and policies around who can transfer, who can be transferred, and what the balance is.</p>
+
+<p>You could stipulate that only a specific whitelist of addresses should be able to receive the token, for instance, restricting ownership of the token to a known set of individuals. You could exclude certain addresses. You could require a certain amount of ether in exchange for the token, or even a certain amount of another token in exchange for the token. You could even <strong>change the amount transferred when somebody transfers it</strong>, deducting a fee. In other words, you can implement a monetary policy, controlling how the token enters the market, how it leaves it, and how it flows around between participants.</p>
+
+<h3 id="accounts-arent-limited">Accounts aren’t limited</h3>
+
+<p>Since the token contract is the mechanism for recording who owns what, and stipulating the rules that govern that ownership, your account isn’t limited to holding financial instruments like cash or credit cards. Tokens can be used to represent basically anything.</p>
+
+<p>Some tokens represent non-fungible assets, things that can’t be exchanged for another asset just like it. You will have heard of NFTs, and NFTs are token contracts much like the ERC-20 contract we just discussed. The biggest difference between ERC-20 and ERC-721 – the basic standard for representing NFTs – is that the parameters of the <code class="language-plaintext highlighter-rouge">transferFrom</code> function are slightly different:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function transferFrom(address from, address to, uint256 id) public virtual;
+</code></pre></div></div>
+
+<p>An ERC-721 contract introduces the notion of an <code class="language-plaintext highlighter-rouge">id</code>, and requires that the pair <code class="language-plaintext highlighter-rouge">(owner, id)</code> is globally unique. So a specific token – that described by the contract and the specific ID the contract defines – is owned by one and only one person.</p>
+
+<p>NFTs are often used for digital art or collectibles, but they can be used to represent ownership of lots more. In time, they may be used to represent ownership of real-world assets: houses, cars, paintings, bottles of wine.</p>
+
+<p>NFTs can also be used for interesting, crypto-native use cases: Uniswap v3, for instance, mints an NFT that represents a deposit to a specific pool within a specific price range. Each deposit has its own custom configuration, and so the pool mints an NFT that represents your specific deposit with your specific settings.</p>
+
+<p>Fungible tokens, too, can be used to represent many more types of things than just those that map to financial value. They can represent governance rights, as they do with the <code class="language-plaintext highlighter-rouge">TRIBE</code> token, which grants the right to vote on proposals of the Tribe DAO. (At the time of writing, most governance tokens grant voting rights on a quantity basis: if you have more tokens, your vote represents more of the. But this isn’t the only model for governance design made possible by the ERC-20 token standard). They can also represent other sorts of values, such as carbon credits, or reputation, or points accumulated in a game.</p>
+
+<p>The point is that the ‘wallet’ metaphor suggests a constraint on the sorts of things that can be ‘held’. Since accounts don’t ‘hold’ things, the design space for what sorts of ownership and participation claims they can represent is much, much bigger.</p>
+
+<h3 id="accounts-arent-physical-items">Accounts aren’t physical items</h3>
+
+<p>This might seem like a silly point to make, but the fact that accounts aren’t physical items runs a little deeper than the obvious. Accounts aren’t physical items: they are abstractions over an individual, a face you can show to the blockchain.</p>
+
+<p>And this means that your accounts aren’t tied to one place. If you know your private key, you can use your account in whatever interface you want.</p>
+
+<p>This means that <strong>different interfaces can display different aspects of the same account</strong>. Some interfaces – CHECK: such as what? – put an emphasis on NFT collectibles, a kind of gallery. Others might focus on the purely financial aspects of the account, its deposits and loans and investments. Perhaps an interface could be built around governance, showing the proposals and votes and engagements with protocols. Perhaps another could be built around whatever gaming tokens the account has claims to. And so on.</p>
+
+<p>When you start to consider these sorts of product implications of the fact that accounts aren’t physical items, it makes you realise that the design space for account interfaces is co-extensive – overlapping with – the design space for tokens themselves.</p>
+
+<p>It also pushes the sorts of signalling properties we mentioned earlier elsewhere. Perhaps people do signal with their <strong>wallet software</strong> – i.e. their account interfaces – a little, using a newer or more feature-complete piece of software to indicate the sort of user they are, the sorts of things they are interested in. But the account itself is a very lightweight thing.</p>
+
+<p>And because it’s lightweight, it can be transported, as we’ve discussed. It can also be ‘hosted’ on-chain, which opens up the possibility of smart contract wallets and multi-signature wallets.</p>
+
+<h3 id="accounts-are-identity">Accounts are identity</h3>
+
+<p>So what is an account, then, if not a wallet?</p>
+
+<p>My answer: an account is an <strong>identity</strong>. It is a way of informing other participants that you are who you say you are. It is a username and password. It is a mechanism to authenticate yourself.</p>
+
+<p>If accounts are identity, then it means you can separate out your identities depending on different contexts of usage. You might use an account to trade, another account to represent your investments, a third to hold your claims to any artwork or collectibles. You might use accounts for different platforms with different risk profiles, or with different privacy considerations. You can separate out your identities in whatever way you choose, isolating your public, on-chain behaviour into different categories. The ownership of a private key gives you full control over what aspect of yourself you wish to show to the world.</p>
+
+<p>Products built on Ethereum need to understand this multiplicity of identities, and implement support for it in a deep way. We’ll see how this works more concretely in other posts. But for now, consider that <strong>your identity goes with you wherever you take it</strong>. And where your identity goes, so do your claims of ownership.</p>
+
+<p>This, combined with the standardisation of interfaces such as ERC-20 and ERC-721, increases the power of the interfaces we can build substantially. To take a simple example: a tool for listing whatever ERC-20-compatible tokens are ‘held’ by an account will work with <strong>any token that meets the requirements of that interface</strong>. It’s as if PayPal could support all currencies from day one, with no extra development work.</p>
+
+<p>The wallet metaphor is generally broken, then, and can severely constrain your imagination vis-a-vis what accounts are capable of. For sure, there are ways in which an account can seem like a wallet: when you lose your account, just like your wallet, you lose the money in it; to that extent, the metaphor is true. But it’s true for different reasons. If you lose a physical wallet you’ve actually lost the cash inside it. If you lose a crypto wallet, you’ve lost your ability to prove you are the person who owns the cash.</p>
+
+<p>We are likely to continue using the term ‘wallet’, since that’s what the community uses, and there’s not much marginal benefit in changing this sort of heavily-entrenched meme. I use ‘wallet’ and ‘account’ interchangeably. But I hope this chapter has given you a sense of how accounts actually work, and why the design space for them is an awful lot bigger than a piece of folded leather that you keep in your pocket.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>How hard? There’s no better way than guessing at random. Ethereum private keys are 256 bits. Since a bit has two possible states, guessing a 256 bit sequence correctly at random has a chance of 1/2^256. There are ~10^78 atoms in the observable universe, which is roughly 2^260. Account addresses are only 160 bits long, which means that there are multiple possible private keys, but 2^160 is still a very big number, equivalent to a little bit less than the total number of atoms on Earth. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+            </div>
+            <footer class="post-meta">
+              <p>10:14am. June 27, 2022.</p>
+            </footer>
+          </article>
+        
+          <article class="post text">
             <h2 class="post-title"><a href="https://jamieonsoftware.com/2022/06/02/links-may-2022.html">Links, May 2022</a></h2>
             <div class="post-content">
               <p>May was a fine month with lots of social engagements, less writing than I wanted, but quite a lot of reading. I ran the Edinburgh Marathon, my first marathon ever, in four hours and 33 minutes. I wrote a piece on <a href="https://jamieonsoftware.com/2022/05/24/decentralisation-is-a-tradeoff-space.html">Decentralisation as a trade-off space</a>.</p>
@@ -604,69 +743,6 @@ bit sequence correctly at random has a chance of <code class="language-plaintext
             </div>
             <footer class="post-meta">
               <p> 9:23pm. March  9, 2022.</p>
-            </footer>
-          </article>
-        
-          <article class="post text">
-            <h2 class="post-title"><a href="https://jamieonsoftware.com/2022/01/03/recommendations.html">How to think about recommendations</a></h2>
-            <div class="post-content">
-              <p>I make a lot of recommendations for <a href="https://jamierumbelow.net/restaurants">restaurants</a>. I also receive a fair few.</p>
-
-<p>Unless the facts change from out under my feet – one day I’ll tell you a story about The Marksman – I think my recommendations are generally pretty good. But I would, wouldn’t I? Unless I don’t like you, I’m not going to recommend things I don’t think are good recommendations.</p>
-
-<p>It’s very important to be careful when recommending. If you eat out often, say ~3 times / week, you can expect to have ~9,300 meals over a 60-year adulthood of eating. That isn’t many meals! I read roughly a book per week. That’s ~3,120 books in the same adulthood. That isn’t many books! So each meal and each book has to count. &amp; many people eat out many fewer times per month and read much less. Centrally: you should respect the time and money that people will spend based on your recommendations.</p>
-
-<p>It’s also easier to recommend things in the indirect-objectless sense, as I do in the restaurant list above. But recommendations are often recommendations <em>to</em> somebody, in some context, for some purpose.</p>
-
-<p>In these cases, how should we tell which recommendations to listen to, and which to ignore? How reliable is the average recommendation? How can you reliably make good recommendations to others?</p>
-
-<p>Off the top of my head, there are obvious heuristics we can use:</p>
-
-<ul>
-  <li><strong>Prior experience of the recommender’s recommendations</strong>. Have you been to restaurants with this person before? Did you like the last movie she recommended?</li>
-  <li><strong>The recommender’s knowledge of the subject matter</strong>. Is he an expert? Are they at least an enthusiastic amateur? Are you confident they know a lot about this?</li>
-  <li><strong>The recommender’s knowledge of the recommendee’s tastes</strong>. Does this person know you? Do you have confidence in her model of your preferences? Does he buy you good novels at Christmas?</li>
-  <li><strong>Consensus amongst more than one recommender</strong>. Have you heard from multiple people that this restaurant is good? Have each of them been consistent in their reasons for recommending it, or have the different reasons been intriguing and appealing?</li>
-</ul>
-
-<p>These each seem non-controversially true: if these conditions are met, it seems more likely that you’ll get a good recommendation. But it’s not at all obvious to me that you’ll <em>reliably</em> (i.e. &gt;50% of the time) get a good recommendation.</p>
-
-<p>For one thing, the facts can change from out under the feet of the recommender. In a large city like London, you’re not likely to revisit the same restaurant more than a few times a month (unless it’s provenly reliable and local). Staff turns over, the great old chef moves to her new place, your friend goes on a busy night, has horrible service, and it’s game over.</p>
-
-<p>For another, it’s only semi-plausible that good taste clusters. So if the recommender’s taste in novels is good, that doesn’t on the face of it seem to suggest his taste in restaurants will necessarily be good; or art, or music, or whatever else. Some people seem blessed with good taste across the board, but that’s far from true universally.</p>
-
-<p>For a third – and this is my central point here – contexts which involve taste exhibit huge interpersonal variation <em>no matter how persuasive the a priori justification happens to be</em>.</p>
-
-<p>So what are some things we can do to ensure we receive better recommendations, and can filter out the bad ones that slip through?</p>
-
-<ul>
-  <li><strong>Surround yourself by people with good taste.</strong> This seems like an easy one, but something I think not enough people act on meaningfully. It’s worth selecting good taste into your friendship group, not just because the quality of the recommendations you’ll receive will increase, but because you’ll develop a better appreciation for <em>what sorts of people are the sorts of people who make good recommendations</em>, which of course generalises.</li>
-  <li><strong>Cultivate better taste yourself; learn more</strong>. Another easy one too easily forgotten. Do you reflect on your aesthetic experiences, note what you enjoyed and what you didn’t? Do you move outside of your comfort zone frequently, and take the hits (so your recommendees don’t have to?) Do you make an active and regular effort to learn more?<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup></li>
-  <li><strong>Select for order-of-magnitude differences.</strong> You should aim to find recommenders who have at least an order-of-magnitude more experience than you, and try to tailor your recommendations to people with at least an order-of-magnitude less. There’s enough noise so that the marginal next % of exposure seems much less important. I wouldn’t, for instance, trust the judgement of somebody who had been to strictly <em>one</em> more opera than me. (This perhaps isn’t the case if I’ve <em>never</em>  been to an opera.) Another reason why a little learning is a dangerous thing.</li>
-  <li><strong>Go wide then deep then wide again.</strong> A good way to think about taste is effective pattern-matching. For this you first need a broad range of knowledge to anchor novel experiences, and then enough depth of understanding to discriminate between the great and merely good. But it’s important to back out of the rabbit hole and dig yourself another one. Eat fifteen different cuisines, then pick a few and learn the regional variances within them, then eat fifteen more.<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup></li>
-  <li><strong>Consider the incentives.</strong> Tyler Cowen’s <a href="https://www.theatlantic.com/magazine/archive/2012/05/six-rules-for-dining-out/308929/">famous piece</a> on restaurant recommendations makes this point well. If a restaurant is full of good-looking people, it will attract more people, holding fixed the quality of the food, which reduces the incentive for the restaurant to care about the food as much. (The restaurant, in effect, stops competing on quality of food and thus stops caring about it.) These sorts of incentives are everywhere, and it’s both fun and useful to be a little cynical and consider how they might affect your experience, and the recommendations you receive and make on the basis of it.</li>
-</ul>
-
-<p>Two final points to consider. Firstly, perhaps try to elicit and make <em>anti-recommendations</em> rather than positive recommendations. It can often be more helpful to know <em>where to avoid</em> rather than where to go. This seems a little counterintuitive, since we’re optimising for the positive case – i.e. the case in which we in fact do go to the restaurant – but it’s useful because it provides useful information and still ‘frees up’ the higher end of the recommendation spectrum to float more independently. Similar concerns apply to groups of positive recommendations (“eat in Shoreditch”, “read novels from feminist authors in the 1920s”). You can then use your good taste to narrow it down further.</p>
-
-<p>Finally, and most importantly, try to keep an open mind, and give others as many opportunities to be open-minded as possible. (If that means hiding certain things from your recommendees, so be it.) This can be very high-leverage, because the best sort of recommendation (at least in an information-theoretic sense) is the recommendation somebody is unlikely to receive from anybody else. For instance, many people miss out on amazing food because they dislike the <em>idea</em> of offal, while at the same time are fine with a chicken liver pâté. It’s not that they won’t like offal, it’s that they’re unlikely to follow a recommendation that mentions it, and therefore people are unlikely to make these recommendations in the first place. Sometimes it takes a bit of energy to get past the inertial resistance.</p>
-
-<p>My mother hates the idea of lardo, but couldn’t stop eating the lardo-fried rice at Smoking Goat. I may have forgotten to tell her what it was.</p>
-
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:1" role="doc-endnote">
-      <p>There are some interesting questions about the dynamics of taste. Tastes appear to ossify as you get older, which is a shame since your knowledge accumulates (generally) monotonically. I need to think about this more. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:2" role="doc-endnote">
-      <p>This approach also helps counter <a href="https://www.epsilontheory.com/gell-mann-amnesia/">Gell-Mann amnesia</a>, because you interlace the development of expertise with novelty and force yourself to consider whether and in which ways the experiences cross-cut. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
-
-            </div>
-            <footer class="post-meta">
-              <p> 9:31am. January  3, 2022.</p>
             </footer>
           </article>
         
