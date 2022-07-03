@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <title>Home &centerdot; Jamie on Software</title>
+  </head>
+  <body>
+    <header class="callout">
+      <h1>
+        <a href="https://jamieonsoftware.com/">
+          Jamie on Software
+        </a>
+      </h1>
+      <p></p>
+    </header>
+
+    <div class="content homepage-content wrap">
+      <section class="posts">
+        <article class="post text">
+          <p>This is the blog of <a href="http://jamierumbelow.net">Jamie Rumbelow</a>: a software engineer, writer and philosophy graduate who lives in London.</p>
+          <p>
+  <strong>tags:</strong>
+    
+  <a href="/aesthetics">aesthetics</a>
+    
+  <a href="/books">books</a>
+    
+  <a href="/climate">climate</a>
+    
+  <a href="/decentralisation">decentralisation</a>
+    
+  <a href="/economics">economics</a>
+    
+  <a href="/ethereum">ethereum</a>
+    
+  <a href="/fintech">fintech</a>
+    
+  <a href="/food">food</a>
+    
+  <a href="/housing">housing</a>
+    
+  <a href="/javascript">javascript</a>
+    
+  <a href="/links">links</a>
+    
+  <a href="/london">london</a>
+    
+  <a href="/music">music</a>
+    
+  <a href="/personal">personal</a>
+    
+  <a href="/philosophy">philosophy</a>
+    
+  <a href="/politics">politics</a>
+    
+  <a href="/productivity">productivity</a>
+    
+  <a href="/science">science</a>
+    
+  <a href="/space">space</a>
+    
+  <a href="/startups">startups</a>
+    
+  <a href="/urbanism">urbanism</a>
+   
+</p>
+
+          <p>
+  <strong>months:</strong>
+       
+  <a href="/months/2022/07">
+    July 2022
+  </a>
+        
+  <a href="/months/2022/06">
+    June 2022
+  </a>
+            
+  <a href="/months/2022/05">
+    May 2022
+  </a>
+            
+  <strong>April 2022</strong>
+                    
+  <a href="/months/2022/03">
+    March 2022
+  </a>
+            
+  <a href="/months/2022/01">
+    January 2022
+  </a>
+            
+  <a href="/months/2021/05">
+    May 2021
+  </a>
+        
+  <a href="/months/2020/02">
+    February 2020
+  </a>
+            
+  <a href="/months/2020/01">
+    January 2020
+  </a>
+        
+  <a href="/months/2019/12">
+    December 2019
+  </a>
+        
+</p>
+
+          <hr />
+        </article>
+
+        
+          <article class="post text">
+            <h2 class="post-title"><a href="https://jamieonsoftware.com/2022/04/06/solidity-fridays-transmissions11.html">Notes on Solidity Fridays Episode with Transmissions11</a></h2>
+            <div class="post-content">
+              <p>December’s <a href="https://www.youtube.com/watch?v=58eKnYR_EyM">Solidity Fridays with transmissions11</a> is really excellent, and I think a very high-leverage way to learn how good Solidity actually gets written. When the guest is especially good, as with transmissions, I put Solidity Fridays in the same sort of category as <a href="https://www.destroyallsoftware.com">Destroy All Software</a> – teaching by communicating models and patterns of thought, rather than regurgitating tutorial content.</p>
+
+<p>Anyway, here are my notes in case somebody else finds them useful:</p>
+
+<ul>
+  <li>
+    <p>When emitting events, t11s emits instances of the contract rather than the address directly; the compiler will swap it out for an address anyway, but this approach gives you greater type safety</p>
+  </li>
+  <li>
+    <p>Call <code class="language-plaintext highlighter-rouge">CREATE2</code> to revert if the contract has already been deployed, by adding a salt of the underlying address to the deployment</p>
+  </li>
+  <li>
+    <p>Addresses are 20 bytes, salts have to be 32 bytes. So we call <code class="language-plaintext highlighter-rouge">fillLast12Bytes</code> to add the remaining bytes (provided in Solmate’s <code class="language-plaintext highlighter-rouge">bytes32</code> library)</p>
+  </li>
+  <li>
+    <p>The gas cost of <code class="language-plaintext highlighter-rouge">&gt;</code> is equivalent to <code class="language-plaintext highlighter-rouge">!=</code> when the comparator is <code class="language-plaintext highlighter-rouge">0</code>, more expensive otherwise.</p>
+  </li>
+  <li>
+    <p>Illustration of his opinionated approach to smart contract development: “the performance of the code for users who aren’t stupid matters” - that’s why the [[ERC20]] implementation in [[Solmate]] doesn’t stop you from transferring into the contract’s address. “I’m not raising the cost for everyone else”</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">fdiv</code> is like division, but accounting for the bases. ‘Scale this down by the contract’s base’. Multiply the numerator by <code class="language-plaintext highlighter-rouge">baseUnit</code> and then divide the <code class="language-plaintext highlighter-rouge">numerator * baseUnit</code> by the denominator. Also checks for overflow on <code class="language-plaintext highlighter-rouge">numerator * baseUnit</code>, since overflow isn’t protected in assembly calls.</p>
+  </li>
+  <li>
+    <p>In general, keep external calls all the way at the end of the function – including after any events are emitted – to make reentrancy more difficult.</p>
+  </li>
+  <li>
+    <p>More important with eg ERC777 since eg <code class="language-plaintext highlighter-rouge">safeTransferFrom</code> might allow arbitrary code execution (https://eips.ethereum.org/EIPS/eip-777)</p>
+  </li>
+  <li>
+    <p>Removing things from the end of an array is significantly cheaper than from the beginning, since in the latter case you have to move everything over.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">uint256 currentIndex = withdrawalQueue.length - 1; for (; ; currentIndex--)</code> is better in this case than initialising the <code class="language-plaintext highlighter-rouge">uint56 i = withdrawalQueue.length - 1</code> since we’re only doing effects (the tx will revert by underflow automatically), so we don’t need to check the length. Saves gas.</p>
+  </li>
+  <li>
+    <p>Add a <code class="language-plaintext highlighter-rouge">trusted</code> boolean to the strategies, which is then checked on deposit and withdrawal. Makes it easier for EOAs to manage vaults without having to be wrapped in some other contract. Also makes it possible to disable withdrawal from strategies easily if they’re malicious in some way.</p>
+  </li>
+  <li>
+    <p>Two reads to the same struct from <code class="language-plaintext highlighter-rouge">getStrategyData[strategy]</code> has no extra gas cost, since it gets optimised by the compiler into one single <code class="language-plaintext highlighter-rouge">SLOAD</code>. &amp; makes it clearer to read by a dev where it’s coming from.</p>
+  </li>
+  <li>
+    <p>Use <code class="language-plaintext highlighter-rouge">unchecked</code> when you know you won’t underflow or overflow, and so can therefore do without the safety. Saves gas.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">unchecked</code> isn’t leaky - it won’t uncheck in nested function calls</p>
+  </li>
+  <li>
+    <p>The implementation of Compound’s cToken is a little funky, since in a lot of places function calls return an error code rather than revert. So sometimes you need to <code class="language-plaintext highlighter-rouge">require(cToken.blah() == 0)</code> to ensure it succeeded.</p>
+  </li>
+</ul>
+
+            </div>
+            <footer class="post-meta">
+              <span> 6:38pm. April  6, 2022.</span>
+              
+            </footer>
+          </article>
+          <hr />
+        
+          <article class="post text">
+            <h2 class="post-title"><a href="https://jamieonsoftware.com/2022/04/04/links-march-2022.html">Links, March 2022</a></h2>
+            <div class="post-content">
+              <p>A lot of spacey content this month, and a lot of crypto, as I left my old job at Pactio and moved into crypto full-time:</p>
+
+<p>Finally got round to reading <a href="https://www.amazon.co.uk/Value-must-read-politics-economics-Governor/dp/0008421099">Values by Mark Carney.</a> Seesaws from economic theory to memoir in a not-uninteresting way. Carney writes well, but sets things up in such a manner as to make his premises seem more interesting than this conclusions. A very safe book. I imagine he’s going to run for public office in Canada some time soon.</p>
+
+<p>Also enjoyed <a href="https://www.amazon.com/Power-Law-Venture-Capital-Making/dp/052555999X">The Power Law by Sebastian Mallaby</a>. Clean writing, thoroughly researched.</p>
+
+<p>Curricula for self-teaching <a href="https://www.susanrigetti.com/math">maths</a> and <a href="https://www.susanrigetti.com/physics">physics</a> from Susan Rigetti.</p>
+
+<p>I wrote a <a href="https://jamieonsoftware.com/2022/03/09/enthusiastic-amateurs.html">couple</a> of <a href="https://jamieonsoftware.com/2022/03/10/enthusiastic-amateurs-some-tips.html">posts</a> on being an enthusiastic amateur.</p>
+
+<p>The <a href="https://cosmosmagazine.com/space/james-webb-telescope-first-images/">first test image from the James Webb Telescope</a>, of the star <a href="https://en.wikipedia.org/wiki/James_Webb_Space_Telescope#Commissioning_and_testing">HD 84406</a> is pretty spectacular (and even more so the more you learn about it.) You can clearly see the spiralling of the galaxies in the background, each one comprising on average 100 billion stars, and many of them billions of lightyears away. The scale of space is very hard to comprehend.</p>
+
+<p>Nadia Eghbal <a href="https://nayafia.substack.com/p/out-of-the-valley">is writing again</a>, which is always a joyous event, this first new essay a gesture toward a broader project on philanthropy and the tech industry. Her prose is both incisive and imagistic, twisting and deforming ideas in the best way possible, finding their veins, snapping them like kindling.</p>
+
+<p>An essay on <a href="https://handsandcities.com/2022/01/30/on-infinite-ethics/">infinite ethics</a>, an approach to ethics that takes the existence of infinites seriously, and how infinity fits into the logical structure of existing mainstream ethical theories.</p>
+
+<p><a href="https://www.motionmountain.net/9lines.html">All of physics in nine lines</a>. I’m surprised the basic theoretical scheme of physics is so parsimonious. (Although it might not <strong>actually</strong> be that parsimonious and this is expository slight-of-hand. What, for instance, explains why there are 27 constants?)</p>
+
+<p>A fun collection of <a href="https://github.com/d-xo/weird-erc20">weird ERC-20 contracts</a>, mostly exploits or incompatibilities with conventions.</p>
+
+<p>I enjoyed watching <a href="https://www.youtube.com/watch?v=58eKnYR_EyM">this episode of Solidity Fridays</a> with <a href="http://twitter.com/transmissions11">transmissions11</a>. He articulates trade-offs very well. I took voluminous notes that I’ll type up soon.</p>
+
+<p>On top of my normal reading, I listened to three audiobooks this month. The first, <a href="https://www.amazon.co.uk/Spacefarers-Humans-Will-Settle-Beyond/dp/067498448X">Spacefarers by Christopher Wanjek</a>, is freely available to Audible subscribers, and a smart and deeply technical look about the next thousand years of spaceflight.</p>
+
+<p>The second, <a href="https://www.audible.co.uk/pd/Planets-Audiobook/0008294313">The Planets by Andrew Cohen and Brian Cox</a>, is a book about the history and physics of the Solar System, a companion to the 2019 BBC television series (which is <a href="https://www.bbc.co.uk/iplayer/episode/p06qj2l5/the-planets-series-1-1-a-moment-in-the-sun-the-terrestrial-planets">itself really excellent</a>.) Samuel West’s narration is extremely good, and Cohen is a talented science writer.</p>
+
+<p>The third, also <a href="https://www.audible.com/pd/The-Search-for-Exoplanets-What-Astronomers-Know-Audiobook/B0159LVSNC">available for free on Audible</a>, was a collection of Scientific American articles about Exoplanets. The article format is helpful, and the narrator’s voice is just monotonal enough to fall asleep to.</p>
+
+<p>Emily St. John Mandel wrote <a href="https://www.goodreads.com/notes/59815561-station-eleven/30386465-emily-mandel">a series of notes on GoodReads</a>, discussing various passages from her excellent novel Station Eleven.</p>
+
+<p>Vitalik on <a href="https://vitalik.ca/general/2022/03/29/road.html">the roads not taken</a>.</p>
+
+<p><a href="https://timdaub.github.io/2022/03/27/the-user-experience-problems-of-quadratic-voting/">The user experience problems of quadratic voting.</a> It’s easy to evaluate an approach to some problem in terms of its technical feasibility, or how attractive it is with respect to various theoretical constraints. A lot of the time, its success hinges simply on whether people can understand it.</p>
+
+<p>A very, very good blog post on <a href="https://policyskeptic.blogspot.com/2022/03/the-biggest-problem-holding-back-nhs.html">NHS performance</a>. We need more LessWrong-style analyses of British government policy.</p>
+
+            </div>
+            <footer class="post-meta">
+              <span> 5:46pm. April  4, 2022.</span>
+              
+            </footer>
+          </article>
+          <hr />
+        
+          <article class="post text">
+            <h2 class="post-title"><a href="https://jamieonsoftware.com/2022/04/03/a-quick-note-on-web_accessible_resources-in-Safari-Web-Extensions.html">A quick note on web_accessible_resources in Safari Web Extensions</a></h2>
+            <div class="post-content">
+              <p>The Safari Web Extension mechanism is an important step forward for iOS apps – and a significant part of my current project, on which more soon – but the documentation is a little fragmented and the tooling isn’t nearly solid enough just yet. Developing these new extensions is challenging.</p>
+
+<p>A small contribution to changing that:</p>
+
+<p>By default, extension files that aren’t explicitly whitelisted in the <code class="language-plaintext highlighter-rouge">manifest.json</code> file are inaccessible from the browser. One common use case of the <code class="language-plaintext highlighter-rouge">content.js</code> script is to inject scripts into the same execution environment of the active web page. However, no such injection is possible unless the loaded file is whitelisted.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">manifest.json</code> spec <a href="https://developer.chrome.com/docs/extensions/mv3/manifest/web_accessible_resources/">defines</a> a <code class="language-plaintext highlighter-rouge">web_accessible_resources</code> parameter, which allows extensions to whitelist resources for access from the browser.</p>
+
+<p>Thus, the following whitelist:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"web_accessible_resources": ["images/foo.png"]
+</code></pre></div></div>
+
+<p>Allows you to generate the resource’s URL with the following code:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>browser.runtime.getURL("images/foo.png")
+</code></pre></div></div>
+
+<p>Which gives you the following sort of URL:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>safari-web-extension://2AB33852-D69B-4ED6-99AD-A4839DFEC7ED/images/foo.png
+</code></pre></div></div>
+
+<p>The ID directly after the protocol in that URL is generated on a per-browser-instance basis, so you can’t guess it ahead of time. You have to call <code class="language-plaintext highlighter-rouge">getURL</code> to generate it.</p>
+
+<p>There are two important things that <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">the API documentation</a> doesn’t specify, which took me some time to figure out:</p>
+
+<ul>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">browser.runtime.getURL</code> is only defined inside the extension’s execution contexts.</strong> So the content.js and background.js files are fine, but the webpage itself is not. If you want to use it in the webpage context, you’ll need to generate the URL in the extension somewhere and communicate it via the <code class="language-plaintext highlighter-rouge">window.postMessage</code> event trigger.</p>
+  </li>
+  <li>
+    <p><strong>Any values used in the <code class="language-plaintext highlighter-rouge">web_accessible_resources</code> parameter must be nested under a subdirectory.</strong> If you try to call a top-level file (such as <code class="language-plaintext highlighter-rouge">getURL("foo.png")</code>), the URL will generate fine, but the file itself won’t be loadable. The browser will simply report it as inaccessible.</p>
+  </li>
+</ul>
+
+<p>Hopefully this saves somebody else some time.</p>
+
+            </div>
+            <footer class="post-meta">
+              <span>10:30pm. April  3, 2022.</span>
+              
+            </footer>
+          </article>
+          <hr />
+        
+          <article class="post text">
+            <h2 class="post-title"><a href="https://jamieonsoftware.com/2022/04/02/hd-wallets-and-network-switching.html">HD wallets and network switching</a></h2>
+            <div class="post-content">
+              <p>Blockchain ‘wallets’ are generally just pairs of <a href="https://en.wikipedia.org/wiki/Public-key_cryptography">public and private keys</a> with some UI wrapped around them.<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> We take the private key, and use it to derive the public key, which we then use to derive the wallet’s address.</p>
+
+<p>What’s important is that the process of derivation is very difficult to reverse, in the same way that a hashing function is difficult to reverse: the chance of you guessing the private key correctly at random is about the same as selecting one atom from all the atoms in the universe – and there’s no better way than guessing at random.<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> We can therefore use the wallet address publicly, being able to prove mathematically that we own it, without ever leaking information about the private key we used to generate it.</p>
+
+<p>This works great, until you need more than one wallet. You might be concerned about privacy, or you might want to keep certain types of transactions separated for tax or other organisational reasons. If you have more than one wallet, you need to manage more than one set of private keys, back each key up separately, store each key separately, restore each key separately, etc. This presents a user experience problem: it is inconvenient, and clunky, and pushes a lot of the infosec responsibility onto the user. That might be acceptable for a bunch of nerds or anarcho-libertarians, but isn’t going to cut it for the median user.</p>
+
+<p>The agreed-upon solution to these UX problems is Hierarchical Deterministic (HD) wallets, proposed in the Bitcoin BIP-32/44 standards and used by most other chains. This post considers this standard, how we’re not meeting it, and why it matters.</p>
+
+<p>The plan, in three sections:</p>
+
+<ul>
+  <li>A short overview of what HD wallets are. Feel free to skip over this if you’re familiar with the spec already.</li>
+  <li>A discussion of how common wallets are not meeting this standard</li>
+  <li>A discussion of why that matters, and what we could do about it.</li>
+</ul>
+
+<h4 id="hd-wallets">HD Wallets</h4>
+
+<p>Hierarchical Deterministic (HD) wallets take the basic derivation mechanism and encode <em>structure</em> into it. We take a master password – a single thing for the user to remember, to back up, etc. – and combine it with a <em>path</em>, a string following an a priori agreed-upon schema that allows us to generate multiple private keys from the same master password.</p>
+
+<p>But it needn’t actually have much structure at all. You could simply take a master password and append <code class="language-plaintext highlighter-rouge">1</code>, <code class="language-plaintext highlighter-rouge">2</code>, <code class="language-plaintext highlighter-rouge">3</code>, and so on, to generate different wallet addresses. This strategy would generate perfectly usable wallets with no obvious link between them. And since the generation process follows the same general sort of process as it does for the single-key case, the generation process produces hashed values that are similarly difficult to reverse.</p>
+
+<p>We therefore only really need two pieces of information to calculate our wallet address:</p>
+
+<ul>
+  <li>Our master password</li>
+  <li>Some sort of <em>seed</em></li>
+</ul>
+
+<p>The master password is the user’s responsibility; it’s her input, her secret. What seed should we use?</p>
+
+<p>One option is to let the user specify whatever sort of seed she wishes. But this doesn’t really solve our problem: instead of multiple private keys, we instead have to deal with a single password plus multiple paths. We’ve just given ourselves more passwords to remember.</p>
+
+<p>Another is to do what I suggested above: append an incrementing integer to the end of it to generate different wallets. This is equivalent to giving ourselves more passwords, but at least there’s some rationale to it: our first wallet has a 1 at the end, our second wallet a 2, etc. It gives us some psychological safety: it means that our wallet is recoverable (assuming we can remember which number we used to generate it, or assuming we don’t mind iterating through a few guesses). This approach is fine, as far as it goes, but this is crypto, so, given the opportunity, we should make it more complicated.</p>
+
+<p>A third approach is to develop a <em>common standard</em> for generating our seeds with more variables than just an incrementing number. This way, we can describe a tree structure independent of its values, embedding multiple values with which we might want to generate differing wallets. The benefit to this approach is that we can encode information about the purpose of the wallet into the seed itself, and then recover it later using our knowledge of those purposes without having to remember many arbitrary numbers. The standard gives us the template, and the purposes give us the values of the variables; all we have to do is fill them in. The other benefit to using a common standard is that wallet software can implement the standards too, so you don’t need to generate the wallets off-site somewhere.</p>
+
+<p>This standard is called <a href="https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki">BIP-44</a> (it was originally a Bitcoin standard), and it presents this exactly this sort of predictable tree structure that we’ve been discussing. The goal here is minimises user input and maximise the number of wallets that can be generated with a single master password.</p>
+
+<p>The standard calls the seed a <em>derivation path</em>, since it’s a path in a tree that we append to a master password and use the resulting string to derive a public address. The standard gives derivation paths the following structure:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>m/purpose'/coin'/account'/change/index
+</code></pre></div></div>
+
+<p>And here’s the trick: most of these values are knowable by the wallet software, based on what sort of wallet you’re using:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">purpose</code> is always <code class="language-plaintext highlighter-rouge">44'</code>.<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup> They gave it a value to allow them to upgrade the standard if they wanted to.</li>
+  <li><code class="language-plaintext highlighter-rouge">coin</code> varies depending on the crypto network. For instance, <code class="language-plaintext highlighter-rouge">coin = 60'</code> is Ethereum mainnet, and <code class="language-plaintext highlighter-rouge">coin = 966'</code> is Polygon.</li>
+  <li><code class="language-plaintext highlighter-rouge">account</code> gives the wallet a degree of freedom to support multiple user accounts (c.f. to the <code class="language-plaintext highlighter-rouge">/Users/username</code> directory on your OS)</li>
+  <li><code class="language-plaintext highlighter-rouge">change</code> will generally be <code class="language-plaintext highlighter-rouge">0</code>; it refers to whether the wallet should be used externally, or whether it should be use internal to the wallet for Bitcoin-based transaction change reasons. I’ve read somewhere that Ethereans sometimes use it, though for what I’m not sure.</li>
+</ul>
+
+<p>The only non-guessable input value is <code class="language-plaintext highlighter-rouge">index</code>, which gives the user a degree of freedom to generate multiple wallets for under the same tree. This parameter is why the user can generate many wallets for a single password: she can keep incrementing <code class="language-plaintext highlighter-rouge">index</code> to generate more! It’s also exactly the same as my much simpler idea discussed previously.</p>
+
+<p>These parameters then get put into the structure, like so:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>m/44'/60'/0'/0/2
+</code></pre></div></div>
+
+<p>The structure then gets combined with the master password (or, more precisely, with a key generated from the master password), and users (or wallets) can vary <code class="language-plaintext highlighter-rouge">coin</code>, <code class="language-plaintext highlighter-rouge">account</code> and <code class="language-plaintext highlighter-rouge">index</code> to generate various wallet addresses.</p>
+
+<h4 id="existing-uis-and-a-subtle-incompatibility">Existing UIs and a Subtle Incompatibility</h4>
+
+<p>This isn’t a huge, bombshell-dropped discovery, I’ll admit it, but I’ve noticed that most wallets with support for both HD wallets and network switching don’t actually implement the BIP-44 correctly, or, at least, there is a tension between the model used for network switching and the model used for wallet generation.</p>
+
+<p>Generally, what happens is:</p>
+
+<ul>
+  <li>Users add a master password (or its equivalent in the form of a mnemonic phrase) from which the wallet derives a single keypair</li>
+  <li>As far as I can make out, the ‘default wallet’ generated through this mechanism still uses the HD standard, it just relies implicitly upon the <code class="language-plaintext highlighter-rouge">m/44'/60'/0'/0/0</code> derivation path (i.e. “give me external index 0 at account 0 for the Ethereum chain”).</li>
+  <li>When the user switches between compatible chains – from Mainnet to Arbitrum, for instance – the wallet software uses the same wallet address and private key to sign new transactions. It just switches the RPC endpoint it uses to make the request.</li>
+</ul>
+
+<p>If wallets were to follow the standard correctly, they would be varying the <code class="language-plaintext highlighter-rouge">coin</code> value when switching networks, generating different wallet addresses for use depending on the network being used. In other words, according to BIP-44 at least, there’s no such thing as a ‘cross-network address’ – and existing wallets ignore this subtle fact entirely.</p>
+
+<p>I’ve been looking at how various different wallets handle this, and they all seem to do the same thing:</p>
+
+<ul>
+  <li>Metamask’s network switcher is <a href="https://metaschool.so/articles/how-to-change-add-new-network-metamask-wallet/">entirely independent</a> from the wallet list, allowing the user to switch networks on the current wallet, even if that wallet was generated through a derivation path</li>
+  <li>MyEtherWallet do the same thing, <a href="https://github.com/MyEtherWallet/MyEtherWallet/blob/8703b504e8b1166877ac7b2cc2a75e08614bd8a4/src/core/store/wallet/actions.js#L34">switching the network URL</a> used for chain interactions and not (as far as I can see) adjusting the corresponding wallets.</li>
+  <li>Similarly, there is nothing in <a href="https://docs.walletconnect.com/client-api#approve-session-request-connect">the WalletConnect spec</a> preventing this behaviour, meaning that any HD-compatible wallet software using the protocol facilitates wallet-independent network switching</li>
+</ul>
+
+<p>The problem is not so much that nobody’s trying to follow the spec. The problem is that the spec is ambiguous with respect to the UI in which it’s being implemented. The community therefore has implicitly converged on this non-standard behaviour because of the ostensible UI benefits. This has created an implicit standard incompatible with the original BIP-32/44 proposals.</p>
+
+<p>It gets even more confusing when you notice that there is a third, Ethereum-specific standard, <a href="https://eips.ethereum.org/EIPS/eip-601">EIP-601</a>, designed to modify the BIP-44 standard for Ethereum use cases. From a brief google, I can’t see any mentions of 601 that aren’t merely links to the spec itself. But this ambiguity – what should happen to the valid wallet list when the user switches networks? – isn’t resolved by EIP-601 either.</p>
+
+<p>This ambiguity is born because the BIP-32/44 standards were built around the assumption that the different networks a user might switch between were mutually incompatible. It didn’t foresee the rise of EVM-compatible layer 2s, and a range of dapps built to run on several of them concurrently, and therefore the capacity for the user to switch between them easily, in-app.</p>
+
+<h4 id="why-this-matters-and-what-to-do">Why this matters, and what to do</h4>
+
+<p>Of course, this doesn’t seem like a critical problem – there are bigger problems we could be tackling, for sure. Indeed, there’s even something comforting about going from Polygon to Ethereum Mainnet and taking your address with you. It’s certainly convenient. But this isn’t what the BIP-32/44 specs say, and I think there actually are good reasons to obey them more precisely:</p>
+
+<ol>
+  <li>
+    <p><strong>It makes it possible to upgrade the spec in the future.</strong> The standard can evolve safely, and those implementing it correctly are able to evolve without having to hack in workarounds for backward compatibility, and keep track of previous fringe behaviours.</p>
+  </li>
+  <li>
+    <p><strong>It makes interoperability with other wallets easier.</strong> Wallet onboarding and offboarding isn’t a light matter; the more activation energy required to move to one wallet from another, or from no wallet at all, the more intimidating crypto as a whole will become to the marginal user. Problems at the tail-end often get publicised more than problems at the mean.</p>
+  </li>
+  <li>
+    <p><strong>Not doing so undermines one of the main reasons to use HD wallets in the first place:</strong> HD wallets allow you to keep public references to different addresses separated, increasing privacy. A wallet address that comes with you cross-network just makes your transactions that much easier to track.</p>
+  </li>
+</ol>
+
+<p>Fortunately, I don’t believe that the UI concessions made by existing wallet implementations need to be locked in. There are some steps that wallets could take today, such as triggering a confirmation model when changing networks, that would enable users to opt-out of the spec. Many users don’t knowingly use HD wallets at all; in these cases, the default behaviour could just clear the wallet list and regenerate using the standard specs on network change.</p>
+
+<p>Or, alternatively, we could develop a new, more parsimonious standard to capture the semantics of cross-chain wallets, compatible with the current UI approach. One simple method would be to amend the current spec such that <code class="language-plaintext highlighter-rouge">network = 0</code> means ‘no specific network’, allowing cross-chain wallets to be represented in the existing spec. If a network changes while a user is connected with a wallet known to be generated with <code class="language-plaintext highlighter-rouge">network = 0</code>, the wallet persists.</p>
+
+<p>Either way, this is the exactly the sort of subtle incompatibility that could prove to be an increasing nuisance, compounded by the ongoing growth in usage of layer 2s. Our standards for network switching were designed at a time when the only networks we would switch between were testnets. Today, the UI implications of network switching are a lot more important. And, today, that is incompatible with one of the most useful standards we have for managing multiple wallets.</p>
+
+<p>Multiple wallets, multiple networks, good UX. We don’t need to pick only two.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>The name wallet is therefore a misnomer, since the wallet itself doesn’t store anything; it’s much closer to a username and password for online banking, than the vault itself. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+
+      <p>Ethereum private keys are 256 bits. Since a bit has two possible states, guessing a 256
+bit sequence correctly at random has a chance of <code class="language-plaintext highlighter-rouge">1/2^256</code>. There are ~10^78 atoms in the observable universe, which is ~2^260. If you know the Ethereum address of the wallet you’re trying to get into it’s slightly easier, since wallet addresses are only 160 bits long, but it’s still <a href="https://www.youtube.com/watch?v=S9JGmA5_unY">a very big number</a>. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>The apostrophe in the path tells the key generation algorithm to use the ‘hardened’ form of the derivation, which puts extra constraints on the derivation such that derived public keys can’t be proven to be derived from a given parent public key using only public information. The <a href="https://wiki.trezor.io/Hardened_and_non-hardened_derivation">details here</a> are a little tricky, and outside the scope of this post. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+            </div>
+            <footer class="post-meta">
+              <span>12:35pm. April  2, 2022.</span>
+              
+            </footer>
+          </article>
+          
+        
+
+        
+      </section>
+    </div>
+
+    <footer>
+  <p>
+    <strong>colophon:</strong>
+    est. 2009, reset 2019. published in London.</p>
+</footer>
+  </body>
+</html>

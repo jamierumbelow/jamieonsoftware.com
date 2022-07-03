@@ -20,7 +20,12 @@ plugins:
   - jekyll-paginate
 
 jekyll-archives:
-  enabled: [tags]
-  layout: tag
+  enabled:
+    - tags
+    - month
+  layouts:
+    tag: tag
+    month: month
   permalinks:
     tag: "/:name/"
+    month: "/months/:year/:month.html"
