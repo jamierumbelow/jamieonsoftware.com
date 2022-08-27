@@ -1,10 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://jamieonsoftware.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jamieonsoftware.com/" rel="alternate" type="text/html" /><updated>2022-08-03T12:17:24+01:00</updated><id>https://jamieonsoftware.com/feed.xml</id><title type="html">Jamie on Software</title><subtitle></subtitle><entry><title type="html">Links, July 2022</title><link href="https://jamieonsoftware.com/2022/08/03/links-july-2022.html" rel="alternate" type="text/html" title="Links, July 2022" /><published>2022-08-03T11:35:28+01:00</published><updated>2022-08-03T11:35:28+01:00</updated><id>https://jamieonsoftware.com/2022/08/03/links-july-2022</id><content type="html" xml:base="https://jamieonsoftware.com/2022/08/03/links-july-2022.html">&lt;p&gt;ETHCC Paris, The Idler Festival, dinners at the Liberal Club, work on the book, actual work, and learning to fly; it’s been a busy month in which I deadlifted 100kg for the first time, only read a couple of books, submitted the first few chapters of &lt;strong&gt;Products, Protocols, and Platforms&lt;/strong&gt;, and have found myself exhausted. I am more energised when I am productive, and more productive when I am energised, so ascertaining how to bootstrap myself into either productivity or energy is I think a high-leverage activity with which I’ll be experimenting for the rest of the year.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://jamieonsoftware.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jamieonsoftware.com/" rel="alternate" type="text/html" /><updated>2022-08-27T15:02:52+01:00</updated><id>https://jamieonsoftware.com/feed.xml</id><title type="html">Jamie on Software</title><subtitle></subtitle><entry><title type="html">State-Adjacent Institutions</title><link href="https://jamieonsoftware.com/2022/08/27/state-adjacent-institutions.html" rel="alternate" type="text/html" title="State-Adjacent Institutions" /><published>2022-08-27T14:59:28+01:00</published><updated>2022-08-27T14:59:28+01:00</updated><id>https://jamieonsoftware.com/2022/08/27/state-adjacent-institutions</id><content type="html" xml:base="https://jamieonsoftware.com/2022/08/27/state-adjacent-institutions.html">&lt;p&gt;From Dominic Cummings’s recent &lt;a href=&quot;https://dominiccummings.substack.com/p/snippets-5-no10-farce-ukr-tory-strategy&quot;&gt;‘Snippets 5’&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;NSN searched for people who wanted to start new schools that we intended to allow under new legislation then worked with them on their application.&lt;/p&gt;
+
+  &lt;p&gt;It developed specific ideas for how the system should work. Unlike normal think tanks, it worked at the extreme detail end of the spectrum, like drafting actual forms that the DfE could use.&lt;/p&gt;
+
+  &lt;p&gt;We thought that if we helped people develop specific projects and could actually bend the bureaucracy, we could get ‘Free Schools’ going.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This is interesting, because it suggests a model for &lt;em&gt;state-adjacent&lt;/em&gt; institutions that support the functions of the state without being tied to the bureaucracy or subject to the incentives. Something somewhere in the midpoint between a management consultancy, a think tank, and a training institute.&lt;/p&gt;
+
+&lt;p&gt;It seems like this sort of model is beneficial in specific circumstances:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Where there is considerable state funding for a certain industry / project / goal&lt;/strong&gt;, where ‘considerable’ is relative to the industry / project / goal. (You need more money to make a new nuclear power plant design than you do a school.)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Where access to that funding is reasonably competitive.&lt;/strong&gt; This means it needs to be accessible to SMEs or small teams, rather than just Serco, G4S, the major universities, and the other big boys.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Where the government department distributing the funding is receptive to introductions, advice, support&lt;/strong&gt;. A lot of the benefits seem to come from new ideas being introduced revisited through a feedback loop, so the department must be flexible enough to integrate the state-adjacent institution into its decision making – or, at least, leave its door open to such input. Generally, I suspect, departments are only really flexible in this sort of way during their first few years and for a year or two after a major shake-up (eg DoE under Gove).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A few ideas where this could be useful:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;An ‘ARIA Attractor’: finding individuals / teams with audacious projects, helping them refine their proposals, and using the knowledge gained from the search to help shape the department’s broader research focus.&lt;/li&gt;
+  &lt;li&gt;An analogous attractor for the UKRI / NIH / other ‘normal science’ funding bodies, with an emphasis on speeding up the funding application process.&lt;/li&gt;
+  &lt;li&gt;Standards setting and guidance for navigating the planning system, but beyond a simple planning consultancy. A team of people who work hard to befriend and effectively lobby local planning teams, giving developers large and small the opportunity to boot up to the activation energy required to get anything built. It would be useful to focus on local authorities with a recent change in governance, or with an especially acute housing problem, where the demand to do something is greater.&lt;/li&gt;
+  &lt;li&gt;A company to abstract away the medical licensing and compliance process and help guide new teams / University spin-offs to apply for medical licenses. Medical software, in particular, is notoriously hard to get adequate licensing for. A team dedicated to building solutions and increasing governmental awareness of these issues, working with funding bodies and NHS clinical commissioning groups, could meaningfully move the needle on what innovation we permit in the medical space (&lt;a href=&quot;https://www.scarletcomply.com&quot;&gt;Scarlet&lt;/a&gt; are doing interesting things adjacent to this idea.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Creating and supporting these sorts of state-adjacent institutions could be an important &lt;a href=&quot;https://forum.effectivealtruism.org/posts/pfbLKnJmDKYSPPCEW/four-focus-areas-of-effective-altruism&quot;&gt;focus area&lt;/a&gt; for a movement like Effective Altruism.&lt;/p&gt;
+
+&lt;p&gt;But it could also be a powerful new framing for start-ups themselves: many of these ideas could grow into profitable businesses as well as institutions with positive-sum state/business interactions.&lt;/p&gt;
+
+&lt;p&gt;Asking the question “how can the private or non-profit sector smooth over the relationship between the state and others?” is a subtly different question – and one with (in many cases perhaps) more leverage than the simpler question “how can the state do things more effectively?”&lt;/p&gt;
+
+&lt;p&gt;Why? Because it refocuses the conversation on what can be done &lt;em&gt;practically&lt;/em&gt;, today, without needing large-scale systemic reform, without needing to push through the &lt;a href=&quot;https://dominiccummings.com/tag/procurement/&quot;&gt;ossified systems of government purchasing&lt;/a&gt; and permits that sit in deeply suboptimal equilibria.&lt;/p&gt;</content><author><name></name></author><category term="politics" /><category term="housing" /><category term="startups" /><summary type="html">From Dominic Cummings’s recent ‘Snippets 5’:</summary></entry><entry><title type="html">Links, July 2022</title><link href="https://jamieonsoftware.com/2022/08/03/links-july-2022.html" rel="alternate" type="text/html" title="Links, July 2022" /><published>2022-08-03T11:35:28+01:00</published><updated>2022-08-03T11:35:28+01:00</updated><id>https://jamieonsoftware.com/2022/08/03/links-july-2022</id><content type="html" xml:base="https://jamieonsoftware.com/2022/08/03/links-july-2022.html">&lt;p&gt;ETHCC Paris, The Idler Festival, dinners at the Liberal Club, work on the book, actual work, and learning to fly; it’s been a busy month in which I deadlifted 100kg for the first time, only read a couple of books, submitted the first few chapters of &lt;strong&gt;Products, Protocols, and Platforms&lt;/strong&gt;, and have found myself exhausted. I am more energised when I am productive, and more productive when I am energised, so ascertaining how to bootstrap myself into either productivity or energy is I think a high-leverage activity with which I’ll be experimenting for the rest of the year.&lt;/p&gt;
 
 &lt;p&gt;Perhaps the most important thing I read this month was &lt;a href=&quot;https://www.amazon.co.uk/Eichmann-Jerusalem-Report-Banality-Evil/dp/024155229X/ref=tmm_pap_swatch_0?_encoding=UTF8&amp;amp;qid=&amp;amp;sr=&quot;&gt;Eichmann in Jerusalem&lt;/a&gt;. I didn’t quite realise how much of a journalist Arendt was, and look forward to reading more of her political theory in the future. It’s rare, nowadays, to go from in-the-trenches journalism to academic theorising. (Counterexamples: Gramsci, sort of? Maybe Robert Caro? Anne Applebaum, perhaps?)&lt;/p&gt;
 
 &lt;p&gt;Also supplemented Arendt with Richard Evans’s &lt;a href=&quot;https://www.amazon.co.uk/Third-Reich-Power-1933-Hearts/dp/0141009764&quot;&gt;Third Reich in Power&lt;/a&gt;, the second volume in the series. I read the first volume maybe a decade ago and enjoyed it. The second was more of a slog.&lt;/p&gt;
 
-&lt;p&gt;Just finished &lt;a href=&quot;https://www.amazon.co.uk/Hard-Drive-Making-Microsoft-Empire/dp/0887306292/ref=sr_1_1?crid=D7B2ZBP7Q351&amp;amp;keywords=hard+drive+bill+gates&amp;amp;qid=1659523562&amp;amp;s=books&amp;amp;sprefix=hard+drive+bi%2Cstripbooks%2C798&amp;amp;sr=1-1&quot;&gt;Hard Drive&lt;/a&gt;, a book about Bill Gates and the early days of Microsoft. Gates was a lot more competitive and ruthless than I knew, though I’m not surprised.&lt;/p&gt;
+&lt;p&gt;Just finished &lt;a href=&quot;https://www.amazon.co.uk/Hard-Drive-Making-Microsoft-Empire/dp/0887306292/ref=sr_1_1?crid=D7B2ZBP7Q351&amp;amp;keywords=hard+drive+bill+gates&amp;amp;qid=1659523562&amp;amp;s=books&amp;amp;sprefix=hard+drive+bi%2Cstripbooks%2C798&amp;amp;sr=1-1&quot;&gt;Hard Drive&lt;/a&gt;, a book about Bill Gates and the early days of Microsoft. Gates was a &lt;em&gt;lot&lt;/em&gt; more competitive and ruthless than I thought – and I thought he was pretty competitive and ruthless!&lt;/p&gt;
+
+&lt;p&gt;Also read &lt;a href=&quot;https://www.amazon.co.uk/All-Out-War-Britains-Political/dp/0008215154&quot;&gt;All Out War&lt;/a&gt; by Tim Shipman. Fantastic political journalism, no agenda, just the steady beat and the sporadic bursts of a battle unfolding.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://twitter.com/ryancbriggs/status/1544321988101128195?utm_source=substack&amp;amp;utm_medium=email&quot;&gt;Political science is horribly underpowered.&lt;/a&gt; I am in a cynical mood right now, so don’t expect these findings to change much.&lt;/p&gt;
 
@@ -17,6 +54,8 @@
 &lt;p&gt;Wonderful lecture &lt;a href=&quot;https://www.youtube.com/watch?v=n068fel-W9I&quot;&gt;on the F-22 Raptor and the engineering decisions behind it&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://justinehsmith.substack.com/p/two-years-on-substack&quot;&gt;Justin E. H. Smith reviews his two years on Substack.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Brie Wolfson wrote &lt;a href=&quot;https://every.to/p/what-i-miss-about-working-at-stripe&quot;&gt;on the work culture early-days Stripe&lt;/a&gt;. A reminder that hard work is a feature, not a bug – and the symptom of a thriving culture, not the cause of it.&lt;/p&gt;
 
 &lt;p&gt;Ordinary citizens have &lt;a href=&quot;https://infoproc.blogspot.com/2016/01/american-and-chinese-oligarchies.html&quot;&gt;essentially no influence over government in the United States&lt;/a&gt;. What the elites want, they generally get. It’s amazing that US society is generally so stable.&lt;/p&gt;
 
@@ -402,132 +441,4 @@ function transferFrom(address _from, address _to, uint256 _value) public returns
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Hopefully this saves somebody else some time.&lt;/p&gt;</content><author><name></name></author><category term="javascript" /><summary type="html">The Safari Web Extension mechanism is an important step forward for iOS apps – and a significant part of my current project, on which more soon – but the documentation is a little fragmented and the tooling isn’t nearly solid enough just yet. Developing these new extensions is challenging.</summary></entry><entry><title type="html">HD wallets and network switching</title><link href="https://jamieonsoftware.com/2022/04/02/hd-wallets-and-network-switching.html" rel="alternate" type="text/html" title="HD wallets and network switching" /><published>2022-04-02T12:35:33+01:00</published><updated>2022-04-02T12:35:33+01:00</updated><id>https://jamieonsoftware.com/2022/04/02/hd-wallets-and-network-switching</id><content type="html" xml:base="https://jamieonsoftware.com/2022/04/02/hd-wallets-and-network-switching.html">&lt;p&gt;Blockchain ‘wallets’ are generally just pairs of &lt;a href=&quot;https://en.wikipedia.org/wiki/Public-key_cryptography&quot;&gt;public and private keys&lt;/a&gt; with some UI wrapped around them.&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; We take the private key, and use it to derive the public key, which we then use to derive the wallet’s address.&lt;/p&gt;
-
-&lt;p&gt;What’s important is that the process of derivation is very difficult to reverse, in the same way that a hashing function is difficult to reverse: the chance of you guessing the private key correctly at random is about the same as selecting one atom from all the atoms in the universe – and there’s no better way than guessing at random.&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; We can therefore use the wallet address publicly, being able to prove mathematically that we own it, without ever leaking information about the private key we used to generate it.&lt;/p&gt;
-
-&lt;p&gt;This works great, until you need more than one wallet. You might be concerned about privacy, or you might want to keep certain types of transactions separated for tax or other organisational reasons. If you have more than one wallet, you need to manage more than one set of private keys, back each key up separately, store each key separately, restore each key separately, etc. This presents a user experience problem: it is inconvenient, and clunky, and pushes a lot of the infosec responsibility onto the user. That might be acceptable for a bunch of nerds or anarcho-libertarians, but isn’t going to cut it for the median user.&lt;/p&gt;
-
-&lt;p&gt;The agreed-upon solution to these UX problems is Hierarchical Deterministic (HD) wallets, proposed in the Bitcoin BIP-32/44 standards and used by most other chains. This post considers this standard, how we’re not meeting it, and why it matters.&lt;/p&gt;
-
-&lt;p&gt;The plan, in three sections:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A short overview of what HD wallets are. Feel free to skip over this if you’re familiar with the spec already.&lt;/li&gt;
-  &lt;li&gt;A discussion of how common wallets are not meeting this standard&lt;/li&gt;
-  &lt;li&gt;A discussion of why that matters, and what we could do about it.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;hd-wallets&quot;&gt;HD Wallets&lt;/h4&gt;
-
-&lt;p&gt;Hierarchical Deterministic (HD) wallets take the basic derivation mechanism and encode &lt;em&gt;structure&lt;/em&gt; into it. We take a master password – a single thing for the user to remember, to back up, etc. – and combine it with a &lt;em&gt;path&lt;/em&gt;, a string following an a priori agreed-upon schema that allows us to generate multiple private keys from the same master password.&lt;/p&gt;
-
-&lt;p&gt;But it needn’t actually have much structure at all. You could simply take a master password and append &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3&lt;/code&gt;, and so on, to generate different wallet addresses. This strategy would generate perfectly usable wallets with no obvious link between them. And since the generation process follows the same general sort of process as it does for the single-key case, the generation process produces hashed values that are similarly difficult to reverse.&lt;/p&gt;
-
-&lt;p&gt;We therefore only really need two pieces of information to calculate our wallet address:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Our master password&lt;/li&gt;
-  &lt;li&gt;Some sort of &lt;em&gt;seed&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The master password is the user’s responsibility; it’s her input, her secret. What seed should we use?&lt;/p&gt;
-
-&lt;p&gt;One option is to let the user specify whatever sort of seed she wishes. But this doesn’t really solve our problem: instead of multiple private keys, we instead have to deal with a single password plus multiple paths. We’ve just given ourselves more passwords to remember.&lt;/p&gt;
-
-&lt;p&gt;Another is to do what I suggested above: append an incrementing integer to the end of it to generate different wallets. This is equivalent to giving ourselves more passwords, but at least there’s some rationale to it: our first wallet has a 1 at the end, our second wallet a 2, etc. It gives us some psychological safety: it means that our wallet is recoverable (assuming we can remember which number we used to generate it, or assuming we don’t mind iterating through a few guesses). This approach is fine, as far as it goes, but this is crypto, so, given the opportunity, we should make it more complicated.&lt;/p&gt;
-
-&lt;p&gt;A third approach is to develop a &lt;em&gt;common standard&lt;/em&gt; for generating our seeds with more variables than just an incrementing number. This way, we can describe a tree structure independent of its values, embedding multiple values with which we might want to generate differing wallets. The benefit to this approach is that we can encode information about the purpose of the wallet into the seed itself, and then recover it later using our knowledge of those purposes without having to remember many arbitrary numbers. The standard gives us the template, and the purposes give us the values of the variables; all we have to do is fill them in. The other benefit to using a common standard is that wallet software can implement the standards too, so you don’t need to generate the wallets off-site somewhere.&lt;/p&gt;
-
-&lt;p&gt;This standard is called &lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki&quot;&gt;BIP-44&lt;/a&gt; (it was originally a Bitcoin standard), and it presents this exactly this sort of predictable tree structure that we’ve been discussing. The goal here is minimises user input and maximise the number of wallets that can be generated with a single master password.&lt;/p&gt;
-
-&lt;p&gt;The standard calls the seed a &lt;em&gt;derivation path&lt;/em&gt;, since it’s a path in a tree that we append to a master password and use the resulting string to derive a public address. The standard gives derivation paths the following structure:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;m/purpose&apos;/coin&apos;/account&apos;/change/index
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;And here’s the trick: most of these values are knowable by the wallet software, based on what sort of wallet you’re using:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;purpose&lt;/code&gt; is always &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;44&apos;&lt;/code&gt;.&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; They gave it a value to allow them to upgrade the standard if they wanted to.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;coin&lt;/code&gt; varies depending on the crypto network. For instance, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;coin = 60&apos;&lt;/code&gt; is Ethereum mainnet, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;coin = 966&apos;&lt;/code&gt; is Polygon.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;account&lt;/code&gt; gives the wallet a degree of freedom to support multiple user accounts (c.f. to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/Users/username&lt;/code&gt; directory on your OS)&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;change&lt;/code&gt; will generally be &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;; it refers to whether the wallet should be used externally, or whether it should be use internal to the wallet for Bitcoin-based transaction change reasons. I’ve read somewhere that Ethereans sometimes use it, though for what I’m not sure.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The only non-guessable input value is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index&lt;/code&gt;, which gives the user a degree of freedom to generate multiple wallets for under the same tree. This parameter is why the user can generate many wallets for a single password: she can keep incrementing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index&lt;/code&gt; to generate more! It’s also exactly the same as my much simpler idea discussed previously.&lt;/p&gt;
-
-&lt;p&gt;These parameters then get put into the structure, like so:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;m/44&apos;/60&apos;/0&apos;/0/2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The structure then gets combined with the master password (or, more precisely, with a key generated from the master password), and users (or wallets) can vary &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;coin&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;account&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index&lt;/code&gt; to generate various wallet addresses.&lt;/p&gt;
-
-&lt;h4 id=&quot;existing-uis-and-a-subtle-incompatibility&quot;&gt;Existing UIs and a Subtle Incompatibility&lt;/h4&gt;
-
-&lt;p&gt;This isn’t a huge, bombshell-dropped discovery, I’ll admit it, but I’ve noticed that most wallets with support for both HD wallets and network switching don’t actually implement the BIP-44 correctly, or, at least, there is a tension between the model used for network switching and the model used for wallet generation.&lt;/p&gt;
-
-&lt;p&gt;Generally, what happens is:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Users add a master password (or its equivalent in the form of a mnemonic phrase) from which the wallet derives a single keypair&lt;/li&gt;
-  &lt;li&gt;As far as I can make out, the ‘default wallet’ generated through this mechanism still uses the HD standard, it just relies implicitly upon the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;m/44&apos;/60&apos;/0&apos;/0/0&lt;/code&gt; derivation path (i.e. “give me external index 0 at account 0 for the Ethereum chain”).&lt;/li&gt;
-  &lt;li&gt;When the user switches between compatible chains – from Mainnet to Arbitrum, for instance – the wallet software uses the same wallet address and private key to sign new transactions. It just switches the RPC endpoint it uses to make the request.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If wallets were to follow the standard correctly, they would be varying the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;coin&lt;/code&gt; value when switching networks, generating different wallet addresses for use depending on the network being used. In other words, according to BIP-44 at least, there’s no such thing as a ‘cross-network address’ – and existing wallets ignore this subtle fact entirely.&lt;/p&gt;
-
-&lt;p&gt;I’ve been looking at how various different wallets handle this, and they all seem to do the same thing:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Metamask’s network switcher is &lt;a href=&quot;https://metaschool.so/articles/how-to-change-add-new-network-metamask-wallet/&quot;&gt;entirely independent&lt;/a&gt; from the wallet list, allowing the user to switch networks on the current wallet, even if that wallet was generated through a derivation path&lt;/li&gt;
-  &lt;li&gt;MyEtherWallet do the same thing, &lt;a href=&quot;https://github.com/MyEtherWallet/MyEtherWallet/blob/8703b504e8b1166877ac7b2cc2a75e08614bd8a4/src/core/store/wallet/actions.js#L34&quot;&gt;switching the network URL&lt;/a&gt; used for chain interactions and not (as far as I can see) adjusting the corresponding wallets.&lt;/li&gt;
-  &lt;li&gt;Similarly, there is nothing in &lt;a href=&quot;https://docs.walletconnect.com/client-api#approve-session-request-connect&quot;&gt;the WalletConnect spec&lt;/a&gt; preventing this behaviour, meaning that any HD-compatible wallet software using the protocol facilitates wallet-independent network switching&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The problem is not so much that nobody’s trying to follow the spec. The problem is that the spec is ambiguous with respect to the UI in which it’s being implemented. The community therefore has implicitly converged on this non-standard behaviour because of the ostensible UI benefits. This has created an implicit standard incompatible with the original BIP-32/44 proposals.&lt;/p&gt;
-
-&lt;p&gt;It gets even more confusing when you notice that there is a third, Ethereum-specific standard, &lt;a href=&quot;https://eips.ethereum.org/EIPS/eip-601&quot;&gt;EIP-601&lt;/a&gt;, designed to modify the BIP-44 standard for Ethereum use cases. From a brief google, I can’t see any mentions of 601 that aren’t merely links to the spec itself. But this ambiguity – what should happen to the valid wallet list when the user switches networks? – isn’t resolved by EIP-601 either.&lt;/p&gt;
-
-&lt;p&gt;This ambiguity is born because the BIP-32/44 standards were built around the assumption that the different networks a user might switch between were mutually incompatible. It didn’t foresee the rise of EVM-compatible layer 2s, and a range of dapps built to run on several of them concurrently, and therefore the capacity for the user to switch between them easily, in-app.&lt;/p&gt;
-
-&lt;h4 id=&quot;why-this-matters-and-what-to-do&quot;&gt;Why this matters, and what to do&lt;/h4&gt;
-
-&lt;p&gt;Of course, this doesn’t seem like a critical problem – there are bigger problems we could be tackling, for sure. Indeed, there’s even something comforting about going from Polygon to Ethereum Mainnet and taking your address with you. It’s certainly convenient. But this isn’t what the BIP-32/44 specs say, and I think there actually are good reasons to obey them more precisely:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;It makes it possible to upgrade the spec in the future.&lt;/strong&gt; The standard can evolve safely, and those implementing it correctly are able to evolve without having to hack in workarounds for backward compatibility, and keep track of previous fringe behaviours.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;It makes interoperability with other wallets easier.&lt;/strong&gt; Wallet onboarding and offboarding isn’t a light matter; the more activation energy required to move to one wallet from another, or from no wallet at all, the more intimidating crypto as a whole will become to the marginal user. Problems at the tail-end often get publicised more than problems at the mean.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Not doing so undermines one of the main reasons to use HD wallets in the first place:&lt;/strong&gt; HD wallets allow you to keep public references to different addresses separated, increasing privacy. A wallet address that comes with you cross-network just makes your transactions that much easier to track.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Fortunately, I don’t believe that the UI concessions made by existing wallet implementations need to be locked in. There are some steps that wallets could take today, such as triggering a confirmation model when changing networks, that would enable users to opt-out of the spec. Many users don’t knowingly use HD wallets at all; in these cases, the default behaviour could just clear the wallet list and regenerate using the standard specs on network change.&lt;/p&gt;
-
-&lt;p&gt;Or, alternatively, we could develop a new, more parsimonious standard to capture the semantics of cross-chain wallets, compatible with the current UI approach. One simple method would be to amend the current spec such that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;network = 0&lt;/code&gt; means ‘no specific network’, allowing cross-chain wallets to be represented in the existing spec. If a network changes while a user is connected with a wallet known to be generated with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;network = 0&lt;/code&gt;, the wallet persists.&lt;/p&gt;
-
-&lt;p&gt;Either way, this is the exactly the sort of subtle incompatibility that could prove to be an increasing nuisance, compounded by the ongoing growth in usage of layer 2s. Our standards for network switching were designed at a time when the only networks we would switch between were testnets. Today, the UI implications of network switching are a lot more important. And, today, that is incompatible with one of the most useful standards we have for managing multiple wallets.&lt;/p&gt;
-
-&lt;p&gt;Multiple wallets, multiple networks, good UX. We don’t need to pick only two.&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;The name wallet is therefore a misnomer, since the wallet itself doesn’t store anything; it’s much closer to a username and password for online banking, than the vault itself. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
-
-      &lt;p&gt;Ethereum private keys are 256 bits. Since a bit has two possible states, guessing a 256
-bit sequence correctly at random has a chance of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1/2^256&lt;/code&gt;. There are ~10^78 atoms in the observable universe, which is ~2^260. If you know the Ethereum address of the wallet you’re trying to get into it’s slightly easier, since wallet addresses are only 160 bits long, but it’s still &lt;a href=&quot;https://www.youtube.com/watch?v=S9JGmA5_unY&quot;&gt;a very big number&lt;/a&gt;. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;The apostrophe in the path tells the key generation algorithm to use the ‘hardened’ form of the derivation, which puts extra constraints on the derivation such that derived public keys can’t be proven to be derived from a given parent public key using only public information. The &lt;a href=&quot;https://wiki.trezor.io/Hardened_and_non-hardened_derivation&quot;&gt;details here&lt;/a&gt; are a little tricky, and outside the scope of this post. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="ethereum" /><summary type="html">Blockchain ‘wallets’ are generally just pairs of public and private keys with some UI wrapped around them.1 We take the private key, and use it to derive the public key, which we then use to derive the wallet’s address. The name wallet is therefore a misnomer, since the wallet itself doesn’t store anything; it’s much closer to a username and password for online banking, than the vault itself. &amp;#8617;</summary></entry></feed>
+&lt;p&gt;Hopefully this saves somebody else some time.&lt;/p&gt;</content><author><name></name></author><category term="javascript" /><summary type="html">The Safari Web Extension mechanism is an important step forward for iOS apps – and a significant part of my current project, on which more soon – but the documentation is a little fragmented and the tooling isn’t nearly solid enough just yet. Developing these new extensions is challenging.</summary></entry></feed>
