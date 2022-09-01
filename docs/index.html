@@ -75,6 +75,10 @@
           <p>
   <strong>months:</strong>
        
+  <a href="/months/2022/09">
+    September 2022
+  </a>
+        
   <a href="/months/2022/08">
     August 2022
   </a>
@@ -124,6 +128,47 @@
           <hr />
         </article>
 
+        
+          <article class="post text">
+            <h2 class="post-title"><a href="https://jamieonsoftware.com/2022/09/01/links-august-2022.html">Links, August 2022</a></h2>
+            <div class="post-content">
+              <p>Richard Rhodes’s <a href="https://www.amazon.co.uk/Making-Atomic-Bomb-Richard-Rhodes/dp/1471111237/">The Making of the Atomic Bomb</a> was the highlight this month, a detailed and incredibly scientifically literate story of the agglomeration effects of genius and the construction of the atomic age. A long and detailed book but interesting ideas and stories on every page.</p>
+
+<p>Continually impressed by <a href="https://press.stripe.com">Stripe Press</a> and thoroughly enjoyed <a href="https://www.amazon.co.uk/Where-Flying-Car-Storrs-Hall/dp/1953953182">Where Is My Flying Car?</a> by J. Storrs Hall. We need more techno-optimistic books. Hope and ambition are technologies too, and should be developed and promoted.</p>
+
+<p>Also finished <a href="https://www.amazon.co.uk/Anarchy-Rise-Fall-India-Company/dp/1408864371">The Anarchy</a> by William Dalrymple. Had the chance to chat to Dalrymple last month and his enthusiasm and perspicuity for this subject is astounding. The EIC was a violent and predictable and transformative institution, but it was at the same time path-dependent and its success subject to utterly unpredictable chance. Every time I read history I’m taken aback by the fragility of the world we’ve inherited.</p>
+
+<p>I wrote a short post on <a href="https://jamieonsoftware.com/2022/08/27/state-adjacent-institutions.html">state-adjacent institutions</a>.</p>
+
+<p>The US <a href="https://arstechnica.com/science/2022/07/us-regulators-will-certify-first-small-nuclear-reactor-design">approved a small nuclear reactor design</a>.</p>
+
+<p>Noah Smith on <a href="https://noahpinion.substack.com/p/industrial-policy-starts-with-semiconductors">CHIPS and chips</a>, and <a href="https://noahpinion.substack.com/p/four-reasons-why-gdp-is-a-useful">four reasons why GDP is a useful number</a>.</p>
+
+<p><a href="https://scienceplusplus.org/visions/index.html">Vision papers in science</a>.</p>
+
+<p>Regress Studies on <a href="https://regressstudies.substack.com/p/is-it-okay-to-finish-books">how to choose books</a> and why you should allow yourself to be dragged into books you suspect you won’t finish.</p>
+
+<p>An older thread from <a href="https://twitter.com/_ArnaudS_/status/1427003439540756485">Arnaud on books on the history of modern computing</a>.</p>
+
+<p><a href="https://www.gleech.org/aaronson">The best of Scott Aaronson</a>.</p>
+
+<p>From <a href="https://conference.nber.org/conf_papers/f166369.pdf">Knowledge spillovers in Silicon Valley</a>:</p>
+
+<blockquote>
+  <p>Our IV approach estimates substantial returns to face-to-face meetings with overidentification tests suggesting we are capturing the returns to serendipity that play a central role in the urban theories of Jane Jacobs.</p>
+</blockquote>
+
+<p><a href="https://scanbot.io/blog/types-of-barcodes/">Types of barcodes</a></p>
+
+<p>Some good Visa threads on a cluster of related ideas: <a href="https://twitter.com/visakanv/status/1436393464468369408">do what you want to do</a>, <a href="https://twitter.com/visakanv/status/1199907654602125312">do it a lot</a>, and <a href="https://twitter.com/visakanv/status/1455243916773494784">tell others to do what they want to do</a>. I had a great chat with Visa at Future Forum, and his temper and mode and writing is lovely in a happy-go-lucky, auto-optimistic kind of way. <a href="http://www.visakanv.com/blog/">His blog</a> is also excellent.</p>
+
+<p>Nuño Sempere on <a href="https://nunosempere.com/blog/2022/08/20/fermi-introduction/">decomposing quantitative problems into simpler questions</a>.</p>
+
+            </div>
+            <footer class="post-meta">
+              <p> 2:43pm. September  1, 2022.</p>
+            </footer>
+          </article>
         
           <article class="post text">
             <h2 class="post-title"><a href="https://jamieonsoftware.com/2022/08/27/state-adjacent-institutions.html">State-Adjacent Institutions</a></h2>
@@ -628,53 +673,6 @@ function transferFrom(address _from, address _to, uint256 _value) public returns
             </div>
             <footer class="post-meta">
               <p> 5:46pm. April  4, 2022.</p>
-            </footer>
-          </article>
-        
-          <article class="post text">
-            <h2 class="post-title"><a href="https://jamieonsoftware.com/2022/04/03/a-quick-note-on-web_accessible_resources-in-Safari-Web-Extensions.html">A quick note on web_accessible_resources in Safari Web Extensions</a></h2>
-            <div class="post-content">
-              <p>The Safari Web Extension mechanism is an important step forward for iOS apps – and a significant part of my current project, on which more soon – but the documentation is a little fragmented and the tooling isn’t nearly solid enough just yet. Developing these new extensions is challenging.</p>
-
-<p>A small contribution to changing that:</p>
-
-<p>By default, extension files that aren’t explicitly whitelisted in the <code class="language-plaintext highlighter-rouge">manifest.json</code> file are inaccessible from the browser. One common use case of the <code class="language-plaintext highlighter-rouge">content.js</code> script is to inject scripts into the same execution environment of the active web page. However, no such injection is possible unless the loaded file is whitelisted.</p>
-
-<p>The <code class="language-plaintext highlighter-rouge">manifest.json</code> spec <a href="https://developer.chrome.com/docs/extensions/mv3/manifest/web_accessible_resources/">defines</a> a <code class="language-plaintext highlighter-rouge">web_accessible_resources</code> parameter, which allows extensions to whitelist resources for access from the browser.</p>
-
-<p>Thus, the following whitelist:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"web_accessible_resources": ["images/foo.png"]
-</code></pre></div></div>
-
-<p>Allows you to generate the resource’s URL with the following code:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>browser.runtime.getURL("images/foo.png")
-</code></pre></div></div>
-
-<p>Which gives you the following sort of URL:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>safari-web-extension://2AB33852-D69B-4ED6-99AD-A4839DFEC7ED/images/foo.png
-</code></pre></div></div>
-
-<p>The ID directly after the protocol in that URL is generated on a per-browser-instance basis, so you can’t guess it ahead of time. You have to call <code class="language-plaintext highlighter-rouge">getURL</code> to generate it.</p>
-
-<p>There are two important things that <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">the API documentation</a> doesn’t specify, which took me some time to figure out:</p>
-
-<ul>
-  <li>
-    <p><strong><code class="language-plaintext highlighter-rouge">browser.runtime.getURL</code> is only defined inside the extension’s execution contexts.</strong> So the content.js and background.js files are fine, but the webpage itself is not. If you want to use it in the webpage context, you’ll need to generate the URL in the extension somewhere and communicate it via the <code class="language-plaintext highlighter-rouge">window.postMessage</code> event trigger.</p>
-  </li>
-  <li>
-    <p><strong>Any values used in the <code class="language-plaintext highlighter-rouge">web_accessible_resources</code> parameter must be nested under a subdirectory.</strong> If you try to call a top-level file (such as <code class="language-plaintext highlighter-rouge">getURL("foo.png")</code>), the URL will generate fine, but the file itself won’t be loadable. The browser will simply report it as inaccessible.</p>
-  </li>
-</ul>
-
-<p>Hopefully this saves somebody else some time.</p>
-
-            </div>
-            <footer class="post-meta">
-              <p>10:30pm. April  3, 2022.</p>
             </footer>
           </article>
         
