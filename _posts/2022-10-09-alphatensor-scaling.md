@@ -11,14 +11,14 @@ Their approach is a variant of the deep reinforcement-learning-guided Monte Carl
 
 There are a number of important object-level takeaways from the paper:
 
-1. The search space for various algorithms and mathematical techniques is enormous
-2. Existing algorithms and techniques are often not provably the most globally efficient; there is room to improve
-3. We can improve an algorithm by paying attention to its implementation, as well as its theoretical virtues
+- The search space for various algorithms and mathematical techniques is enormous
+- Existing algorithms and techniques are often not provably the most globally efficient; there is room to improve
+- We can improve an algorithm by paying attention to its implementation, as well as its theoretical virtues
 
 But it also teaches us some things about the meta-level, and the benefits of DeepMind's distinctive approach:
 
-4. DeepMind's approach is scaleable vertically: the more time and compute they spend on a task, the more they can achieve.
-5. DeepMind's approach is scaleable horizontally: the more tasks they apply their approach to, the more tasks they can achieve.
+- DeepMind's approach is scaleable vertically: the more time and compute they spend on a task, the more they can achieve.
+- DeepMind's approach is scaleable horizontally: the more tasks they apply their approach to, the more tasks they can achieve.
 
 I think these points suggest something important about the [scaling hypothesis](https://www.gwern.net/Scaling-hypothesis#scaling-hypothesis).
 
@@ -41,12 +41,13 @@ Instead, AI researchers will develop heuristics, industry and academic partnersh
 
 But most importantly, the game needs to be designed _such that it's the sort of game that the model can play_. This is what DeepMind seem especially good at: they are able to express, e.g., protein folding, or tensor decomposition, in the form of a game that their RL agent can play.
 
-This ability – being able to reorganise a question in the form of a model-appropriate game – doesn't look nearly as susceptible to Moore's Law-style exponential speed-ups. Researchers' insights and abilities – in other terms, researcher productivity – don't scale exponentially. It takes time and energy and the serendipitousness of a well-functioning research lab to cultivate them. Scaling compute down to an effective cost of zero doesn't help if we're not using these models to attack the right issues (1) in the right way (2). The marginal next unit of compute will exhibit diminishing returns.
+This ability – being able to reorganise a question in the form of a model-appropriate game – doesn't look nearly as susceptible to Moore's Law-style exponential speed-ups. Researchers' insights and abilities – in other terms, researcher productivity – don't scale exponentially.[^2] It takes time and energy and the serendipitousness of a well-functioning research lab to cultivate them. Scaling compute down to an effective cost of zero doesn't help if we're not using these models to attack the right issues (1) in the right way (2). The marginal next unit of compute will exhibit diminishing returns.
 
 But if that's the case, then it's clear that _compute isn't the bottleneck_. The bottleneck, instead, will be humans figuring out which problems to tackle (1) and how to regiment them, encode them, and design games/reward systems to get AI to solve them (2).
 
 DeepMind have the absolute best people on the planet working on this stuff, and it takes them time and huge amounts of resources. So we end up back at _taste_. Researchers need time and experience to develop taste, and the ability to apply heuristics and deep domain knowledge – something much more ineffable and difficult to scale.
 
-This doesn't of course mean that there won't be wonderful progress in many, many domains, brought about by 'merely' scaling the compute available. Even Kuhn is at pains to stress that 'normal science' is progress! But it does mean that the scaling hypothesis doesn't necessarily scale research output at the same rate, at least not without AGI –– and without this, my best guess is that progress will be bottlenecked long before.
+This doesn't of course mean that there won't be wonderful progress in many, many domains, brought about by 'merely' scaling the compute available. Even Kuhn is at pains to stress that 'normal science' is progress! But it does mean that the scaling hypothesis doesn't necessarily scale research output at the same rate, at least not without the accompanying good taste.
 
-[1]: This is just an assumption, and one that changes the following argument significantly if it is false. A world with AGI looks, I think we can all assume, quite a bit different.
+[^1]: This is just an assumption, and one that changes the following argument significantly if it is false. A world with AGI looks, I think we can all assume, quite a bit different.
+[^2]: For some empirical data on this point, [see here](https://www.nature.com/articles/467912a), which suggests that doubling the population of a city increases its productivity per capita by ~15%. In other words, productivity per capita scales linearly, not exponentially.
