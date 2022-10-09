@@ -49,5 +49,7 @@ DeepMind have the absolute best people on the planet working on this stuff, and 
 
 This doesn't of course mean that there won't be wonderful progress in many, many domains, brought about by 'merely' scaling the compute available. Even Kuhn is at pains to stress that 'normal science' is progress! But it does mean that the scaling hypothesis doesn't necessarily scale research output at the same rate, at least not without the accompanying good taste.
 
+**Thanks** to Camin McCluskey and Jessica Cooper for discussion and notes.
+
 [^1]: This is just an assumption, and one that changes the following argument significantly if it is false. A world with AGI looks, I think we can all assume, quite a bit different.
 [^2]: For some empirical data on this point, [see here](https://www.nature.com/articles/467912a), which suggests that doubling the population of a city increases its productivity per capita by ~15%. In other words, productivity per capita scales linearly, not exponentially.
