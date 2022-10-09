@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AlphaTensor, Taste, and the Scalability of AIs"
-date: 2022-10-09 10:26:00 +0100
+date: 2022-10-09 20:25:00 +0100
 tags: ai
 ---
 
