@@ -1,4 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://jamieonsoftware.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jamieonsoftware.com/" rel="alternate" type="text/html" /><updated>2022-10-01T14:46:09+01:00</updated><id>https://jamieonsoftware.com/feed.xml</id><title type="html">Jamie on Software</title><subtitle></subtitle><entry><title type="html">Links, September 2022</title><link href="https://jamieonsoftware.com/2022/10/01/links-september-2022.html" rel="alternate" type="text/html" title="Links, September 2022" /><published>2022-10-01T14:22:45+01:00</published><updated>2022-10-01T14:22:45+01:00</updated><id>https://jamieonsoftware.com/2022/10/01/links-september-2022</id><content type="html" xml:base="https://jamieonsoftware.com/2022/10/01/links-september-2022.html">&lt;p&gt;Wrapped up my work with Fei Labs this week, and am now unemployed again, poking around the edges of opportunities and building a stronger sense of what I want to work on next. My book on product engineering with Ethereum is coming along well; I should have the first draft done in the next few weeks.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://jamieonsoftware.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jamieonsoftware.com/" rel="alternate" type="text/html" /><updated>2022-10-09T20:19:00+01:00</updated><id>https://jamieonsoftware.com/feed.xml</id><title type="html">Jamie on Software</title><subtitle></subtitle><entry><title type="html">AlphaTensor, Taste, and the Scalability of AIs</title><link href="https://jamieonsoftware.com/2022/10/09/alphatensor-scaling.html" rel="alternate" type="text/html" title="AlphaTensor, Taste, and the Scalability of AIs" /><published>2022-10-09T10:26:00+01:00</published><updated>2022-10-09T10:26:00+01:00</updated><id>https://jamieonsoftware.com/2022/10/09/alphatensor-scaling</id><content type="html" xml:base="https://jamieonsoftware.com/2022/10/09/alphatensor-scaling.html">&lt;p&gt;This week’s &lt;a href=&quot;https://www.deepmind.com/blog/discovering-novel-algorithms-with-alphatensor&quot;&gt;AlphaTensor&lt;/a&gt; announcement shows not only that AI is getting really good at doing things, but also that DeepMind are really good at getting AI to do things.&lt;/p&gt;
+
+&lt;p&gt;Their approach is a variant of the deep reinforcement-learning-guided Monte Carlo tree search that they have applied so successfully to playing Chess and Go. What they have done, very effectively, is to design a game with the objective of finding the most efficient tensor multiplication algorithm for a matrix of some dimension.&lt;/p&gt;
+
+&lt;p&gt;There are a number of important object-level takeaways from the paper:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The search space for various algorithms and mathematical techniques is enormous&lt;/li&gt;
+  &lt;li&gt;Existing algorithms and techniques are often not provably the most globally efficient; there is room to improve&lt;/li&gt;
+  &lt;li&gt;We can improve an algorithm by paying attention to its implementation, as well as its theoretical virtues&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;But it also teaches us some things about the meta-level, and the benefits of DeepMind’s distinctive approach:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;DeepMind’s approach is scaleable vertically: the more time and compute they spend on a task, the more they can achieve.&lt;/li&gt;
+  &lt;li&gt;DeepMind’s approach is scaleable horizontally: the more tasks they apply their approach to, the more tasks they can achieve.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I think these points suggest something important about the &lt;a href=&quot;https://www.gwern.net/Scaling-hypothesis#scaling-hypothesis&quot;&gt;scaling hypothesis&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A weak version of the scaling hypothesis claims that most of what we need to improve AI performance is more compute. All we need to do is scale up the computational and data resources of a sufficiently scalable model, and we’ll get much better performance. Give the right model architecture enough data, and enough compute/time, and our problem is solvable (up to the phyical limits, or something like that.)&lt;/p&gt;
+
+&lt;p&gt;Before I begin my argument, I’ll make a presupposition: we won’t get to AGI. My hunch is that AGI is a bit of a chimera, and that progress in AI will consist mostly in the discovery and application of specialist models for narrow-domain problem solving. Some models may generalise to some extent, some may not. But over time the progress of narrow-domain AIs will far outstrip the progress in broad-domain AIs, and the market will reallocate resources accordingly.[^1]&lt;/p&gt;
+
+&lt;p&gt;Given this presupposition, we can ask an important question: does the weak scaling hypothesis hold?&lt;/p&gt;
+
+&lt;p&gt;In a world in which AI is applied to solving narrow-domain issues, AI researchers have two major tasks:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;How should they decide which tasks to work on?&lt;/li&gt;
+  &lt;li&gt;How should they encode a given problem such that it is tractable for AI to solve?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;(1) is hard to decide &lt;em&gt;a priori&lt;/em&gt;, because it will depend on the path-dependence progress of science (and the supporting AI). Utility-maximising functions might be helpful here: what task has the lowest cost and the highest utility? But a lot will be baked into ‘cost’ and ‘utility’, and the various cost bases of tasks will change depending on how the technology evolves, what data is available, etc.&lt;/p&gt;
+
+&lt;p&gt;Instead, AI researchers will develop heuristics, industry and academic partnerships, new data sources, etc., and that will help narrow down the range of tasks susceptible to quick resolution. In short, AI researchers will rely on &lt;em&gt;taste&lt;/em&gt; and experience to guide their decisions over the medium- and long-term.&lt;/p&gt;
+
+&lt;p&gt;(2) is more analysable from first principles. Tasks need to be encoded in such a way as to make them solvable by the model: the model architecture needs to be designed in such a way as to not preclude the task; the input needs to be readable by the model; the set of training data needs to be large and varied enough to prevent overfit, and contain sufficient signal to allow generalisation to inputs outside that dataset.&lt;/p&gt;
+
+&lt;p&gt;But most importantly, the game needs to be designed &lt;em&gt;such that it’s the sort of game that the model can play&lt;/em&gt;. This is what DeepMind seem especially good at: they are able to express, e.g., protein folding, or tensor decomposition, in the form of a game that their RL agent can play.&lt;/p&gt;
+
+&lt;p&gt;This ability – being able to reorganise a question in the form of a model-appropriate game – doesn’t look nearly as susceptible to Moore’s Law-style exponential speed-ups. Researchers’ insights and abilities – in other terms, researcher productivity – don’t scale exponentially. It takes time and energy and the serendipitousness of a well-functioning research lab to cultivate them. Scaling compute down to an effective cost of zero doesn’t help if we’re not using these models to attack the right issues (1) in the right way (2). The marginal next unit of compute will exhibit diminishing returns.&lt;/p&gt;
+
+&lt;p&gt;But if that’s the case, then it’s clear that &lt;em&gt;compute isn’t the bottleneck&lt;/em&gt;. The bottleneck, instead, will be humans figuring out which problems to tackle (1) and how to regiment them, encode them, and design games/reward systems to get AI to solve them (2).&lt;/p&gt;
+
+&lt;p&gt;DeepMind have the absolute best people on the planet working on this stuff, and it takes them time and huge amounts of resources. So we end up back at &lt;em&gt;taste&lt;/em&gt;. Researchers need time and experience to develop taste, and the ability to apply heuristics and deep domain knowledge – something much more ineffable and difficult to scale.&lt;/p&gt;
+
+&lt;p&gt;This doesn’t of course mean that there won’t be wonderful progress in many, many domains, brought about by ‘merely’ scaling the compute available. Even Kuhn is at pains to stress that ‘normal science’ is progress! But it does mean that the scaling hypothesis doesn’t necessarily scale research output at the same rate, at least not without AGI –– and without this, my best guess is that progress will be bottlenecked long before.&lt;/p&gt;</content><author><name></name></author><category term="ai" /><summary type="html">This week’s AlphaTensor announcement shows not only that AI is getting really good at doing things, but also that DeepMind are really good at getting AI to do things.</summary></entry><entry><title type="html">Links, September 2022</title><link href="https://jamieonsoftware.com/2022/10/01/links-september-2022.html" rel="alternate" type="text/html" title="Links, September 2022" /><published>2022-10-01T14:22:45+01:00</published><updated>2022-10-01T14:22:45+01:00</updated><id>https://jamieonsoftware.com/2022/10/01/links-september-2022</id><content type="html" xml:base="https://jamieonsoftware.com/2022/10/01/links-september-2022.html">&lt;p&gt;Wrapped up my work with Fei Labs this week, and am now unemployed again, poking around the edges of opportunities and building a stronger sense of what I want to work on next. My book on product engineering with Ethereum is coming along well; I should have the first draft done in the next few weeks.&lt;/p&gt;
 
 &lt;p&gt;I’ve been rewatching &lt;a href=&quot;https://www.netflix.com/title/80025678&quot;&gt;The Crown&lt;/a&gt;, partly in preparation for the new season, partly to revisit the life of Elizabeth II, and most of all because I have had several casual conversations with friends on various topics in 20th-century British political history, and I wanted a lightweight set of touch points, nudges toward various prime ministers and political events that I might read into more deeply. As a result, almost all of my reading time has been taken up with television. It’s amazing how easily that can happen!&lt;/p&gt;
 
@@ -371,54 +419,4 @@ function transferFrom(address _from, address _to, uint256 _value) public returns
 
 &lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/080322639X&quot;&gt;Into That Silent Sea: Trailblazers of the Space Era, 1961-1965 by French and Burgess&lt;/a&gt; is part of &lt;a href=&quot;https://www.amazon.co.uk/dp/B088T4M553&quot;&gt;a broader series&lt;/a&gt; of histories on various topics in spaceflight. The whole series is pretty good, with only a few exceptions, and this isn’t one of them. Meticulous and narrative-driven, I learnt a lot about Gagarin, Leonov, the Mercury Seven, and the politics that made it all happen. I’ll be continuing this series.&lt;/p&gt;
 
-&lt;p&gt;I also &lt;a href=&quot;https://calendly.com/jamierumbelow&quot;&gt;finally got a Calendly set up&lt;/a&gt;, so if you’d like to chat, feel free to book in a call.&lt;/p&gt;</content><author><name></name></author><category term="links" /><category term="science" /><category term="london" /><category term="books" /><category term="climate" /><summary type="html">April has been busy and changeable – mirroring the weather, I suppose – I began a new role at Fei Labs and am getting settled. I wrote three pieces on this blog: something technical on HD wallets and network switching, something equally technical about Safari iOS extensions, and the aforementioned notes on the t11s episode of Solidity Fridays.</summary></entry><entry><title type="html">Notes on Solidity Fridays Episode with Transmissions11</title><link href="https://jamieonsoftware.com/2022/04/06/solidity-fridays-transmissions11.html" rel="alternate" type="text/html" title="Notes on Solidity Fridays Episode with Transmissions11" /><published>2022-04-06T18:38:55+01:00</published><updated>2022-04-06T18:38:55+01:00</updated><id>https://jamieonsoftware.com/2022/04/06/solidity-fridays-transmissions11</id><content type="html" xml:base="https://jamieonsoftware.com/2022/04/06/solidity-fridays-transmissions11.html">&lt;p&gt;December’s &lt;a href=&quot;https://www.youtube.com/watch?v=58eKnYR_EyM&quot;&gt;Solidity Fridays with transmissions11&lt;/a&gt; is really excellent, and I think a very high-leverage way to learn how good Solidity actually gets written. When the guest is especially good, as with transmissions, I put Solidity Fridays in the same sort of category as &lt;a href=&quot;https://www.destroyallsoftware.com&quot;&gt;Destroy All Software&lt;/a&gt; – teaching by communicating models and patterns of thought, rather than regurgitating tutorial content.&lt;/p&gt;
-
-&lt;p&gt;Anyway, here are my notes in case somebody else finds them useful:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;When emitting events, t11s emits instances of the contract rather than the address directly; the compiler will swap it out for an address anyway, but this approach gives you greater type safety&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CREATE2&lt;/code&gt; to revert if the contract has already been deployed, by adding a salt of the underlying address to the deployment&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Addresses are 20 bytes, salts have to be 32 bytes. So we call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fillLast12Bytes&lt;/code&gt; to add the remaining bytes (provided in Solmate’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bytes32&lt;/code&gt; library)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The gas cost of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; is equivalent to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;!=&lt;/code&gt; when the comparator is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;, more expensive otherwise.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Illustration of his opinionated approach to smart contract development: “the performance of the code for users who aren’t stupid matters” - that’s why the [[ERC20]] implementation in [[Solmate]] doesn’t stop you from transferring into the contract’s address. “I’m not raising the cost for everyone else”&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fdiv&lt;/code&gt; is like division, but accounting for the bases. ‘Scale this down by the contract’s base’. Multiply the numerator by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;baseUnit&lt;/code&gt; and then divide the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;numerator * baseUnit&lt;/code&gt; by the denominator. Also checks for overflow on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;numerator * baseUnit&lt;/code&gt;, since overflow isn’t protected in assembly calls.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;In general, keep external calls all the way at the end of the function – including after any events are emitted – to make reentrancy more difficult.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;More important with eg ERC777 since eg &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;safeTransferFrom&lt;/code&gt; might allow arbitrary code execution (https://eips.ethereum.org/EIPS/eip-777)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Removing things from the end of an array is significantly cheaper than from the beginning, since in the latter case you have to move everything over.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;uint256 currentIndex = withdrawalQueue.length - 1; for (; ; currentIndex--)&lt;/code&gt; is better in this case than initialising the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;uint56 i = withdrawalQueue.length - 1&lt;/code&gt; since we’re only doing effects (the tx will revert by underflow automatically), so we don’t need to check the length. Saves gas.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Add a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;trusted&lt;/code&gt; boolean to the strategies, which is then checked on deposit and withdrawal. Makes it easier for EOAs to manage vaults without having to be wrapped in some other contract. Also makes it possible to disable withdrawal from strategies easily if they’re malicious in some way.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Two reads to the same struct from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getStrategyData[strategy]&lt;/code&gt; has no extra gas cost, since it gets optimised by the compiler into one single &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SLOAD&lt;/code&gt;. &amp;amp; makes it clearer to read by a dev where it’s coming from.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;unchecked&lt;/code&gt; when you know you won’t underflow or overflow, and so can therefore do without the safety. Saves gas.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;unchecked&lt;/code&gt; isn’t leaky - it won’t uncheck in nested function calls&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The implementation of Compound’s cToken is a little funky, since in a lot of places function calls return an error code rather than revert. So sometimes you need to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;require(cToken.blah() == 0)&lt;/code&gt; to ensure it succeeded.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="ethereum" /><summary type="html">December’s Solidity Fridays with transmissions11 is really excellent, and I think a very high-leverage way to learn how good Solidity actually gets written. When the guest is especially good, as with transmissions, I put Solidity Fridays in the same sort of category as Destroy All Software – teaching by communicating models and patterns of thought, rather than regurgitating tutorial content.</summary></entry></feed>
+&lt;p&gt;I also &lt;a href=&quot;https://calendly.com/jamierumbelow&quot;&gt;finally got a Calendly set up&lt;/a&gt;, so if you’d like to chat, feel free to book in a call.&lt;/p&gt;</content><author><name></name></author><category term="links" /><category term="science" /><category term="london" /><category term="books" /><category term="climate" /><summary type="html">April has been busy and changeable – mirroring the weather, I suppose – I began a new role at Fei Labs and am getting settled. I wrote three pieces on this blog: something technical on HD wallets and network switching, something equally technical about Safari iOS extensions, and the aforementioned notes on the t11s episode of Solidity Fridays.</summary></entry></feed>

@@ -30,6 +30,8 @@
     
   <a href="/aesthetics">aesthetics</a>
     
+  <a href="/ai">ai</a>
+    
   <a href="/books">books</a>
     
   <a href="/climate">climate</a>
@@ -80,7 +82,7 @@
   <a href="/months/2022/10">
     October 2022
   </a>
-        
+            
   <a href="/months/2022/09">
     September 2022
   </a>
@@ -134,6 +136,66 @@
           <hr />
         </article>
 
+        
+          <article class="post text">
+            <h2 class="post-title"><a href="https://jamieonsoftware.com/2022/10/09/alphatensor-scaling.html">AlphaTensor, Taste, and the Scalability of AIs</a></h2>
+            <div class="post-content">
+              <p>This week’s <a href="https://www.deepmind.com/blog/discovering-novel-algorithms-with-alphatensor">AlphaTensor</a> announcement shows not only that AI is getting really good at doing things, but also that DeepMind are really good at getting AI to do things.</p>
+
+<p>Their approach is a variant of the deep reinforcement-learning-guided Monte Carlo tree search that they have applied so successfully to playing Chess and Go. What they have done, very effectively, is to design a game with the objective of finding the most efficient tensor multiplication algorithm for a matrix of some dimension.</p>
+
+<p>There are a number of important object-level takeaways from the paper:</p>
+
+<ol>
+  <li>The search space for various algorithms and mathematical techniques is enormous</li>
+  <li>Existing algorithms and techniques are often not provably the most globally efficient; there is room to improve</li>
+  <li>We can improve an algorithm by paying attention to its implementation, as well as its theoretical virtues</li>
+</ol>
+
+<p>But it also teaches us some things about the meta-level, and the benefits of DeepMind’s distinctive approach:</p>
+
+<ol>
+  <li>DeepMind’s approach is scaleable vertically: the more time and compute they spend on a task, the more they can achieve.</li>
+  <li>DeepMind’s approach is scaleable horizontally: the more tasks they apply their approach to, the more tasks they can achieve.</li>
+</ol>
+
+<p>I think these points suggest something important about the <a href="https://www.gwern.net/Scaling-hypothesis#scaling-hypothesis">scaling hypothesis</a>.</p>
+
+<p>A weak version of the scaling hypothesis claims that most of what we need to improve AI performance is more compute. All we need to do is scale up the computational and data resources of a sufficiently scalable model, and we’ll get much better performance. Give the right model architecture enough data, and enough compute/time, and our problem is solvable (up to the phyical limits, or something like that.)</p>
+
+<p>Before I begin my argument, I’ll make a presupposition: we won’t get to AGI. My hunch is that AGI is a bit of a chimera, and that progress in AI will consist mostly in the discovery and application of specialist models for narrow-domain problem solving. Some models may generalise to some extent, some may not. But over time the progress of narrow-domain AIs will far outstrip the progress in broad-domain AIs, and the market will reallocate resources accordingly.[^1]</p>
+
+<p>Given this presupposition, we can ask an important question: does the weak scaling hypothesis hold?</p>
+
+<p>In a world in which AI is applied to solving narrow-domain issues, AI researchers have two major tasks:</p>
+
+<ol>
+  <li>How should they decide which tasks to work on?</li>
+  <li>How should they encode a given problem such that it is tractable for AI to solve?</li>
+</ol>
+
+<p>(1) is hard to decide <em>a priori</em>, because it will depend on the path-dependence progress of science (and the supporting AI). Utility-maximising functions might be helpful here: what task has the lowest cost and the highest utility? But a lot will be baked into ‘cost’ and ‘utility’, and the various cost bases of tasks will change depending on how the technology evolves, what data is available, etc.</p>
+
+<p>Instead, AI researchers will develop heuristics, industry and academic partnerships, new data sources, etc., and that will help narrow down the range of tasks susceptible to quick resolution. In short, AI researchers will rely on <em>taste</em> and experience to guide their decisions over the medium- and long-term.</p>
+
+<p>(2) is more analysable from first principles. Tasks need to be encoded in such a way as to make them solvable by the model: the model architecture needs to be designed in such a way as to not preclude the task; the input needs to be readable by the model; the set of training data needs to be large and varied enough to prevent overfit, and contain sufficient signal to allow generalisation to inputs outside that dataset.</p>
+
+<p>But most importantly, the game needs to be designed <em>such that it’s the sort of game that the model can play</em>. This is what DeepMind seem especially good at: they are able to express, e.g., protein folding, or tensor decomposition, in the form of a game that their RL agent can play.</p>
+
+<p>This ability – being able to reorganise a question in the form of a model-appropriate game – doesn’t look nearly as susceptible to Moore’s Law-style exponential speed-ups. Researchers’ insights and abilities – in other terms, researcher productivity – don’t scale exponentially. It takes time and energy and the serendipitousness of a well-functioning research lab to cultivate them. Scaling compute down to an effective cost of zero doesn’t help if we’re not using these models to attack the right issues (1) in the right way (2). The marginal next unit of compute will exhibit diminishing returns.</p>
+
+<p>But if that’s the case, then it’s clear that <em>compute isn’t the bottleneck</em>. The bottleneck, instead, will be humans figuring out which problems to tackle (1) and how to regiment them, encode them, and design games/reward systems to get AI to solve them (2).</p>
+
+<p>DeepMind have the absolute best people on the planet working on this stuff, and it takes them time and huge amounts of resources. So we end up back at <em>taste</em>. Researchers need time and experience to develop taste, and the ability to apply heuristics and deep domain knowledge – something much more ineffable and difficult to scale.</p>
+
+<p>This doesn’t of course mean that there won’t be wonderful progress in many, many domains, brought about by ‘merely’ scaling the compute available. Even Kuhn is at pains to stress that ‘normal science’ is progress! But it does mean that the scaling hypothesis doesn’t necessarily scale research output at the same rate, at least not without AGI –– and without this, my best guess is that progress will be bottlenecked long before.</p>
+
+
+            </div>
+            <footer class="post-meta">
+              <p>10:26am. October  9, 2022.</p>
+            </footer>
+          </article>
         
           <article class="post text">
             <h2 class="post-title"><a href="https://jamieonsoftware.com/2022/10/01/links-september-2022.html">Links, September 2022</a></h2>
@@ -604,67 +666,6 @@ function transferFrom(address _from, address _to, uint256 _value) public returns
             </div>
             <footer class="post-meta">
               <p> 9:10am. May  1, 2022.</p>
-            </footer>
-          </article>
-        
-          <article class="post text">
-            <h2 class="post-title"><a href="https://jamieonsoftware.com/2022/04/06/solidity-fridays-transmissions11.html">Notes on Solidity Fridays Episode with Transmissions11</a></h2>
-            <div class="post-content">
-              <p>December’s <a href="https://www.youtube.com/watch?v=58eKnYR_EyM">Solidity Fridays with transmissions11</a> is really excellent, and I think a very high-leverage way to learn how good Solidity actually gets written. When the guest is especially good, as with transmissions, I put Solidity Fridays in the same sort of category as <a href="https://www.destroyallsoftware.com">Destroy All Software</a> – teaching by communicating models and patterns of thought, rather than regurgitating tutorial content.</p>
-
-<p>Anyway, here are my notes in case somebody else finds them useful:</p>
-
-<ul>
-  <li>
-    <p>When emitting events, t11s emits instances of the contract rather than the address directly; the compiler will swap it out for an address anyway, but this approach gives you greater type safety</p>
-  </li>
-  <li>
-    <p>Call <code class="language-plaintext highlighter-rouge">CREATE2</code> to revert if the contract has already been deployed, by adding a salt of the underlying address to the deployment</p>
-  </li>
-  <li>
-    <p>Addresses are 20 bytes, salts have to be 32 bytes. So we call <code class="language-plaintext highlighter-rouge">fillLast12Bytes</code> to add the remaining bytes (provided in Solmate’s <code class="language-plaintext highlighter-rouge">bytes32</code> library)</p>
-  </li>
-  <li>
-    <p>The gas cost of <code class="language-plaintext highlighter-rouge">&gt;</code> is equivalent to <code class="language-plaintext highlighter-rouge">!=</code> when the comparator is <code class="language-plaintext highlighter-rouge">0</code>, more expensive otherwise.</p>
-  </li>
-  <li>
-    <p>Illustration of his opinionated approach to smart contract development: “the performance of the code for users who aren’t stupid matters” - that’s why the [[ERC20]] implementation in [[Solmate]] doesn’t stop you from transferring into the contract’s address. “I’m not raising the cost for everyone else”</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">fdiv</code> is like division, but accounting for the bases. ‘Scale this down by the contract’s base’. Multiply the numerator by <code class="language-plaintext highlighter-rouge">baseUnit</code> and then divide the <code class="language-plaintext highlighter-rouge">numerator * baseUnit</code> by the denominator. Also checks for overflow on <code class="language-plaintext highlighter-rouge">numerator * baseUnit</code>, since overflow isn’t protected in assembly calls.</p>
-  </li>
-  <li>
-    <p>In general, keep external calls all the way at the end of the function – including after any events are emitted – to make reentrancy more difficult.</p>
-  </li>
-  <li>
-    <p>More important with eg ERC777 since eg <code class="language-plaintext highlighter-rouge">safeTransferFrom</code> might allow arbitrary code execution (https://eips.ethereum.org/EIPS/eip-777)</p>
-  </li>
-  <li>
-    <p>Removing things from the end of an array is significantly cheaper than from the beginning, since in the latter case you have to move everything over.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">uint256 currentIndex = withdrawalQueue.length - 1; for (; ; currentIndex--)</code> is better in this case than initialising the <code class="language-plaintext highlighter-rouge">uint56 i = withdrawalQueue.length - 1</code> since we’re only doing effects (the tx will revert by underflow automatically), so we don’t need to check the length. Saves gas.</p>
-  </li>
-  <li>
-    <p>Add a <code class="language-plaintext highlighter-rouge">trusted</code> boolean to the strategies, which is then checked on deposit and withdrawal. Makes it easier for EOAs to manage vaults without having to be wrapped in some other contract. Also makes it possible to disable withdrawal from strategies easily if they’re malicious in some way.</p>
-  </li>
-  <li>
-    <p>Two reads to the same struct from <code class="language-plaintext highlighter-rouge">getStrategyData[strategy]</code> has no extra gas cost, since it gets optimised by the compiler into one single <code class="language-plaintext highlighter-rouge">SLOAD</code>. &amp; makes it clearer to read by a dev where it’s coming from.</p>
-  </li>
-  <li>
-    <p>Use <code class="language-plaintext highlighter-rouge">unchecked</code> when you know you won’t underflow or overflow, and so can therefore do without the safety. Saves gas.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">unchecked</code> isn’t leaky - it won’t uncheck in nested function calls</p>
-  </li>
-  <li>
-    <p>The implementation of Compound’s cToken is a little funky, since in a lot of places function calls return an error code rather than revert. So sometimes you need to <code class="language-plaintext highlighter-rouge">require(cToken.blah() == 0)</code> to ensure it succeeded.</p>
-  </li>
-</ul>
-
-            </div>
-            <footer class="post-meta">
-              <p> 6:38pm. April  6, 2022.</p>
             </footer>
           </article>
         
