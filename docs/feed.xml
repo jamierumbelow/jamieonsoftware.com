@@ -1,4 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://jamieonsoftware.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jamieonsoftware.com/" rel="alternate" type="text/html" /><updated>2022-10-09T20:35:56+01:00</updated><id>https://jamieonsoftware.com/feed.xml</id><title type="html">Jamie on Software</title><subtitle></subtitle><entry><title type="html">AlphaTensor, Taste, and the Scalability of AIs</title><link href="https://jamieonsoftware.com/2022/10/09/alphatensor-scaling.html" rel="alternate" type="text/html" title="AlphaTensor, Taste, and the Scalability of AIs" /><published>2022-10-09T20:25:00+01:00</published><updated>2022-10-09T20:25:00+01:00</updated><id>https://jamieonsoftware.com/2022/10/09/alphatensor-scaling</id><content type="html" xml:base="https://jamieonsoftware.com/2022/10/09/alphatensor-scaling.html">&lt;p&gt;This week’s &lt;a href=&quot;https://www.deepmind.com/blog/discovering-novel-algorithms-with-alphatensor&quot;&gt;AlphaTensor&lt;/a&gt; announcement shows not only that AI is getting really good at doing things, but also that DeepMind are really good at getting AI to do things.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://jamieonsoftware.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jamieonsoftware.com/" rel="alternate" type="text/html" /><updated>2022-11-02T12:56:02+00:00</updated><id>https://jamieonsoftware.com/feed.xml</id><title type="html">Jamie on Software</title><subtitle></subtitle><entry><title type="html">Links, October 2022</title><link href="https://jamieonsoftware.com/2022/11/02/links-october-2022.html" rel="alternate" type="text/html" title="Links, October 2022" /><published>2022-11-02T11:10:00+00:00</published><updated>2022-11-02T11:10:00+00:00</updated><id>https://jamieonsoftware.com/2022/11/02/links-october-2022</id><content type="html" xml:base="https://jamieonsoftware.com/2022/11/02/links-october-2022.html">&lt;p&gt;Writing lots this month, finishing up the manuscript for &lt;a href=&quot;https://www.amazon.co.uk/Building-Ethereum-Products-Protocols-Platforms/dp/1484290445&quot;&gt;Building With Ethereum: Products, Protocols, and Platforms&lt;/a&gt;. Decided to restructure it all halfway through the first draft, which has meant a lot of rewriting. I’m learning a lot about how to sustain an argument over ~300 pages, and what makes for clear, technical exposition.&lt;/p&gt;
+
+&lt;p&gt;Managed to dash out something small on &lt;a href=&quot;https://jamieonsoftware.com/2022/10/09/alphatensor-scaling.html&quot;&gt;AlphaTensor and research taste&lt;/a&gt;. Since I noticed this taste dynamic, it keeps popping up everywhere. It’s certainly not a new insight, but it’s something I see addressed an unfortunately small amount in the philosophy of science literature. The scientist is taken as some a priori given to most philosophical models of science, which, if my observation is correct, is skipping over perhaps the most important part of the analysis. Feyerabend gestures towards it in Against Method, but, again, doesn’t quite get there.&lt;/p&gt;
+
+&lt;p&gt;I’ve also been reading a lot. Winston Churchill’s &lt;a href=&quot;https://www.amazon.co.uk/My-Early-Life-Winston-Churchill/dp/0907871623&quot;&gt;My Early Life&lt;/a&gt; was a delightful, charming piece of Kipling-hued imperialism. His world-view is so remote from ours, so free of moral ambiguity. It’s a decidedly Victorian book, of heroes and adventures, a sort of anti-Le Carré. He is a wonderful writer and a gifted storyteller. Well worth a read.&lt;/p&gt;
+
+&lt;p&gt;Charles Petzold’s &lt;a href=&quot;https://www.amazon.co.uk/Code-Language-Computer-Hardware-Software/dp/0735611319&quot;&gt;Code: The Hidden Language of Computer Hardware and Software&lt;/a&gt; was also extremely good. He builds up an intuitive model for digital computing, from the very basics of Morse code via flashlights to complex microprocessors. This was a fill-in-the-gaps book for me, something I could read quickly – I finished it in two days – but has meaningfully added to my basic understanding. I didn’t, for instance, have a clear idea of a CPU’s clock cycle, which this book has changed superlatively. It was funny, too.&lt;/p&gt;
+
+&lt;p&gt;Just finished Simon Morden’s &lt;a href=&quot;https://www.amazon.co.uk/Red-Planet-Natural-History-Mars/dp/1783966610/&quot;&gt;The Red Planet: A Natural History of Mars&lt;/a&gt;, which I’m reading in a cluster with some other Mars books. More top spacey content! Good passages on competing theories of crust formation and covers the basics of the protoplanetary disc super well. Makes me want to write something similar on Saturn (an infinitely more mysterious and beautiful planet.)&lt;/p&gt;
+
+&lt;p&gt;And, of course, &lt;a href=&quot;https://www.amazon.co.uk/Cosmos-Cosmic-Evolution-Science-Civilisation/dp/0349107033&quot;&gt;Cosmos&lt;/a&gt; by Carl Sagan. It has taken me 27 years to read a book that I should have read in my early teens. I felt a flickering rememberance of days past, that wide-eyed, ambitious, weird young boy, trying to understand who he was and why he was so unhappy. If I had read this book then, I suspect I’d be a scientist now – and would have become much more content with my weirdness.&lt;/p&gt;
+
+&lt;p&gt;My first Interintellect Salon, &lt;a href=&quot;https://interintellect.com/salon/freedom-and-love-in-the-music-of-joni-mitchell/&quot;&gt;Freedom and Love in the Music of Joni Mitchell&lt;/a&gt; is later this month. Should be wonderfully self-indulgent and fun.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://noahpinion.substack.com/p/a-concrete-vision-of-the-liberal&quot;&gt;A concrete vision of the liberal democratic future&lt;/a&gt; from Noah Smith, and a more pointed &lt;a href=&quot;https://www.theatlantic.com/ideas/archive/2022/01/scarcity-crisis-college-housing-health-care/621221/&quot;&gt;piece on the abundance agenda&lt;/a&gt;. This quote from Noah stuck with me:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The final thing that the liberal democratic vision needs is a way to accommodate conservatives. The divisions within the democratic world are the primary reason why the autocratic powers are able to make their case at all. But a great many people within any society, including liberal democratic ones, are socially conservative to a greater or lesser degree. If the vision of the future that liberal democracies present is one where conservative values have been wiped from the Earth, then conservatives will feel they have no choice but to embrace reactionary illiberalism.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Also from Noah, &lt;a href=&quot;https://noahpinion.substack.com/p/why-per-capita-emissions-is-a-bad&quot;&gt;why per-capita emissions is a bad framing for the carbon debate&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lots of anti-EA discourse began in our little corner of the Internet this month. Liam Kofi Bright made a fair point that the evaluative standards of the movement’s critics seem &lt;a href=&quot;https://twitter.com/lastpositivist/status/1578695082748055553&quot;&gt;radically out-of-whack&lt;/a&gt;. David Shor &lt;a href=&quot;https://twitter.com/davidshor/status/1578779382545530886&quot;&gt;gave a good reply&lt;/a&gt; about the psychology of the median EA member (via Nadia). And Nathan &lt;a href=&quot;https://www.lesswrong.com/tag/effective-altruism#An_attempt_at_a_minimal_set_of_effective_altruism_axioms&quot;&gt;put together an attempt at a minimal set of EA axioms&lt;/a&gt; that is worth reading.&lt;/p&gt;
+
+&lt;p&gt;Really enjoying the &lt;a href=&quot;https://pedestrianobservations.com&quot;&gt;Pedestrian Observations&lt;/a&gt; blog, another good example (along with Construction Physics) of the single-issue blog that &lt;a href=&quot;https://conversationswithtyler.com/episodes/patrick-collison/&quot;&gt;Patrick and Tyler discussed&lt;/a&gt; back in 2017:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;COLLISON: What kinds of blogs should there be more of in the world?&lt;/p&gt;
+
+  &lt;p&gt;COWEN: Single-issue blogs on issues of importance. If you take something like penal reform, an underrated cause. Prisons, I think, are barbaric, but it’s not an easy problem to solve. There’s not a quick fix. Some people do need to be constrained in some way. The idea that there should be more blogs that track that and persistently deliver the message, “Something is wrong here.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I would love to hear more about &lt;a href=&quot;https://twitter.com/jamierumbelow/status/1587785290994929665&quot;&gt;your single-issue blog ideas&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/BrianCAlbrecht/status/1580889256922210304&quot;&gt;A good list of economics bloggers.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Zvi is working on Balsa Research, &lt;a href=&quot;https://thezvi.substack.com/p/announcing-balsa-research&quot;&gt;an attempt to reimagine the think tank&lt;/a&gt;. &lt;a href=&quot;https://thezvi.substack.com/p/why-balsa-research-is-worthwhile&quot;&gt;Why it is worthwhile&lt;/a&gt;. And &lt;a href=&quot;https://thezvi.substack.com/p/balsa-faq&quot;&gt;an FAQ on the same&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A great paper on &lt;a href=&quot;https://stephenjarvis.github.io/files/jarvis_jmp_nimbyism_renewable_energy.pdf&quot;&gt;The Economic Costs of NIMBYism&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Using hedonic methods I find that wind projects can impose significant external local costs, while solar projects do not. I then show that planning officials are particularly sensitive to local costs in their area. The resulting misallocation of investment may have increased wind power deployment costs by 10-29%.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://share.transistor.fm/s/22f16c7f&quot;&gt;Nearly-incredible AI-generated interview with Joe Rogan and Steve Jobs.&lt;/a&gt; We are months away from the uncanny valley.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/2206.01878&quot;&gt;Remote Collaboration Fuses Fewer Breakthrough Ideas.&lt;/a&gt; Across 20mn research articles and 4mn patents, Lin, Frey, and Wu find that, on average, the farther away the members of the team are from one another, the less likely the paper is to be disruptive.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/chrisdancy/status/1583594350956933121&quot;&gt;Using drones to represent the destroyed architecture of ancient monuments.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Jatan on &lt;a href=&quot;https://blog.jatan.space/p/its-craters-all-the-way-down&quot;&gt;the pre-Apollo lunar photography missions.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Judah on &lt;a href=&quot;https://bewrong.substack.com/p/the-problem-of-too-much-money&quot;&gt;the problem of too much money.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Lachy’s &lt;a href=&quot;https://bleedingedge.ai&quot;&gt;bleeding edge AI history project.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ACX on &lt;a href=&quot;https://astralcodexten.substack.com/p/from-nostradamus-to-fukuyama&quot;&gt;the lens through which the world judges your predictions.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://marginalrevolution.com/marginalrevolution/2022/10/space-race-versus-seattle-crawl.html&quot;&gt;Another example of fast/slow public infrastructure.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Galbraith on forecasting:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;There are two kinds of forecasters: those who don’t know, and those who don’t know they don’t know.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And Bagehot on confidence:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Every banker knows that if he has to prove that he is worthy of credit, however good may be his arguments, in fact his credit is gone.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="links" /><category term="books" /><category term="science" /><category term="space" /><category term="ethereum" /><category term="economics" /><category term="housing" /><category term="effective-altruism" /><category term="music" /><category term="politics" /><summary type="html">Writing lots this month, finishing up the manuscript for Building With Ethereum: Products, Protocols, and Platforms. Decided to restructure it all halfway through the first draft, which has meant a lot of rewriting. I’m learning a lot about how to sustain an argument over ~300 pages, and what makes for clear, technical exposition.</summary></entry><entry><title type="html">AlphaTensor, Taste, and the Scalability of AIs</title><link href="https://jamieonsoftware.com/2022/10/09/alphatensor-scaling.html" rel="alternate" type="text/html" title="AlphaTensor, Taste, and the Scalability of AIs" /><published>2022-10-09T20:25:00+01:00</published><updated>2022-10-09T20:25:00+01:00</updated><id>https://jamieonsoftware.com/2022/10/09/alphatensor-scaling</id><content type="html" xml:base="https://jamieonsoftware.com/2022/10/09/alphatensor-scaling.html">&lt;p&gt;This week’s &lt;a href=&quot;https://www.deepmind.com/blog/discovering-novel-algorithms-with-alphatensor&quot;&gt;AlphaTensor&lt;/a&gt; announcement shows not only that AI is getting really good at doing things, but also that DeepMind are really good at getting AI to do things.&lt;/p&gt;
 
 &lt;p&gt;Their approach is a variant of the deep reinforcement-learning-guided Monte Carlo tree search that they have applied so successfully to playing Chess and Go. What they have done, very effectively, is to design a game with the objective of finding the most efficient tensor multiplication algorithm for a matrix of some dimension.&lt;/p&gt;
 
@@ -400,36 +470,4 @@ function transferFrom(address _from, address _to, uint256 _value) public returns
       &lt;p&gt;We know this, since there actually are &lt;a href=&quot;https://ethereum.org/en/developers/docs/nodes-and-clients/nodes-as-a-service/&quot;&gt;a bunch&lt;/a&gt; &lt;a href=&quot;https://developers.cloudflare.com/web3/ethereum-gateway/&quot;&gt;of&lt;/a&gt; &lt;a href=&quot;https://infura.io&quot;&gt;competitors&lt;/a&gt;. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="ethereum" /><category term="decentralisation" /><summary type="html">When you ask a crypto-sceptic what decentralisation means wrt crypto, they offer these sorts of properties:</summary></entry><entry><title type="html">Links, April 2022</title><link href="https://jamieonsoftware.com/2022/05/01/links-april-2022.html" rel="alternate" type="text/html" title="Links, April 2022" /><published>2022-05-01T09:10:04+01:00</published><updated>2022-05-01T09:10:04+01:00</updated><id>https://jamieonsoftware.com/2022/05/01/links-april-2022</id><content type="html" xml:base="https://jamieonsoftware.com/2022/05/01/links-april-2022.html">&lt;p&gt;April has been busy and changeable – mirroring the weather, I suppose – I began a new role at &lt;a href=&quot;https://fei.money&quot;&gt;Fei Labs&lt;/a&gt; and am getting settled. I wrote three pieces on this blog: something technical on &lt;a href=&quot;https://jamieonsoftware.com/2022/04/02/hd-wallets-and-network-switching.html&quot;&gt;HD wallets and network switching&lt;/a&gt;, something equally technical &lt;a href=&quot;https://jamieonsoftware.com/2022/04/03/a-quick-note-on-web_accessible_resources-in-Safari-Web-Extensions.html&quot;&gt;about Safari iOS extensions&lt;/a&gt;, and the aforementioned &lt;a href=&quot;https://jamieonsoftware.com/2022/04/06/solidity-fridays-transmissions11.html&quot;&gt;notes on the t11s episode of Solidity Fridays&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Notwithstanding my own contributions, this was a good month for interesting reading. &lt;a href=&quot;https://www.amazon.co.uk/Star-Builders-Nuclear-Fusion-Planet/dp/1474611583&quot;&gt;The Star Builders&lt;/a&gt; is a very accessible and fast read on the why and how of nuclear fusion. It’s a contribution to the – I think underrated – genre of “here’s a plausible pathway to some major scientific discovery, and a set of good reasons to be optimistic we’re on that pathway” science writing. One for the techno-optimists’ bookshelves.&lt;/p&gt;
-
-&lt;p&gt;Emily St. John Mandel’s new novel, &lt;a href=&quot;https://www.amazon.co.uk/Sea-Tranquility-Emily-John-Mandel/dp/1529083494&quot;&gt;Sea of Tranquility&lt;/a&gt;, is out, and is splendid. I found some of the science fiction elements a little bit hamfisted, and this is definitely Mandel finding her voice and her groove. But it’s worth reading, especially if you’ve read Station Eleven (one of the best novels I’ve read in the last few years) and The Glass Hotel.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/Seven-Brief-Lessons-Physics-Rovelli/dp/0141981725/ref=tmm_pap_swatch_0?_encoding=UTF8&amp;amp;qid=1651344159&amp;amp;sr=1-1&quot;&gt;Seven Brief Lessons on Physics&lt;/a&gt; was enjoyable, too. Best supplemented by something more technical, I think.&lt;/p&gt;
-
-&lt;p&gt;Finally, I just finished &lt;a href=&quot;https://www.amazon.co.uk/London-Under-Peter-Ackroyd/dp/0099287374&quot;&gt;London Under&lt;/a&gt; by Peter Ackroyd. I &lt;em&gt;loved&lt;/em&gt; Ackroyd’s &lt;a href=&quot;https://www.amazon.co.uk/Life-Thomas-More-Peter-Ackroyd/dp/0749386401&quot;&gt;biography of Sir Thomas More&lt;/a&gt;, but hadn’t read any of his other books. He’s an excellent writer. There were a handful of places where I thought he made non-sequiturs – the sort of non-sequiturs quite common in a certain style of proto-academic culture writing – but I’m being really picky.&lt;/p&gt;
-
-&lt;p&gt;The excellent Noah Smith did &lt;a href=&quot;https://www.youtube.com/watch?v=oaMgZSd3gV4&quot;&gt;an interview&lt;/a&gt; with the excellent David Roberts on climate change, climate tech, climate activism, writing in public. Both combative and thoughtful throughout.&lt;/p&gt;
-
-&lt;p&gt;A &lt;a href=&quot;https://www.wired.com/story/tracers-in-the-dark-welcome-to-video-crypto-anonymity-myth/&quot;&gt;challenging post on child abuse videos&lt;/a&gt; and a global coordinated effort to bust a specific site and its clients. A long and difficult read but very worthwhile.&lt;/p&gt;
-
-&lt;p&gt;Something to keep an eye on – an economics lab &lt;a href=&quot;https://start.edgeryders.eu/page/15452&quot;&gt;imaginging systems through science-fiction&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In case you’ve woken in a sweat, panicked that you’re not subscribed to enough substacks (subsstack?), &lt;a href=&quot;https://news.ycombinator.com/item?id=30983517&quot;&gt;here’s a list&lt;/a&gt; of good, subject-specific newsletters.&lt;/p&gt;
-
-&lt;p&gt;Very very good and comprehensive and thorough &lt;a href=&quot;https://cdrprimer.org/read&quot;&gt;guide to direct carbon renewal&lt;/a&gt;. We need to do more here; Stripe and others have &lt;a href=&quot;https://frontierclimate.com&quot;&gt;launched an advanced market commitment to help&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Stripe &lt;a href=&quot;https://stripe.com/blog/expanding-global-payouts-with-crypto&quot;&gt;have also launched crypto payments&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The beginning of the conversation, not the end of it, but &lt;a href=&quot;https://austinvernon.site/blog/starshipsuperweapon.html&quot;&gt;some reflections on SpaceX’s technologies and warfare&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Really enjoyed &lt;a href=&quot;https://www.worksinprogress.co/issue/londons-lost-ringways/&quot;&gt;this article on the urban history and development of London’s planned and, blisfully, abandoned Ringways&lt;/a&gt;, the persistence of political structures and the perversity of political incentives, and the pitfalls of top-down urban planning. Works in Progress is putting out a lot of excellent stuff.&lt;/p&gt;
-
-&lt;p&gt;On top of my normal reading, I listened to three audiobooks this month, all spacey or science-related content. Another for the techno-optimist bookshelf, &lt;a href=&quot;https://www.amazon.co.uk/Case-Space-Revolution-Spaceflight-Possibility/dp/B08CVTT36C&quot;&gt;The Case for Space by Zubrin&lt;/a&gt; was good fun, opinionated, rigorous and rather inspiring.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/Forces-of-Nature/dp/B01NA0F2DD&quot;&gt;Forces of Nature&lt;/a&gt;, from the same authorship of The Planets (mentioned last month), was also splendid. The narrator is truly excellent.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/080322639X&quot;&gt;Into That Silent Sea: Trailblazers of the Space Era, 1961-1965 by French and Burgess&lt;/a&gt; is part of &lt;a href=&quot;https://www.amazon.co.uk/dp/B088T4M553&quot;&gt;a broader series&lt;/a&gt; of histories on various topics in spaceflight. The whole series is pretty good, with only a few exceptions, and this isn’t one of them. Meticulous and narrative-driven, I learnt a lot about Gagarin, Leonov, the Mercury Seven, and the politics that made it all happen. I’ll be continuing this series.&lt;/p&gt;
-
-&lt;p&gt;I also &lt;a href=&quot;https://calendly.com/jamierumbelow&quot;&gt;finally got a Calendly set up&lt;/a&gt;, so if you’d like to chat, feel free to book in a call.&lt;/p&gt;</content><author><name></name></author><category term="links" /><category term="science" /><category term="london" /><category term="books" /><category term="climate" /><summary type="html">April has been busy and changeable – mirroring the weather, I suppose – I began a new role at Fei Labs and am getting settled. I wrote three pieces on this blog: something technical on HD wallets and network switching, something equally technical about Safari iOS extensions, and the aforementioned notes on the t11s episode of Solidity Fridays.</summary></entry></feed>
+&lt;/div&gt;</content><author><name></name></author><category term="ethereum" /><category term="decentralisation" /><summary type="html">When you ask a crypto-sceptic what decentralisation means wrt crypto, they offer these sorts of properties:</summary></entry></feed>
