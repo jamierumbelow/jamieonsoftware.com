@@ -29,3 +29,6 @@ jekyll-archives:
   permalinks:
     tag: "/:name/"
     month: "/months/:year/:month.html"
+
+feed:
+  posts_limit: 1000
