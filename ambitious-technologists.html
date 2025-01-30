@@ -1,0 +1,793 @@
+<p>
+  ‘Move fast and break things’ is still underrated advice. The idea of shipping
+  quickly might be memetically abundant within tech, but there are many places
+  in the economy where it is not just uncommon, but actively discouraged. There
+  are many occasions where companies follow this advice, and
+  <a href="https://youtu.be/KA69Oh3_obY?t=1650">win because of it</a>.
+</p>
+<p>
+  But it is easy to let it infect the wrong part of your brain, and
+  <em>a fortiori</em> your processes. It’s easy to let it constrain you in
+  important, invisible ways. The idea that you should ship quickly forces
+  simplicity on everything upstream of the product. You need to do the minimum
+  required to get to a shipped product. Nothing more.
+</p>
+<p>
+  This is <a href="http://www.paulgraham.com/early.html">considered</a>
+  <a
+    href="https://www.goodreads.com/quotes/6499956-if-you-aren-t-embarrassed-by-the-first-version-of-your"
+    >canonical</a
+  >
+  <a href="https://hbr.org/2013/05/why-the-lean-start-up-changes-everything"
+    >advice</a
+  >. But it has some interesting effects:
+</p>
+<ul>
+  <li>
+    <p>
+      You might strip out features that could be valuable, but aren’t an
+      immediately obvious good – you might go against your hunches / taste in
+      favour of what can be justified by data
+    </p>
+  </li>
+  <li>
+    <p>
+      You might not add instrumentation, feature flags, and other scaffolding
+      that is hugely valuable but becomes difficult to implement in a large,
+      existing codebase
+    </p>
+  </li>
+  <li>
+    <p>
+      You might not refactor your code properly when it gets messy, shoving it
+      further and further down the timeline
+    </p>
+  </li>
+</ul>
+<p>
+  None of these things are bad per se. But the idea that we should produce the
+  absolute minimal thing at every stage – whatever is needed to push the
+  company’s commercial goals forward&nbsp;– strongly disincentivises a bunch of
+  stuff that takes a product from ‘good enough’ to ‘great’.
+</p>
+<p>
+  And truly great product teams seem to me to
+  <a
+    href="https://marginalrevolution.com/marginalrevolution/2020/02/who-is-excellent-and-why.html"
+    >have a vision of excellence</a
+  >
+  and integrate considerations of the longer-term into the demands of the
+  everyday.
+</p>
+<p>
+  Most perniciously, however, the scrappy prototyping approach might produce
+  something that is actually a bit shit?
+</p>
+<p>
+  There’s another approach: doing the deliberately difficult thing because it
+  creates a technical and product advantage, and most importantly because it
+  produces an outcome you’re actually proud of.
+</p>
+<p>
+  In this post, I’d like to give some examples of great companies that have done
+  this sort of thing. I’ll call them <em>ambitious technologists</em>, because
+  they have a sense of ambition – not just for the company they’re building, but
+  for the technology that powers it.
+</p>
+<p></p>
+<h2><strong>280 North</strong></h2>
+<p>
+  Early in my time doing web dev, a team of Apple alums launched
+  <a href="https://280slides.com/">280 Slides</a>, a browser-based clone of OS
+  X’s Keynote. 280 Slides was gorgeous; it was fast, functional, beautiful. If
+  you were running it on a Mac, it was easy to forget you were using a web-based
+  application at all:
+</p>
+<div class="captioned-image-container">
+  <figure>
+    <a
+      class="image-link image2 is-viewable-img"
+      target="_blank"
+      href="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7e3fac4a-cb6f-4821-8c99-48c60d7adcd0_1174x889.png"
+      data-component-name="Image2ToDOM"
+      ><div class="image2-inset">
+        <picture
+          ><source
+            type="image/webp"
+            srcset="
+              https://substackcdn.com/image/fetch/w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7e3fac4a-cb6f-4821-8c99-48c60d7adcd0_1174x889.png   424w,
+              https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7e3fac4a-cb6f-4821-8c99-48c60d7adcd0_1174x889.png   848w,
+              https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7e3fac4a-cb6f-4821-8c99-48c60d7adcd0_1174x889.png 1272w,
+              https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7e3fac4a-cb6f-4821-8c99-48c60d7adcd0_1174x889.png 1456w
+            "
+            sizes="100vw" />
+          <img
+            src="https://substack-post-media.s3.amazonaws.com/public/images/7e3fac4a-cb6f-4821-8c99-48c60d7adcd0_1174x889.png"
+            width="1174"
+            height="889"
+            data-attrs='{"src":"https://substack-post-media.s3.amazonaws.com/public/images/7e3fac4a-cb6f-4821-8c99-48c60d7adcd0_1174x889.png","srcNoWatermark":null,"fullscreen":null,"imageSize":null,"height":889,"width":1174,"resizeWidth":null,"bytes":557961,"alt":null,"title":null,"type":"image/png","href":null,"belowTheFold":true,"topImage":false,"internalRedirect":null,"isProcessing":false}'
+            class="sizing-normal"
+            alt=""
+            srcset="
+              https://substackcdn.com/image/fetch/w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7e3fac4a-cb6f-4821-8c99-48c60d7adcd0_1174x889.png   424w,
+              https://substackcdn.com/image/fetch/w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7e3fac4a-cb6f-4821-8c99-48c60d7adcd0_1174x889.png   848w,
+              https://substackcdn.com/image/fetch/w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7e3fac4a-cb6f-4821-8c99-48c60d7adcd0_1174x889.png 1272w,
+              https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7e3fac4a-cb6f-4821-8c99-48c60d7adcd0_1174x889.png 1456w
+            "
+            sizes="100vw"
+            loading="lazy"
+        /></picture>
+        <div class="image-link-expand">
+          <div class="pencraft pc-display-flex pc-gap-8 pc-reset">
+            <div class="pencraft pc-reset icon-container restack-image">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-refresh-cw"
+              >
+                <path
+                  d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"
+                ></path>
+                <path d="M21 3v5h-5"></path>
+                <path
+                  d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"
+                ></path>
+                <path d="M8 16H3v5"></path>
+              </svg>
+            </div>
+            <div class="pencraft pc-reset icon-container view-image">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-maximize2"
+              >
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <polyline points="9 21 3 21 3 15"></polyline>
+                <line x1="21" x2="14" y1="3" y2="10"></line>
+                <line x1="3" x2="10" y1="21" y2="14"></line>
+              </svg>
+            </div>
+          </div>
+        </div></div
+    ></a>
+  </figure>
+</div>
+<p>
+  It’s easy to forget how big a leap this actually was. Robust, fast, and
+  beautiful web UI that felt and behaved like a native application just wasn’t
+  happening in 2008.
+</p>
+<p>
+  By comparison, here is the roughly-contemporaneous Friendfeed, a social media
+  aggregator that was later acquired by Facebook:
+</p>
+<div class="captioned-image-container">
+  <figure>
+    <a
+      class="image-link image2 is-viewable-img"
+      target="_blank"
+      href="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd42d8340-bd68-417c-b068-6f3887faf5e4_609x408.webp"
+      data-component-name="Image2ToDOM"
+      ><div class="image2-inset">
+        <picture
+          ><source
+            type="image/webp"
+            srcset="
+              https://substackcdn.com/image/fetch/w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd42d8340-bd68-417c-b068-6f3887faf5e4_609x408.webp   424w,
+              https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd42d8340-bd68-417c-b068-6f3887faf5e4_609x408.webp   848w,
+              https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd42d8340-bd68-417c-b068-6f3887faf5e4_609x408.webp 1272w,
+              https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd42d8340-bd68-417c-b068-6f3887faf5e4_609x408.webp 1456w
+            "
+            sizes="100vw" />
+          <img
+            src="https://substack-post-media.s3.amazonaws.com/public/images/d42d8340-bd68-417c-b068-6f3887faf5e4_609x408.webp"
+            width="609"
+            height="408"
+            data-attrs='{"src":"https://substack-post-media.s3.amazonaws.com/public/images/d42d8340-bd68-417c-b068-6f3887faf5e4_609x408.webp","srcNoWatermark":null,"fullscreen":null,"imageSize":null,"height":408,"width":609,"resizeWidth":null,"bytes":26086,"alt":null,"title":null,"type":"image/webp","href":null,"belowTheFold":true,"topImage":false,"internalRedirect":null,"isProcessing":false}'
+            class="sizing-normal"
+            alt=""
+            srcset="
+              https://substackcdn.com/image/fetch/w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd42d8340-bd68-417c-b068-6f3887faf5e4_609x408.webp   424w,
+              https://substackcdn.com/image/fetch/w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd42d8340-bd68-417c-b068-6f3887faf5e4_609x408.webp   848w,
+              https://substackcdn.com/image/fetch/w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd42d8340-bd68-417c-b068-6f3887faf5e4_609x408.webp 1272w,
+              https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd42d8340-bd68-417c-b068-6f3887faf5e4_609x408.webp 1456w
+            "
+            sizes="100vw"
+            loading="lazy"
+        /></picture>
+        <div class="image-link-expand">
+          <div class="pencraft pc-display-flex pc-gap-8 pc-reset">
+            <div class="pencraft pc-reset icon-container restack-image">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-refresh-cw"
+              >
+                <path
+                  d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"
+                ></path>
+                <path d="M21 3v5h-5"></path>
+                <path
+                  d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"
+                ></path>
+                <path d="M8 16H3v5"></path>
+              </svg>
+            </div>
+            <div class="pencraft pc-reset icon-container view-image">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-maximize2"
+              >
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <polyline points="9 21 3 21 3 15"></polyline>
+                <line x1="21" x2="14" y1="3" y2="10"></line>
+                <line x1="3" x2="10" y1="21" y2="14"></line>
+              </svg>
+            </div>
+          </div>
+        </div></div
+    ></a>
+  </figure>
+</div>
+<p>
+  It’s hardly hideous, and it was obviously enough to build a business and
+  threaten the relevant room’s 800-pound gorilla into an acquisition. But this
+  was considered decent design and product building, and it still would be:
+  remove the bevels, flatten the colours, rewrite it using Tailwind… and it
+  wouldn’t look out of place in a YC demo day in 2023.
+</p>
+<p>
+  How did these two teams make products of such an obvious disparity in beauty
+  and complexity?
+</p>
+<p>
+  Friendfeed, like most other startups, built a rough-and-ready version of their
+  system using common technologies and design patterns.
+</p>
+<p>
+  <em>280 North wrote a new programming language.</em> And rewrote OS X’s Cocoa
+  library in it. So they could build the web application they wanted to see,
+  rather than the one dragged out of them through rounds of small iterations.
+</p>
+<p>
+  They designed a language called Objective-J, implementing Smalltalk-style
+  messaging on top of a JavaScript runtime. They then implemented a UI library
+  called <a href="https://www.cappuccino.dev/">Cappuccino</a> in Objective-J,
+  creating a suite of tools that could produce what was then an unheard-of
+  quality of web application.
+</p>
+<p>What motivated them to do this?</p>
+<ul>
+  <li>
+    <p>
+      Incompatibilities between varying JavaScript implementations of browser
+      versions
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="https://evertpot.com/ecmascript-4-the-missing-version/"
+        >The failure to standardise ECMAScript 4</a
+      >, and the lack of quick innovation in client-side languages
+    </p>
+  </li>
+  <li>
+    <p>
+      The lack of proper inheritance, code importing, dynamic dispatch, other
+      issues that affected JavaScript the <em>language</em> – and the
+      frustration that libraries needed to redesign and reimplement these things
+    </p>
+  </li>
+  <li>
+    <p>
+      The difficulty of writing actually richly interactive applications,
+      applications that are meant to be competitive with desktop applications
+    </p>
+  </li>
+</ul>
+<p>
+  Cappuccino gave us a web application framework, with a full set of
+  standardised and native-like UI controls. They copied the Cocoa APIs precisely
+  because that would produce the best quality products:
+</p>
+<blockquote>
+  <p>
+    <em
+      >Making APIs is hard, so we just said let’s just steal the best API that
+      exists… and of course we were Mac programmers and we feel very strongly
+      that the Cocoa API is a really really good one; I think it’s hard to deny
+      that the stuff on Macs looks pretty darn good, and that’s not despite the
+      API it’s because of it</em
+    >
+  </p>
+</blockquote>
+<p>
+  –&nbsp;<a href="https://www.youtube.com/watch?v=UwSaR5PsJBQ"
+    >Francisco Tomalsky at JSConf 2009</a
+  >
+</p>
+<p>
+  What’s important about this example is that it expressed
+  <em>a strong vision for what the web could (and would!) become</em>. They
+  rejected contemporaneous approaches, such as Flash, because these approaches
+  didn’t meet the quality bar they thought necessary for web applications to be
+  legitimate competitors. They wanted web-based technologies that could support
+  desktop-style functionality: drag-and-drop, proper graphics rendering,
+  undo/redo. They thought the web as a platform could support this, and that if
+  web applications were to compete with the desktop, they needed to.
+</p>
+<p>
+  All of this seems obvious now, but back then it <em>really wasn’t</em>. It was
+  a bold, ambitious view of what web apps could become. And it took a bold,
+  ambitious technological strategy to get there.
+</p>
+<p></p>
+<h2><strong>Figma</strong></h2>
+<p>
+  The early history of Figma is another fascinating example of ambitious
+  technologists doing something that wasn’t done, or even particularly sensible,
+  on the move-fast-and-break-things model.
+</p>
+<p>
+  Inspired by vector- and canvas-based tooling like
+  <a href="https://www.sketch.com/">Sketch</a>, Figma quickly developed a new
+  mode of interaction for design tooling. An important part of that story was
+  deciding to build a full graphics editing tool directly in the browser.
+</p>
+<p>
+  To do this, Figma had to implement a large amount of the underlying graphics
+  rendering technologies using WebGL:
+</p>
+<div class="captioned-image-container">
+  <figure>
+    <a
+      class="image-link image2 is-viewable-img"
+      target="_blank"
+      href="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F11912370-016c-4321-9993-3e63c8bed740_1982x1234.png"
+      data-component-name="Image2ToDOM"
+      ><div class="image2-inset">
+        <picture
+          ><source
+            type="image/webp"
+            srcset="
+              https://substackcdn.com/image/fetch/w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F11912370-016c-4321-9993-3e63c8bed740_1982x1234.png   424w,
+              https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F11912370-016c-4321-9993-3e63c8bed740_1982x1234.png   848w,
+              https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F11912370-016c-4321-9993-3e63c8bed740_1982x1234.png 1272w,
+              https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F11912370-016c-4321-9993-3e63c8bed740_1982x1234.png 1456w
+            "
+            sizes="100vw" />
+          <img
+            src="https://substack-post-media.s3.amazonaws.com/public/images/11912370-016c-4321-9993-3e63c8bed740_1982x1234.png"
+            width="1456"
+            height="907"
+            data-attrs='{"src":"https://substack-post-media.s3.amazonaws.com/public/images/11912370-016c-4321-9993-3e63c8bed740_1982x1234.png","srcNoWatermark":null,"fullscreen":null,"imageSize":null,"height":907,"width":1456,"resizeWidth":null,"bytes":2770297,"alt":null,"title":null,"type":"image/png","href":null,"belowTheFold":true,"topImage":false,"internalRedirect":null,"isProcessing":false}'
+            class="sizing-normal"
+            alt=""
+            srcset="
+              https://substackcdn.com/image/fetch/w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F11912370-016c-4321-9993-3e63c8bed740_1982x1234.png   424w,
+              https://substackcdn.com/image/fetch/w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F11912370-016c-4321-9993-3e63c8bed740_1982x1234.png   848w,
+              https://substackcdn.com/image/fetch/w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F11912370-016c-4321-9993-3e63c8bed740_1982x1234.png 1272w,
+              https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F11912370-016c-4321-9993-3e63c8bed740_1982x1234.png 1456w
+            "
+            sizes="100vw"
+            loading="lazy"
+        /></picture>
+        <div class="image-link-expand">
+          <div class="pencraft pc-display-flex pc-gap-8 pc-reset">
+            <div class="pencraft pc-reset icon-container restack-image">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-refresh-cw"
+              >
+                <path
+                  d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"
+                ></path>
+                <path d="M21 3v5h-5"></path>
+                <path
+                  d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"
+                ></path>
+                <path d="M8 16H3v5"></path>
+              </svg>
+            </div>
+            <div class="pencraft pc-reset icon-container view-image">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-maximize2"
+              >
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <polyline points="9 21 3 21 3 15"></polyline>
+                <line x1="21" x2="14" y1="3" y2="10"></line>
+                <line x1="3" x2="10" y1="21" y2="14"></line>
+              </svg>
+            </div>
+          </div>
+        </div></div
+    ></a>
+  </figure>
+</div>
+<p>
+  <em
+    ><a href="https://evanw.github.io/webgl-filter/">Play with it here.</a> (You
+    can see a bunch more of these demos in action
+    <a href="https://www.youtube.com/watch?v=C1UUVdN3kdQ">here</a>.)</em
+  >
+</p>
+<p>
+  …and
+  <a href="http://skew-lang.org/"
+    >create a programming language to help optimise it all</a
+  >.
+</p>
+<p>
+  When Figma started adding multiplayer support – a key part of their broader
+  vision to speed up the feedback loop between design and development –
+  <a href="https://www.figma.com/blog/how-figmas-multiplayer-technology-works/"
+    >they took the ambitious approach again</a
+  >, reaching back into academic research to implement an entirely realtime
+  change management system.
+</p>
+<p>
+  These steps can be justified <em>ex post</em> by thinking about the main
+  product goal of the company: to shorten significantly the feedback loop
+  between web design and engineering. If the tooling is designed with web-native
+  technologies, it can copy and export code directly to those technologies. If
+  the tooling is designed with web-native technologies, it can use the
+  inherently connected nature of the web to make collaboration and sharing
+  easier.
+</p>
+<p>
+  But justifying it <em>ex ante</em>&nbsp;is a tough sell, unless you buy into
+  their vision and their ability to solve tough technical problems continuously
+  over a long period of time.
+</p>
+<p>
+  <a
+    href="https://www.figma.com/blog/config-europe-2020-new-feature-announcements/"
+    >Indeed, it took them a while to get there</a
+  >, but they did it – and the significance of these technical advances are
+  obvious.
+</p>
+<p></p>
+<h2><strong>The Browser Company</strong></h2>
+<p>
+  A more recent example of seriously ambitious technologists is
+  <a href="https://thebrowser.company/">The Browser Company</a>. They build Arc,
+  an attempt to reimagine the web browser. Their attempts so far seem to be
+  successful: I was so impressed within the first 20 minutes of using Arc, I
+  made it my default. Why? Because it’s so obvious they care about the product.
+</p>
+<p>
+  Perhaps the best example of them caring about the product quality comes
+  somewhat obliquely through their recent announcement that they are
+  <a href="https://www.youtube.com/watch?v=bOMQiMxh5Bc"
+    >writing a Swift compiler for Windows</a
+  >.
+</p>
+<p>
+  Browsers are complex, with acute performance needs. Browsers do a tremendous
+  amount of processing for every web page, at every layer of the stack:
+  networking, UI rendering, CSS layouting, JS runtime, UI rerendering in
+  response to user input, page rerendering in response to user input. You can’t
+  build a browser with web-based application runtimes like Electron; it’s just
+  not fast enough. Low-level performance concerns also exclude C# (<a
+    href="https://softwareengineering.stackexchange.com/questions/255891/how-does-the-common-language-runtime-improve-performance"
+    >the underlying Common Language Runtime is JIT-compiled</a
+  >.)
+</p>
+<p>
+  Security is also an unusually important requirement for a browser, especially
+  as more of the world’s information processing gets moved to the web. The
+  underlying architecture of the browser, and the security posture of the
+  technologies that power them, are crucial. Traditionally portable languages
+  like C++ make it harder to write secure code.
+</p>
+<p>
+  Beyond performance and security, The Browser Company clearly care about
+  introducing beauty and whimsy to their applications: a native application with
+  UI that feels aligned with macOS is a huge part of the appeal. Swift is a
+  language <em>designed</em> for creating beautiful UIs. Porting this code to
+  Windows and rebuilding the experience in Windows-native technologies is a
+  non-trivial problem.
+</p>
+<p>So they decided to run Swift on Windows.</p>
+<p>Which, when you think about it, is a little bit crazy.</p>
+<p>
+  There isn’t a full Swift environment available on Windows (<a
+    href="https://www.swift.org/blog/swift-on-windows/"
+    >although there have been some attempts</a
+  >). In particular, the existing Swift on Windows compiler lacked modern Swift
+  language features, proper IDE / language server integration, instrumentation
+  and compiler tools, as well as application-level frameworks for rendering UI
+  and animations and all the other things that make Arc a delight to use.
+</p>
+<p>
+  They decided to tackle this problem directly, hiring a compiler team and
+  porting the underlying language tooling to Windows. By doing the ambitious
+  thing, they are taking a short-term hit in terms of technological risk and
+  development time, and will give back to the community a suite of tooling to
+  write cross-platform Swift application code.
+</p>
+<p>
+  There’s another rationale for this audacious approach: the best way to tank
+  your product quality is to make your engineers’ lives miserable. The Browser
+  Company have deep expertise with the Swift language and runtime, and a lot of
+  existing code. Maintaining two code bases is a pretty significant challenge,
+  and it’s important not to discount the benefits of code sharing – especially
+  when you want to iterate quickly. They could give their engineering team a
+  language and platform that they love, and enable the long-term persistence of
+  institutional knowledge.
+</p>
+<p>
+  So far,
+  <a href="https://www.youtube.com/watch?v=Xa_fNuaSE_I"
+    >their attempts seem successful</a
+  >. It doesn’t look great just yet:
+</p>
+<div class="captioned-image-container">
+  <figure>
+    <a
+      class="image-link image2 is-viewable-img"
+      target="_blank"
+      href="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F44ce7245-6194-4ee3-a638-cf1486b55cb3_1307x913.jpeg"
+      data-component-name="Image2ToDOM"
+      ><div class="image2-inset">
+        <picture
+          ><source
+            type="image/webp"
+            srcset="
+              https://substackcdn.com/image/fetch/w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F44ce7245-6194-4ee3-a638-cf1486b55cb3_1307x913.jpeg   424w,
+              https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F44ce7245-6194-4ee3-a638-cf1486b55cb3_1307x913.jpeg   848w,
+              https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F44ce7245-6194-4ee3-a638-cf1486b55cb3_1307x913.jpeg 1272w,
+              https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F44ce7245-6194-4ee3-a638-cf1486b55cb3_1307x913.jpeg 1456w
+            "
+            sizes="100vw" />
+          <img
+            src="https://substack-post-media.s3.amazonaws.com/public/images/44ce7245-6194-4ee3-a638-cf1486b55cb3_1307x913.jpeg"
+            width="1307"
+            height="913"
+            data-attrs='{"src":"https://substack-post-media.s3.amazonaws.com/public/images/44ce7245-6194-4ee3-a638-cf1486b55cb3_1307x913.jpeg","srcNoWatermark":null,"fullscreen":null,"imageSize":null,"height":913,"width":1307,"resizeWidth":null,"bytes":60920,"alt":null,"title":null,"type":"image/jpeg","href":null,"belowTheFold":true,"topImage":false,"internalRedirect":null,"isProcessing":false}'
+            class="sizing-normal"
+            alt=""
+            srcset="
+              https://substackcdn.com/image/fetch/w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F44ce7245-6194-4ee3-a638-cf1486b55cb3_1307x913.jpeg   424w,
+              https://substackcdn.com/image/fetch/w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F44ce7245-6194-4ee3-a638-cf1486b55cb3_1307x913.jpeg   848w,
+              https://substackcdn.com/image/fetch/w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F44ce7245-6194-4ee3-a638-cf1486b55cb3_1307x913.jpeg 1272w,
+              https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F44ce7245-6194-4ee3-a638-cf1486b55cb3_1307x913.jpeg 1456w
+            "
+            sizes="100vw"
+            loading="lazy"
+        /></picture>
+        <div class="image-link-expand">
+          <div class="pencraft pc-display-flex pc-gap-8 pc-reset">
+            <div class="pencraft pc-reset icon-container restack-image">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-refresh-cw"
+              >
+                <path
+                  d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"
+                ></path>
+                <path d="M21 3v5h-5"></path>
+                <path
+                  d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"
+                ></path>
+                <path d="M8 16H3v5"></path>
+              </svg>
+            </div>
+            <div class="pencraft pc-reset icon-container view-image">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-maximize2"
+              >
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <polyline points="9 21 3 21 3 15"></polyline>
+                <line x1="21" x2="14" y1="3" y2="10"></line>
+                <line x1="3" x2="10" y1="21" y2="14"></line>
+              </svg>
+            </div>
+          </div>
+        </div></div
+    ></a>
+  </figure>
+</div>
+<p>
+  But it’s a native Windows application, with native Windows UI, and I’m sure
+  that this upfront work will have produced a much better product than the
+  alternatives.
+</p>
+<p></p>
+<h2><strong>Superhuman and Zed</strong></h2>
+<p>
+  Two other examples that merit attention are
+  <a href="https://superhuman.com">Superhuman</a>, the power-user email client,
+  and <a href="https://t.co/LolUML5eT1">Zed</a>, a high-performance code editor.
+</p>
+<p>
+  Superhuman is designed for speed. But did you know they also wrote an entire
+  CSS layouting framework in order to get the typography right? From
+  <a
+    href="https://www.acquired.fm/episodes/special-superhuman-part-ii-designing-software-to-feel-like-a-game-with-rahul-vohra"
+    >this interview with Rahul Vohra on AcquiredFM</a
+  >:
+</p>
+<blockquote>
+  <p>
+    <em
+      >The other example, David, that you may have been referring to is actually
+      to do a typography and fonts. I'm a big typography nerd. I’ll avoid using
+      too much jargon as I go into this example, but I really wanted everything
+      to line up with the vertical rhythm on the page. This is really hard to do
+      if you're just doing basic web programming. It is in fact impossible—if
+      you have different fonts, you have graphical elements, things of different
+      sizes—to have everything lined up on an eight pixel or a six pixel grid.
+      But we figured out how to do it.</em
+    >
+  </p>
+  <p>
+    <em
+      >We dove into the Chrome source code, reverse-engineered the font layout
+      engine, and then built our own layout framework actually entirely in CSS
+      because we wanted this thing to be super fast as well.</em
+    >
+  </p>
+  <p>
+    <em
+      >Now, whenever we want to lay something out, we have a little tool but in
+      just the font, it spits out all the metrics. This is the height of the
+      ascender, this is the x-height, this is the cap height, this is the length
+      of the descender.</em
+    >
+  </p>
+  <p><em>…</em></p>
+  <p>
+    <em
+      >It generates the CSS to automatically lay this stuff out that it looks
+      beautiful. A lot of the reason why the
+      <a href="http://superhuman.com">superhuman.com</a> website and the
+      Superhuman app looks the way it does is, absolutely everything is on a
+      sub-pixel grid to perfection because of the CSS framework.</em
+    >
+  </p>
+</blockquote>
+<p>
+  On a move-fast-and-break-things model, it makes zero sense to rewrite a CSS
+  layouting framework in order to achieve marginal improvements in typography
+  rendering and increases in speed. But
+  <a href="https://superhuman.com/jobs"
+    >two out of three of the Superhuman team’s values</a
+  >
+  are “Create Delight” and “Remarkable Quality”, and this is a phenomenal
+  example of their work living up to those values. Better typography and faster
+  rendering improves the email experience in a subtle but significant way. They
+  did the right thing, not the easy thing, because they’d make a better product
+  by doing so.
+</p>
+<p>
+  Zed have also put an emphasis on speed and responsiveness at the heart of what
+  they do. This perhaps makes commercial sense for a text editor, because speed
+  is an important dimension of competition. But it would have been a lot more
+  common to accept the limitations of the most common underlying platform –
+  something like Electron. Instead, the Zed team
+  <a href="https://zed.dev/blog/videogame"
+    >wrote their own GPU-powered graphics library</a
+  >.
+</p>
+<p>
+  It takes a certain kind of hubris, and commitment to quality, to build out a
+  library of this sort. Especially since <em>existing platforms work fine</em>.
+  People build editors with them!
+  <a href="https://vscode.dev/">Successful editors</a>, no less. But the Zed
+  team wanted to build something better: they were
+  <a href="https://twitter.com/zeddotdev/status/1636034633665245184"
+    >determined to do better</a
+  >. So they did the ambitious thing.
+</p>
+<p></p>
+<h2>
+  <strong>Is being an ambitious technologist actually a good idea?</strong>
+</h2>
+<p>Probably not!</p>
+<p>
+  The canonical advice is often good advice. Taking on large technical
+  challenges when you are proving the commercial viability of a product is a big
+  risk.
+</p>
+<p>
+  But there are many cases where this advice is not good: where it encourages
+  incremental thinking; where is cauterises progress. If we are not sufficiently
+  bold, we will revert to the mean. And
+  <a href="https://www.alexmurrell.co.uk/articles/the-age-of-average"
+    >the mean isn’t where you want to be.</a
+  >
+</p>
+<p>
+  Your core competencies very well may be wider than you think. Taking a
+  reductionist view on what your company should do might make sense on
+  <em>a priori</em> justifications, even if it goes against your instincts and
+  taste.
+</p>
+<p>
+  But that’s the problem with taste, hunches, intuition:
+  <a
+    href="https://iep.utm.edu/int-ext/#:~:text=Chicken%2Dsexers%20are%20individuals%20that,use%20to%20sort%20the%20chickens."
+    >it’s often really difficult to explain why you are making the calls that
+    you do</a
+  >. Even if those calls are the right ones long-term.
+</p>
+<p>
+  The sad fact is that many important technological advancements are built by
+  <a href="https://www.generalmagicthemovie.com/"
+    >teams that end up losing commercially</a
+  >. But that isn’t always the case.
+</p>
+<p>
+  And we can honour these teams’ memories by giving ourselves a higher bar to
+  meet. By making something we’re proud of, not just something that gets to
+  market quickly, with the minimum amount of work.
+</p>
+<p></p>
+<p>
+  <strong>Thanks</strong> to Arnaud Schenk and Chris Downer for discussions that
+  led to this post, and Maurice Banerjee-Palmer for helpful comments.
+</p>
