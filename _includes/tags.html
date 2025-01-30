@@ -1,9 +1,0 @@
-<p>
-  <strong>tags:</strong>
-  {% assign sortedTags = site.tags | sort %} {% for tag in sortedTags %} {% if
-  tag[0] == page.title %}
-  <strong>{{ tag[0] }}</strong>
-  {% else %}
-  <a href="/{{ tag[0] }}">{{ tag[0] }}</a>
-  {% endif %} {% endfor %}
-</p>
